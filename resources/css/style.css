@@ -28,11 +28,13 @@ body {
   margin: 0 auto;
 }
 
-section {
-  padding: 80px 0;
-}
-
 /*------Main navigation------*/
+
+header {
+  width:100%;
+  position: fixed;
+  z-index: 9999;
+}
 
 .main-nav {
   list-style: none;
@@ -69,7 +71,8 @@ section {
 .main-nav li a:hover {
 }
 
-.main-nav .current-link {
+.main-nav .active {
+  transition: background-color 0.3s;
   background-color: transparent;
 }
 
@@ -78,7 +81,7 @@ section {
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
 
-header {
+.section-header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/mac-keyboard.jpg);
   background-size: cover;
   height:100vh;
@@ -103,4 +106,14 @@ header {
   font-weight: 400;
   font-size: 190%;
   color: #ecf0f1;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*WHO AM I*/
+/*-------------------------------------------------------------------------*/
+
+.section-who-am-i {
+  margin-top: 42px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/mac-keyboard.jpg);
 }
