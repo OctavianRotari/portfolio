@@ -1,0 +1,106 @@
+/*-------------------------------------------------------------------------*/
+/*BASIC SETUP*/
+/*-------------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x:hidden;
+}
+
+/*-------------------------------------------------------------------------*/
+/*REUSABLE CONTENTS*/
+/*-------------------------------------------------------------------------*/
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/*------Main navigation------*/
+
+.main-nav {
+  list-style: none;
+  text-align: center;
+}
+
+.main-nav li {
+  display: inline-block;
+  background-color: #1BBC9B;
+  box-sizing: border-box;
+  margin: 0 0;
+  padding-top: 10px;
+  height: 42px;
+}
+
+.col {
+  width: 20%;
+}
+
+.main-nav:last-child {
+  margin-right:none;
+}
+
+.main-nav:first-child {
+  margin-left:none;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  text-decoration: none;
+}
+
+.main-nav li a:active,
+.main-nav li a:hover {
+}
+
+.main-nav .current-link {
+  background-color: transparent;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*HEADER*/
+/*-------------------------------------------------------------------------*/
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/mac-keyboard.jpg);
+  background-size: cover;
+  height:100vh;
+}
+
+.main-nav li .home {
+  font-family: 'Playfair Display', serif;
+  color: #ecf0f1;
+}
+
+.text-box {
+  margin-left:30px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-box h1{
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 190%;
+  color: #ecf0f1;
+}
