@@ -114,6 +114,23 @@ header {
 /*-------------------------------------------------------------------------*/
 
 .section-who-am-i {
-  margin-top: 42px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/mac-keyboard.jpg);
+}
+
+/*-------------------------------------------------------------------------*/
+/*web developer*/
+
+.web-developer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/code.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*traveler*/
+
+.traveler {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/travel.jpg);
+  background-size: cover;
+  height: 100vh;
 }
