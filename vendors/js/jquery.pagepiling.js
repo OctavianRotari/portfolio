@@ -66,30 +66,6 @@
         };
 
         /**
-        * Adds or remove the possiblity of scrolling through sections by using the mouse wheel or the trackpad.
-        */
-        PP.setMouseWheelScrolling = function (value){
-            if(value){
-                addMouseWheelHandler();
-            }else{
-                removeMouseWheelHandler();
-            }
-        };
-
-        /**
-        * Adds or remove the possiblity of scrolling through sections by using the mouse wheel/trackpad or touch gestures.
-        */
-        PP.setAllowScrolling = function (value){
-            if(value){
-                PP.setMouseWheelScrolling(true);
-                addTouchHandler();
-            }else{
-                PP.setMouseWheelScrolling(false);
-                removeTouchHandler();
-            }
-        };
-
-        /**
         * Adds or remove the possiblity of scrolling through sections by using the keyboard arrow keys
         */
         PP.setKeyboardScrolling = function (value){
@@ -161,9 +137,6 @@
             '-ms-touch-action': 'none',  /* Touch detection for Windows 8 */
             'touch-action': 'none'       /* IE 11 on Windows Phone 8.1*/
         });
-
-        //init
-        PP.setAllowScrolling(true);
 
         //creating the navigation dots
         if (!$.isEmptyObject(options.navigation) ) {
@@ -302,17 +275,11 @@
         function performMovement(v){
             if(options.css3){
                 transformContainer(v.animateSection, v.translate3d, v.animated);
-
                 v.sectionsToMove.each(function(){
                     transformContainer($(this), v.translate3d, v.animated);
                 });
-
-                setTimeout(function () {
-                    afterSectionLoads(v);
-                }, options.scrollingSpeed);
             }else{
                 v.scrollOptions = getScrollProp(v.scrolling);
-
                 if(v.animated){
                     v.animateSection.animate(
                         v.scrollOptions,
@@ -335,7 +302,7 @@
         */
         function afterSectionLoads(v){
             //callback (afterLoad) if the site is not just resizing and readjusting the slides
-            $.isFunction(options.afterLoad) && options.afterLoad.call(this, v.anchorLink, (v.sectionIndex));
+            $.isFunction(options.afterLoad) && options.afterLoad.call(this, v.anchorLink, (v.sectionIndex + 1));
         }
 
 
@@ -540,79 +507,12 @@
         });
 
         /**
-        * If `normalScrollElements` is used, the mouse wheel scrolling will scroll normally
-        * over the defined elements in the option.
-        */
-        if(options.normalScrollElements){
-            $(document).on('mouseenter', options.normalScrollElements, function () {
-                PP.setMouseWheelScrolling(false);
-            });
-
-            $(document).on('mouseleave', options.normalScrollElements, function(){
-                PP.setMouseWheelScrolling(true);
-            });
-        }
-
-        /**
          * Detecting mousewheel scrolling
          *
          * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/index.html
          * http://www.sitepoint.com/html5-javascript-mouse-wheel/
          */
         var prevTime = new Date().getTime();
-
-        function MouseWheelHandler(e) {
-        	var curTime = new Date().getTime();
-
-        	// cross-browser wheel delta
-            e = e || window.event;
-            var value = e.wheelDelta || -e.deltaY || -e.detail;
-            var delta = Math.max(-1, Math.min(1, value));
-
-            var horizontalDetection = typeof e.wheelDeltaX !== 'undefined' || typeof e.deltaX !== 'undefined';
-            var isScrollingVertically = (Math.abs(e.wheelDeltaX) < Math.abs(e.wheelDelta)) || (Math.abs(e.deltaX ) < Math.abs(e.deltaY) || !horizontalDetection);
-
-			//Limiting the array to 150 (lets not waste memory!)
-            if(scrollings.length > 149){
-                scrollings.shift();
-            }
-
-            //keeping record of the previous scrollings
-            scrollings.push(Math.abs(value));
-
-            //time difference between the last scroll and the current one
-            var timeDiff = curTime-prevTime;
-            prevTime = curTime;
-
-            //haven't they scrolled in a while?
-            //(enough to be consider a different scrolling action to scroll another section)
-            if(timeDiff > 200){
-                //emptying the array, we dont care about old scrollings for our averages
-                scrollings = [];
-            }
-
-            if(!isMoving()){
-                var activeSection = $('.pp-section.active-horizontal');
-                var scrollable = isScrollable(activeSection);
-
-                var averageEnd = getAverage(scrollings, 10);
-                var averageMiddle = getAverage(scrollings, 70);
-                var isAccelerating = averageEnd >= averageMiddle;
-
-                if(isAccelerating && isScrollingVertically){
-	                //scrolling down?
-	                if (delta < 0) {
-	                    scrolling('down', scrollable);
-
-	                //scrolling up?
-	                }else if(delta>0){
-	                    scrolling('up', scrollable);
-	                }
-	            }
-
-                return false;
-            }
-         }
 
         /**
         * Gets the average of the last `number` elements of the given array.
@@ -656,77 +556,6 @@
             }else{
                 //moved up/down
                 scrollSection();
-            }
-        }
-
-        /**
-        * Return a boolean depending on whether the scrollable element is at the end or at the start of the scrolling
-        * depending on the given type.
-        */
-        function isScrolled(type, scrollable){
-            if(type === 'top'){
-                return !scrollable.scrollTop();
-            }else if(type === 'bottom'){
-                return scrollable.scrollTop() + 1 + scrollable.innerHeight() >= scrollable[0].scrollHeight;
-            }
-        }
-
-         /**
-        * Determines whether the active section or slide is scrollable through and scrolling bar
-        */
-        function isScrollable(activeSection){
-            return activeSection.filter('.pp-scrollable');
-        }
-
-        /**
-        * Removes the auto scrolling action fired by the mouse wheel and tackpad.
-        * After this function is called, the mousewheel and trackpad movements won't scroll through sections.
-        */
-        function removeMouseWheelHandler(){
-            if (container.get(0).addEventListener) {
-                container.get(0).removeEventListener('mousewheel', MouseWheelHandler, false); //IE9, Chrome, Safari, Oper
-                container.get(0).removeEventListener('wheel', MouseWheelHandler, false); //Firefox
-            } else {
-                container.get(0).detachEvent('onmousewheel', MouseWheelHandler); //IE 6/7/8
-            }
-        }
-
-        /**
-        * Adds the auto scrolling action for the mouse wheel and tackpad.
-        * After this function is called, the mousewheel and trackpad movements will scroll through sections
-        */
-        function addMouseWheelHandler(){
-            if (container.get(0).addEventListener) {
-                container.get(0).addEventListener('mousewheel', MouseWheelHandler, false); //IE9, Chrome, Safari, Oper
-                container.get(0).addEventListener('wheel', MouseWheelHandler, false); //Firefox
-            } else {
-                container.get(0).attachEvent('onmousewheel', MouseWheelHandler); //IE 6/7/8
-            }
-        }
-
-        /**
-        * Adds the possibility to auto scroll through sections on touch devices.
-        */
-        function addTouchHandler(){
-            if(isTouch){
-                //Microsoft pointers
-                var MSPointer = getMSPointer();
-
-                container.off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);
-                container.off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);
-            }
-        }
-
-        /**
-        * Removes the auto scrolling for touch devices.
-        */
-        function removeTouchHandler(){
-            if(isTouch){
-                //Microsoft pointers
-                var MSPointer = getMSPointer();
-
-                container.off('touchstart ' + MSPointer.down);
-                container.off('touchmove ' + MSPointer.move);
             }
         }
 

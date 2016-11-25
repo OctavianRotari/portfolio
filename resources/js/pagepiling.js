@@ -20,7 +20,7 @@ $(document).ready(function() {
     normalScrollElementTouchThreshold: 5,
     touchSensitivity: 5,
     keyboardScrolling: true,
-    sectionSelector: '.horizontal-section',
+    sectionSelector: '.horizontal',
     animateAnchor: false,
 
     //events
@@ -29,5 +29,4 @@ $(document).ready(function() {
     afterRender: function(){},
   });
 
-  $.fn.pagepiling.setAllowScrolling(false);
 });

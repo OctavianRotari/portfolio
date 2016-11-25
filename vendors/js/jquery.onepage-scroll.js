@@ -20,12 +20,10 @@
     sectionContainer: "section",
     easing: "ease",
     animationTime: 1000,
-    pagination: true,
     updateURL: false,
-    keyboard: true,
     beforeMove: null,
     afterMove: null,
-    loop: true,
+    loop: false,
     responsiveFallback: false,
     direction : 'vertical'
   };
@@ -127,6 +125,7 @@
       index = $(settings.sectionContainer +".active").data("index");
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
       next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
+
       if(next.length < 1) {
         if (settings.loop == true) {
           pos = 0;
@@ -141,10 +140,6 @@
       if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
       current.removeClass("active")
       next.addClass("active");
-      if(settings.pagination == true) {
-        $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
-        $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
-      }
 
       $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
       $("body").addClass("viewing-page-"+next.data("index"))
@@ -175,11 +170,8 @@
       }
       if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
       current.removeClass("active")
-      next.addClass("active")
-      if(settings.pagination == true) {
-        $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
-        $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
-      }
+      next.addClass("active");
+
       $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
       $("body").addClass("viewing-page-"+next.data("index"))
 
@@ -193,12 +185,11 @@
     $.fn.moveTo = function(page_index) {
       current = $(settings.sectionContainer + ".active")
       next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
+
       if(next.length > 0) {
         if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
         current.removeClass("active")
         next.addClass("active")
-        $(".onepage-pagination li a" + ".active").removeClass("active");
-        $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
         $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
         $("body").addClass("viewing-page-"+next.data("index"))
 
@@ -317,32 +308,16 @@
       el.moveDown();
     });
 
-    // Create Pagination and Display Them
-    if (settings.pagination == true) {
-      if ($('ul.onepage-pagination').length < 1) $("<ul class='onepage-pagination'></ul>").prependTo("body");
-
-      if( settings.direction == 'horizontal' ) {
-        posLeft = (el.find(".onepage-pagination").width() / 2) * -1;
-        el.find(".onepage-pagination").css("margin-left", posLeft);
-      } else {
-        posTop = (el.find(".onepage-pagination").height() / 2) * -1;
-        el.find(".onepage-pagination").css("margin-top", posTop);
-      }
-      $('ul.onepage-pagination').html(paginationList);
-    }
-
     if(window.location.hash != "" && window.location.hash != "#1") {
       init_index =  window.location.hash.replace("#", "")
 
       if (parseInt(init_index) <= total && parseInt(init_index) > 0) {
         $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
         $("body").addClass("viewing-page-"+ init_index)
-        if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
 
         next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
         if(next) {
           next.addClass("active")
-          if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").addClass("active");
           $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
           $("body").addClass("viewing-page-"+next.data("index"))
           if (history.replaceState && settings.updateURL == true) {
@@ -355,21 +330,11 @@
       } else {
         $(settings.sectionContainer + "[data-index='1']").addClass("active")
         $("body").addClass("viewing-page-1")
-        if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
       }
     }else{
       $(settings.sectionContainer + "[data-index='1']").addClass("active")
       $("body").addClass("viewing-page-1")
-      if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
     }
-
-    if(settings.pagination == true)  {
-      $(".onepage-pagination li a").click(function (){
-        var page_index = $(this).data("index");
-        el.moveTo(page_index);
-      });
-    }
-
 
     $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
       event.preventDefault();
@@ -385,41 +350,6 @@
 
       responsive();
     }
-
-    if(settings.keyboard == true) {
-      $(document).keydown(function(e) {
-        var tag = e.target.tagName.toLowerCase();
-
-        if (!$("body").hasClass("disabled-onepage-scroll")) {
-          switch(e.which) {
-            case 38:
-              if (tag != 'input' && tag != 'textarea') el.moveUp()
-            break;
-            case 40:
-              if (tag != 'input' && tag != 'textarea') el.moveDown()
-            break;
-            case 32: //spacebar
-              if (tag != 'input' && tag != 'textarea') el.moveDown()
-            break;
-            case 33: //pageg up
-              if (tag != 'input' && tag != 'textarea') el.moveUp()
-            break;
-            case 34: //page dwn
-              if (tag != 'input' && tag != 'textarea') el.moveDown()
-            break;
-            case 36: //home
-              el.moveTo(1);
-            break;
-            case 35: //end
-              el.moveTo(total);
-            break;
-            default: return;
-          }
-        }
-
-      });
-    }
-    return false;
   }
 
 
