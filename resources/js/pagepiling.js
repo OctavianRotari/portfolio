@@ -13,8 +13,8 @@ $(document).ready(function() {
     navigation: {
       'textColor': '#000',
       'bulletsColor': '#000',
-      'position': 'left',
-      'tooltips': ['section1', 'section2', 'section3', 'section4']
+      'position': 'right',
+      'tooltips': ['A developer', 'An accountant', 'A bartender', 'A traveler', 'A mechanic']
     },
     normalScrollElements: null,
     normalScrollElementTouchThreshold: 5,

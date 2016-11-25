@@ -634,7 +634,7 @@
                     touchEndY = touchEvents.y;
                     touchEndX = touchEvents.x;
 
-                  //$('body').append('<span style="position:fixed; top: 250px; left: 20px; z-index:88; font-size: 25px; color: #000;">touchEndY: ' + touchEndY  + '</div>');
+                  $('body').append('<span style="position:fixed; top: 250px; left: 20px; z-index:88; font-size: 25px; color: #000;">touchEndY: ' + touchEndY  + '</div>');
 
                     //X movement bigger than Y movement?
                     if (options.direction === 'horizontal' && Math.abs(touchStartX - touchEndX) > (Math.abs(touchStartY - touchEndY))) {
@@ -685,7 +685,7 @@
         * Creates a vertical navigation bar.
         */
         function addVerticalNavigation(){
-            $('body').append('<div id="pp-nav"><ul></ul></div>');
+          $('#pagepiling').append('<div id="pp-nav"><ul></ul></div>');
             var nav = $('#pp-nav');
 
             nav.css('color', options.navigation.textColor);
@@ -707,7 +707,7 @@
                 nav.find('ul').append('<li data-tooltip="' + tooltip + '"><a href="#' + link + '"><span></span></a></li>');
             }
 
-            nav.find('span').css('border-color', options.navigation.bulletsColor);
+          nav.find('span').css('border-color', 'white');
         }
 
         /**
@@ -726,10 +726,10 @@
         $(document).on({
             mouseenter: function(){
                 var tooltip = $(this).data('tooltip');
-                $('<div class="pp-tooltip ' + options.navigation.position +'">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);
+                $('<div class="pp-tooltip ' + options.navigation.position +'">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(10);
             },
             mouseleave: function(){
-                $(this).find('.pp-tooltip').fadeOut(200, function() {
+                $(this).find('.pp-tooltip').fadeOut(10, function() {
                     $(this).remove();
                 });
             }

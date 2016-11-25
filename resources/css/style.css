@@ -16,7 +16,10 @@ body {
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
-  overflow-x:hidden;
+  overflow:hidden;
+
+  /*Avoid flicker on slides transitions for mobile phones #336 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /*-------------------------------------------------------------------------*/
@@ -120,17 +123,61 @@ header {
 /*web developer*/
 
 .web-developer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/code.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/code-min.jpg);
   background-size: cover;
   height: 100vh;
 }
 
+.long-text {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.long-text p{
+  font-size:120%;
+  margin: 10px 0;
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+.long-text p span {
+  color: yellow;
+}
+
+/*-------------------------------------------------------------------------*/
+/*accountant*/
+
+.accountant {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/accounting.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+/*-------------------------------------------------------------------------*/
+/*bartender*/
+
+.bartender {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/cocktail.jpg);
+  background-size: cover;
+  height: 100vh;
+}
 
 /*-------------------------------------------------------------------------*/
 /*traveler*/
 
 .traveler {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/travel.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/travel.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+/*-------------------------------------------------------------------------*/
+/*mechanic*/
+
+.mechanic {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/car.jpg);
   background-size: cover;
   height: 100vh;
 }
