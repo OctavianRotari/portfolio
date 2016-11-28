@@ -46,13 +46,11 @@
 
       if( classie.has( menu, 'bt-menu-open' ) ) {
         resetMenu()
-        $(".active").css("left", 0);
       }
       else {
         classie.remove( menu, 'bt-menu-close' );
         classie.add( menu, 'bt-menu-open' );
         overlay.addEventListener( eventtype, closeClickFn );
-        $(".active").css("left", 90)
       }
     });
 

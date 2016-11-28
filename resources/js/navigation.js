@@ -5,7 +5,7 @@ $(document).ready(function() {
     // Scroll to index
     var id = parseInt(this.id);
     $(".js--main").moveTo(id);
-    e.preventDefault();
+   e.preventDefault();
     return false;
   });
 });
