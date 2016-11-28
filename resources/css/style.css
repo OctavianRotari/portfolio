@@ -17,7 +17,6 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow:hidden;
-
   /*Avoid flicker on slides transitions for mobile phones #336 */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -39,46 +38,9 @@ header {
   z-index: 9999;
 }
 
-.main-nav {
-  list-style: none;
-  text-align: center;
+.active {
+  transition: left 0.31s;
 }
-
-.main-nav li {
-  display: inline-block;
-  background-color: #1BBC9B;
-  box-sizing: border-box;
-  margin: 0 0;
-  padding-top: 10px;
-  height: 42px;
-}
-
-.col {
-  width: 20%;
-}
-
-.main-nav:last-child {
-  margin-right:none;
-}
-
-.main-nav:first-child {
-  margin-left:none;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-  text-decoration: none;
-}
-
-.main-nav li a:active,
-.main-nav li a:hover {
-}
-
-.main-nav .active {
-  transition: background-color 0.3s;
-  background-color: transparent;
-}
-
 
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
@@ -90,13 +52,9 @@ header {
   height:100vh;
 }
 
-.main-nav li .home {
-  font-family: 'Playfair Display', serif;
-  color: #ecf0f1;
-}
-
 .text-box {
-  margin-left:30px;
+  padding-right: 100px;
+  margin-left:90px;
   position: absolute;
   width: 100%;
   top: 50%;
@@ -140,6 +98,10 @@ header {
   font-size:120%;
   margin: 10px 0;
   font-family: 'Droid Sans Mono', monospace;
+}
+
+.long-text p img{
+  height: 2em;
 }
 
 .long-text p span {
