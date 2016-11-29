@@ -33,7 +33,7 @@ h3 {
 /*-------------------------------------------------------------------------*/
 
 .row {
-  padding-top: 55px;
+  padding-top: 15px;
   width: 100%;
   margin: 0 auto;
   width: 1140px;
@@ -105,27 +105,24 @@ header {
   font-family: robotoCondensed, sans-serif;
   font-weight: 700;
   color: #19B5FE;
-  font-size: 280%;
+  font-size: 220%;
 }
 
 .text .long-text {
+  padding-top: 10px;
   position:center;
-  color: #22313F;
+  color: #fff;
 }
 
 .text .long-text p{
-  font-size:120%;
-  margin: 10px 0;
+  font-size:100%;
   font-family: 'Yrsa', serif;
   font-weight: 300;
+  color: #ecf0f1;
 }
 
 .text .long-text p img{
-  height: 2em;
-}
-
-.text .long-text p span {
-  color: yellow;
+  height: 1.5em;
 }
 
 /*-------------------------------------------------------------------------*/

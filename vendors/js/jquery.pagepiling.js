@@ -36,8 +36,8 @@
             loopTop: false,
             css3: true,
             navigation: {
-                textColor: '#000',
-                bulletsColor: '#000',
+                textColor: '#1E8BC3',
+                bulletsColor: '#1E8BC3',
                 position: 'right',
                 tooltips: []
             },
@@ -634,7 +634,7 @@
                     touchEndY = touchEvents.y;
                     touchEndX = touchEvents.x;
 
-                  $('body').append('<span style="position:fixed; top: 250px; left: 20px; z-index:88; font-size: 25px; color: #000;">touchEndY: ' + touchEndY  + '</div>');
+                  $('body').append('<span style="position:fixed; top: 250px; left: 20px; z-index:88; font-size: 25px; color: #1E8BC3;">touchEndY: ' + touchEndY  + '</div>');
 
                     //X movement bigger than Y movement?
                     if (options.direction === 'horizontal' && Math.abs(touchStartX - touchEndX) > (Math.abs(touchStartY - touchEndY))) {
@@ -707,7 +707,7 @@
                 nav.find('ul').append('<li data-tooltip="' + tooltip + '"><a href="#' + link + '"><span></span></a></li>');
             }
 
-          nav.find('span').css('border-color', 'white');
+          nav.find('span').css('border-color', '#1E8BC3');
         }
 
         /**
