@@ -84,8 +84,8 @@ header {
 /*web developer*/
 
 @font-face {
-  font-family: robotoCondensed:;
-  src: url(fonts/RobotoCondensed-Bold.ttf);
+  font-family: robotocondensed:;
+  src: url(fonts/robotocondensed-bold.ttf);
 }
 
 .web-developer {
@@ -108,20 +108,20 @@ header {
   font-size: 220%;
 }
 
-.text .long-text {
+.web-developer .text .long-text {
   padding-top: 10px;
   position:center;
   color: #fff;
 }
 
-.text .long-text p{
+.web-developer .text .long-text p{
   font-size:100%;
   font-family: 'Yrsa', serif;
   font-weight: 300;
   color: #ecf0f1;
 }
 
-.text .long-text p img{
+.web-developer .text .long-text p img{
   height: 1.5em;
 }
 
@@ -134,6 +134,52 @@ header {
   height: 100vh;
 }
 
+@font-face {
+  font-family: bevan;
+  src: url(fonts/Bevan.ttf);
+}
+
+.accountant h2 {
+  text-align: center;
+  font-family: bevan;
+  font-weight: 400;
+  font-size: 220%;
+  color: #00B16A;
+}
+
+.accountant .text {
+  margin-top: 35px;
+  padding: 20px 20px;
+  background: rgba(0, 0, 0, 0.25)
+}
+
+.accountant .long-text {
+  padding-bottom: 15px;
+}
+
+.accountant i {
+  color: #fff;
+}
+
+@font-face {
+  font-family: openSans;
+  src: url(fonts/OpenSans-Semibold.ttf);
+}
+
+.accountant h3{
+  font-family: openSans;
+  margin-top: 15px;
+  display: inline-block;
+  color: #0B8C6F;
+}
+
+.accountant p{
+  color: #E2EAFF;
+  font-family: openSans;
+  font-size: 90%;
+  line-height: 145%;
+  display: inline-block;
+}
 /*-------------------------------------------------------------------------*/
 /*bartender*/
 

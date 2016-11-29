@@ -31,7 +31,7 @@
 
   .bt-menu.bt-menu-open {
     height: 100%;
-    border-width: 30px 30px 30px 90px;
+    border-width: 0 0 0 90px;
     background-color: rgba(0,0,0,0.3);
     -webkit-transition: border-width 0.3s, background-color 0.3s;
     transition: border-width 0.3s, background-color 0.3s;
@@ -182,7 +182,7 @@
   }
 
   .bt-menu ul li a:before {
-    color: #04a466;
+    color: #22A7F0;
     font-size: 48px;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -190,7 +190,7 @@
 
   .bt-menu ul li a:hover:before,
   .bt-menu ul li a:focus:before  {
-    color: #fff;
+    color: #19B5FE;
   }
 
   @media screen and (max-height: 31.125em) {
