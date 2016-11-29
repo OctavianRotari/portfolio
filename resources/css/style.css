@@ -189,6 +189,76 @@ header {
   height: 100vh;
 }
 
+@font-face {
+  font-family: gravitasOne;
+  src: url(fonts/GravitasOne.ttf);
+}
+
+.bartender .quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*it translate the object half of its width and heigh left and top*/
+  font-family: gravitasOne;
+  font-size: 180%;
+  color: #e67e22;
+}
+
+
+@font-face {
+  font-family: lobsterRegular;
+  src: url(fonts/Lobster-Regular.ttf);
+}
+
+.bartender h2 {
+  text-align: center;
+  font-size: 220%;
+  font-family: lobsterRegular;
+  color: #9A0012;
+}
+
+.bartender .info h3 {
+  font-family: lobsterRegular;
+}
+.bartender .info {
+  color: #260004;
+  text-align: center;
+}
+
+.bartender p {
+  margin: 10px 0;
+}
+.bartender .personal{
+  top: 30%;
+  font-family: gravitasOne;
+  position: relative;
+  text-align:center;
+  color: #fff;
+}
+
+.bartender .personal h3{
+  color: #260005;
+  font-family: gravitasOne;
+  font-size: 100%;
+}
+
+.bartender .personal p{
+  font-family: openSans;
+}
+
+.bartender .invented-cocktail{
+  float: left;
+}
+
+.bartender .invented-cocktail i{
+  padding-top: 30px;
+  font-size: 350%;
+}
+
+.bartender .favorite-coctail{
+  float: right;
+}
+
 /*-------------------------------------------------------------------------*/
 /*traveler*/
 
