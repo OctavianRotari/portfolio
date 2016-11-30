@@ -22,8 +22,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2{
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -195,10 +194,8 @@ header {
 }
 
 .bartender .quote {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /*it translate the object half of its width and heigh left and top*/
+  padding: 50px 0;
+  text-align: center;
   font-family: gravitasOne;
   font-size: 180%;
   color: #e67e22;
@@ -220,16 +217,17 @@ header {
 .bartender .info h3 {
   font-family: lobsterRegular;
 }
+
 .bartender .info {
   color: #260004;
   text-align: center;
 }
 
-.bartender p {
+.bartender .info p {
   margin: 10px 0;
+  color: #fff;
 }
 .bartender .personal{
-  top: 30%;
   font-family: gravitasOne;
   position: relative;
   text-align:center;
@@ -243,6 +241,7 @@ header {
 }
 
 .bartender .personal p{
+  margin: 10px 0;
   font-family: openSans;
 }
 
@@ -268,6 +267,58 @@ header {
   height: 100vh;
 }
 
+.traveler .content {
+  height: 80vh;
+}
+
+@font-face {
+  font-family: meriendaOne;
+  src: url(fonts/MeriendaOne-Regular.ttf);
+}
+
+.traveler h2 {
+  text-align: center;
+  font-size: 220%;
+  font-family: meriendaOne;
+  color: #2980b9;
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(fonts/Quicksand-Bold.ttf);
+}
+
+.traveler .travel-quote {
+  padding-top: 30px;
+  font-family: quicksand, sans-serif;
+  color: #E0F2FE;
+  font-size: 160%;
+}
+
+.traveler .travel-quote span{
+  display: block;
+  text-align: right;
+}
+
+.traveler .footer {
+  height: 20vh;
+}
+
+@font-face {
+  font-family: rokkitt;
+  src: url(fonts/Rokkitt-Bold.ttf);
+}
+
+.traveler h3 {
+  margin: 10px 0;
+  font-size: 180%;
+  font-family: rokkitt;
+  color: #2980B9;
+}
+
+.traveler h3 span{
+  color: #E0F2FE;
+}
 /*-------------------------------------------------------------------------*/
 /*mechanic*/
 

@@ -5,7 +5,6 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<link rel="stylesheet" href="vendors/css/normalize.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/Grid.css" type='text/css'>
-		<link rel="stylesheet" href="vendors/css/animate.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/cursor-typed.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/onepage-scroll.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/component.css" type='text/css'>
@@ -14,11 +13,14 @@
 		<link rel="stylesheet" href="resources/css/icons.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/navigation.css" type="text/css"/>
 		<link rel="stylesheet" href="resources/css/queries.css" type='text/css'>
-		<link rel="stylesheet" type="text/css" href="vendors/css/jquery.jscrollpane.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="vendors/css/sliderStyle.css" media="all" />
+		<link rel="stylesheet" href="vendors/css/jquery.jscrollpane.css" type="text/css"  />
+		<link rel="stylesheet" href="vendors/css/sliderStyle.css" type="text/css" />
+		<link rel="stylesheet" href="vendors/css/animate.css" type="text/css"/>
+		<link rel="stylesheet" href="vendors/css/flag-icon.css" type="text/css"/>
+		<link rel="stylesheet" href="vendors/css/progressjs.css" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Yrsa:500" rel="stylesheet"> 
-		<link href="https://fonts.googleapis.com/css?family=Yrsa:300,400" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Yrsa:500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Yrsa:300,400" rel="stylesheet">
 		<title>Octavian Rotari</title>
 	</head>
 	<body>
@@ -98,7 +100,7 @@
 									<div id="ca-container-frameworks" class="ca-container-frameworks">
 										<h2 id='title-frameworks'>Frameworks with which<br>I've experimented</h2>
 										<div class="ca-wrapper">
-											<div class="ca-item ca-item-1">
+											<div class="ca-item ca-item-1 js--slider-animations">
 												<div class="ca-item-main">
 													<div class="ca-icon"></div>
 												</div>
@@ -144,7 +146,7 @@
 											how important is education, so I joined night-school in economy while still<br>
 											working in a factory.<br>
 											<br>
-											During my studies I gained an in-depth understanding of economics and the<br> 
+											During my studies I gained an in-depth understanding of economics and the<br>
 											way they relate to entrepreneurship
 										</p>
 									</div>
@@ -161,16 +163,16 @@
 					</div>
 					<div class="horizontal">
 						<div class="bartender">
-							<div class="quote">
-								<h3>&ldquo;I am a bartender... What is your super-power?&rdquo;</h3>
-							</div>
 							<div class="row info">
 								<h2>A bartender</h2>
 								<p>Finished the EBS course as a bartender in Stockholm 88/100</p>
-								<h3>Kalima beach (Spain)</h3>
-								<p>Worked as the main bartender in a cocktailbar/restaurant in Spain</p>
+								<h3>Kalima beach (Majorca)</h3>
+								<p>Worked as the main bartender in a cocktailbar/restaurant in Majorca</p>
 								<h3>Camillo B. (Roma)</h3>
 								<p>Worked as second bartender in one of the most prestigiuos cocktailbar in Rome</p>
+							</div>
+							<div class="quote">
+								<h3>&ldquo;I am a bartender...<br> What is your super-power?&rdquo;</h3>
 							</div>
 							<div class="personal">
 								<div class="invented-cocktail col span-1-of-2">
@@ -193,6 +195,28 @@
 					</div>
 					<div class="horizontal">
 						<div class="traveler">
+							<div class="row">
+								<div class="content">
+									<h2>A traveler</h2>
+									<p class='travel-quote'>&ldquo;Stuff your eyes with wounder, live as you'd drop up dead in ten seconds.
+										See the world. It's more fantastic than any dream made!&rdquo;<br><span>Ray Bradbury</span></p>
+									<h3>Countries visited: <span>20/195</span></h3>
+								</div>
+								<div class="footer">
+									<h3>Languages spoken:</h3>
+										<div id="italian">
+											<div class="progressjs-progress progressjs-theme-blue">
+												<div class="progressjs-inner">
+													<div class="progressjs-percen"> 60%</div>
+												</div>
+											</div>
+											<span class="flag-icon flag-icon-it"></span>
+										</div>
+										<span class="flag-icon flag-icon-gb"></span>
+										<span class="flag-icon flag-icon-md"></span>
+										<span class="flag-icon flag-icon-ru"></span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="horizontal">
@@ -219,11 +243,8 @@
 		<script type="text/javascript" src="resources/js/githubRequest.js"></script>
 		<script type="text/javascript" src="vendors/js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="vendors/js/jquery.contentcarousel.js"></script>
-		<script type="text/javascript">
-			$('#ca-container-languages').contentcarousel();
-		</script>
-		<script type="text/javascript">
-			$('#ca-container-frameworks').contentcarousel();
-		</script>
+		<script type="text/javascript" src="resources/js/carousel.js"></script>
+		<script type="text/javascript" src="vendors/js/progress.js"></script>
+		<script type="text/javascript" src="resources/js/progress.js"></script>
 	</body>
 </html>
