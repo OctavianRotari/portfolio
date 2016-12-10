@@ -14,7 +14,7 @@ $(document).ready(function() {
       'textColor': '#000',
       'bulletsColor': '#000',
       'position': 'right',
-      'tooltips': ['A developer', 'An accountant', 'A bartender', 'A traveler', 'A mechanic']
+      'tooltips': ['A developer', 'An accountant', 'A bartender', 'A traveler']
     },
     normalScrollElements: null,
     normalScrollElementTouchThreshold: 5,

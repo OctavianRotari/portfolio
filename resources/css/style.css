@@ -268,7 +268,7 @@ header {
 }
 
 .traveler .content {
-  height: 80vh;
+  height: 70vh;
 }
 
 @font-face {
@@ -300,8 +300,15 @@ header {
   text-align: right;
 }
 
+.traveler .personal-quote {
+  padding-top: 18%;
+  font-family: quicksand, sans-serif;
+  color: #E0F2FE;
+  font-size: 160%;
+}
+
 .traveler .footer {
-  height: 20vh;
+  height: 30vh;
 }
 
 @font-face {
@@ -318,12 +325,4 @@ header {
 
 .traveler h3 span{
   color: #E0F2FE;
-}
-/*-------------------------------------------------------------------------*/
-/*mechanic*/
-
-.mechanic {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/car.jpg);
-  background-size: cover;
-  height: 100vh;
 }
