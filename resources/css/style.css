@@ -100,10 +100,13 @@ header {
   text-align: center;
 }
 
-.web-developer .image h2 {
+.web-developer h2 {
   font-family: robotoCondensed, sans-serif;
-  font-weight: 700;
   color: #19B5FE;
+}
+
+.web-developer .image h2 {
+  font-weight: 700;
   font-size: 220%;
 }
 
@@ -124,6 +127,47 @@ header {
   height: 1.5em;
 }
 
+.web-developer .skills h2,
+.web-developer .certificates h2 {
+  font-size: 100%;
+  margin-bottom: 3%;
+}
+
+.web-developer .skills h2{
+  margin-top: 15%;
+}
+
+.img-list-small {
+  width: 15%;
+  height: 15%;
+}
+
+.makers-accademy {
+  margin-top: 12%;
+  text-align: center;
+}
+
+.makers-accademy-img {
+  width: 70%;
+  margin-bottom: 3%;
+}
+
+.makers-accademy ul {
+  text-align: left;
+  margin-left: 20%;
+  text-align: left;
+  font-size:100%;
+  font-family: 'Yrsa', serif;
+  font-weight: 300;
+}
+
+.web-developer .certificates {
+  margin-left: 17%;
+}
+
+.web-developer .certificates h2 {
+  margin-top: 13%;
+}
 /*-------------------------------------------------------------------------*/
 /*accountant*/
 
