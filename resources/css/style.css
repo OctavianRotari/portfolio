@@ -280,7 +280,7 @@ header {
   text-align: center;
   font-size: 220%;
   font-family: meriendaOne;
-  color: #2980b9;
+  color: #2B0A00;
 }
 
 @font-face {
@@ -291,7 +291,7 @@ header {
 .traveler .travel-quote {
   padding-top: 30px;
   font-family: quicksand, sans-serif;
-  color: #E0F2FE;
+  color: #FFFFFF;
   font-size: 160%;
 }
 
@@ -301,9 +301,9 @@ header {
 }
 
 .traveler .personal-quote {
-  padding-top: 18%;
+  padding-top: 25%;
   font-family: quicksand, sans-serif;
-  color: #E0F2FE;
+  color: #FFFFFF;
   font-size: 160%;
 }
 
@@ -320,9 +320,15 @@ header {
   margin: 10px 0;
   font-size: 180%;
   font-family: rokkitt;
-  color: #2980B9;
+  color: #240011;
+}
+
+.countries-visited {
+  text-align: right;
+  padding-top: 3%;
 }
 
 .traveler h3 span{
-  color: #E0F2FE;
+  color: #FFFFFF;
+  font-size: 160%;
 }
