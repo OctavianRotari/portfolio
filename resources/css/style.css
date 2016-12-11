@@ -168,6 +168,11 @@ header {
 .web-developer .certificates h2 {
   margin-top: 13%;
 }
+
+.certificates .img-list-small{
+  width: 25%;
+  height: none;
+}
 /*-------------------------------------------------------------------------*/
 /*accountant*/
 
