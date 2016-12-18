@@ -147,8 +147,8 @@ header {
 }
 
 .img-list-small {
-  width: 15%;
-  height: 15%;
+  width: 84px;
+  height: 84px;
 }
 
 .makers-accademy {
@@ -395,7 +395,26 @@ header {
 /*PROJECTS*/
 /*-------------------------------------------------------------------------*/
 .projects{
+  font-family: 'Lato', 'Arial', sans-serif;
   color: #FFFFFF;
+}
+
+.projects h2, h3{
+  font-weight: 300;
+}
+
+.projects h2{
+  color:#000000;
+  font-size: 180%;
+}
+
+.projects h3{
+  display:inline-block;
+  font-size: 120%;
+}
+
+.projects p{
+  margin:20px;
 }
 
 .first-row{
@@ -446,14 +465,25 @@ header {
   margin-left:1%;
 }
 
-.description{
+.approach{
   height:98%;
   background-color:#2980B9;
 }
 
-.approach{
+.facts{
   height:98%;
   background-color:#02446E;
+}
+
+
+.facts img,
+.facts h3{
+  margin:20px 0;
+}
+
+.facts a{
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .conclusion{
@@ -469,4 +499,44 @@ header {
 
 .accounting-rails .second-photo{
   background-image: url(img/desktop-contabilita-dashboard.png);
+}
+
+/*-------------------------------------------------------------------------*/
+/*autotrasporti-rotari*/
+.autotrasporti-rotari .first-photo{
+  background-image: url(img/autotrasporti-home.png);
+}
+
+.autotrasporti-rotari .second-photo{
+  background-image: url(img/autotrasporti-flotta.png);
+}
+
+/*-------------------------------------------------------------------------*/
+/*cms-php*/
+.cms-php .first-photo{
+  background-image: url(img/cms-php-home.png);
+}
+
+.cms-php .second-photo{
+  background-image: url(img/cms-php-admin.png);
+}
+
+/*-------------------------------------------------------------------------*/
+/*omnifood*/
+.omnifood .first-photo{
+  background-image: url(img/omnifood-home.png);
+}
+
+.omnifood .second-photo{
+  background-image: url(img/omnifood-about.png);
+}
+
+/*-------------------------------------------------------------------------*/
+/*maker-pair rails*/
+.maker-pair .first-photo{
+  background-image: url(img/maker-pair-home.png);
+}
+
+.maker-pair .second-photo{
+  background-image: url(img/maker-pair-profile.png);
 }

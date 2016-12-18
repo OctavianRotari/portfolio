@@ -235,7 +235,7 @@
 /* Second Slide */
 .bg-2 .sl-slide-inner,
 .bg-2 .sl-content-slice {
-  background: #000;
+  background: #222;
 }
 
 .bg-2 [data-icon]:after,
@@ -250,7 +250,7 @@
 /* Third Slide */
 .bg-3 .sl-slide-inner,
 .bg-3 .sl-content-slice {
-  background: #db84ad;
+  background: #222;
 }
 
 .bg-3 .deco {
@@ -277,7 +277,7 @@
 /* Forth Slide */
 .bg-4 .sl-slide-inner,
 .bg-4 .sl-content-slice {
-  background: #5bc2ce;
+  background: #222;
 }
 
 .bg-4 .deco {
@@ -302,7 +302,7 @@
 /* Fifth Slide */
 .bg-5 .sl-slide-inner,
 .bg-5 .sl-content-slice {
-  background: #ffeb41;
+  background: #222;
 }
 
 .bg-5 .deco {
@@ -321,6 +321,31 @@
 }
 
 .bg-5 blockquote:before {
+  color: #ecd82c;
+}
+
+/* Fifth Slide */
+.bg-6 .sl-slide-inner,
+.bg-6 .sl-content-slice {
+  background: #222;
+}
+
+.bg-6 .deco {
+  border-color: #ECD82C;
+}
+
+.bg-6 .deco:after {
+  color: #000;
+  text-shadow: 0 0 1px #000;
+}
+
+.bg-6 h2,
+.bg-5 blockquote{
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.bg-6 blockquote:before {
   color: #ecd82c;
 }
 
