@@ -23,8 +23,18 @@ body {
 
 h1,
 h2{
+  padding-top: 15px;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+.clearfix{zoom:1}
+.clearfix:after{
+  content: '.';
+  clear:both;
+  display: block;
+  height:0;
+  visibility:hidden;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -32,7 +42,6 @@ h2{
 /*-------------------------------------------------------------------------*/
 
 .row {
-  padding-top: 15px;
   width: 100%;
   margin: 0 auto;
   width: 1140px;
@@ -350,7 +359,7 @@ header {
 }
 
 .traveler .personal-quote {
-  padding-top: 25%;
+  padding-top: 20%;
   font-family: quicksand, sans-serif;
   color: #FFFFFF;
   font-size: 160%;
@@ -380,4 +389,84 @@ header {
 .traveler h3 span{
   color: #FFFFFF;
   font-size: 160%;
+}
+
+/*-------------------------------------------------------------------------*/
+/*PROJECTS*/
+/*-------------------------------------------------------------------------*/
+.projects{
+  color: #FFFFFF;
+}
+
+.first-row{
+  height:50%;
+}
+
+.first-row>div{
+  width:32.66%;
+  margin-bottom:0.5%;
+  margin-top:0px;
+  margin-left:1%;
+}
+
+.first-photo,
+.second-photo{
+  height:98%;
+  background-color: #02446E;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+}
+
+.first-photo .pop-up,
+.second-photo .pop-up{
+  height:96%;
+}
+
+.project-name {
+  height:98%;
+  background-color:#2980b9;
+  text-align:center;
+}
+
+.project-name h3{
+  display:inline-block
+}
+
+.second-row{
+  text-align:center;
+  top:50%;
+  height:50%;
+}
+
+.second-row>div{
+  width:32.66%;
+  margin-top:0.5%;
+  margin-bottom:0px;
+  margin-left:1%;
+}
+
+.description{
+  height:98%;
+  background-color:#2980B9;
+}
+
+.approach{
+  height:98%;
+  background-color:#02446E;
+}
+
+.conclusion{
+  height:98%;
+  background-color:#2980b9;
+}
+
+/*-------------------------------------------------------------------------*/
+/*accounting rails*/
+.accounting-rails .first-photo{
+  background-image: url(img/desktop-home-contabilita.png);
+}
+
+.accounting-rails .second-photo{
+  background-image: url(img/desktop-contabilita-dashboard.png);
 }
