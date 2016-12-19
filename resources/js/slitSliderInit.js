@@ -8,7 +8,6 @@ $(function() {
           $nav.eq( pos ).addClass( 'nav-dot-current' );
         }
       } ),
-
       init = function() {
         initEvents();
       },

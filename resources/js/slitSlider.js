@@ -279,7 +279,7 @@
 
               slice.css( slice1Style );
 
-            }, 50 );
+            }, 500 );
 
           }
         )
@@ -310,7 +310,7 @@
 
               }
 
-            }, 50 );
+            }, 500 );
 
           },
           function() {
@@ -435,20 +435,22 @@
               down: 40
             };
 
-          switch (keyCode) {
+          if($('#projects').visible()){
+            switch (keyCode) {
 
-            case arrow.left :
+              case arrow.left :
 
-              self._stopSlideshow();
-              self._navigate( 'prev' );
-              break;
+                self._stopSlideshow();
+                self._navigate( 'prev' );
+                break;
 
-            case arrow.right :
+              case arrow.right :
 
-              self._stopSlideshow();
-              self._navigate( 'next' );
-              break;
+                self._stopSlideshow();
+                self._navigate( 'next' );
+                break;
 
+            }
           }
 
         } );

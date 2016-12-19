@@ -359,7 +359,7 @@ header {
 }
 
 .traveler .personal-quote {
-  padding-top: 20%;
+  padding-top: 15%;
   font-family: quicksand, sans-serif;
   color: #FFFFFF;
   font-size: 160%;
@@ -405,7 +405,7 @@ header {
 
 .projects h2{
   color:#000000;
-  font-size: 180%;
+  font-size: 150%;
 }
 
 .projects h3{
@@ -471,14 +471,18 @@ header {
 }
 
 .facts{
+  text-align:left;
   height:98%;
   background-color:#02446E;
 }
 
+.project-facts{
+  margin: 1% 5%;
+}
 
 .facts img,
 .facts h3{
-  margin:20px 0;
+  margin:10px 0;
 }
 
 .facts a{
