@@ -68,7 +68,7 @@
     width: 100%;
     height: 4px;
     margin-top: -2px;
-    background-color: #fff;
+    background-color: #22A4EB;
     font-size: 0px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -90,7 +90,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #22A4EB;
     content: '';
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;

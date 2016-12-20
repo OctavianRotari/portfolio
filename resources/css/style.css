@@ -410,11 +410,12 @@ header {
 
 .projects h3{
   display:inline-block;
-  font-size: 120%;
+  font-size: 110%;
 }
 
 .projects p{
   margin:20px;
+  text-align: justify;
 }
 
 .first-row{
@@ -543,4 +544,72 @@ header {
 
 .maker-pair .second-photo{
   background-image: url(img/maker-pair-profile.png);
+}
+
+/*-------------------------------------------------------------------------*/
+/*ASPIRATIONS*/
+/*-------------------------------------------------------------------------*/
+
+.aspirations{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/forest-tree.jpg);
+  background-size: cover;
+  height:100vh;
+  color: #fff;
+}
+
+@font-face {
+  font-family: playfairDisplay;
+  src: url(fonts/PlayfairDisplay-Regular.ttf);
+}
+
+.aspirations blockquote {
+  font-family: playfairDisplay, Georgia, serif;
+  text-transform: uppercase;
+  font-size: 220%;
+  padding: 2%;
+  font-style: italic;
+  line-height: 120%;
+  position: relative;
+  margin-top: 7%;
+  margin-left: 10%;
+}
+
+.aspirations blockquote:before{
+  display: block;
+  content: "\201C";
+  font-size: 400%;
+  position: absolute;
+  top: 29%;
+  left: -7%;
+}
+
+.aspirations .why-front-end{
+  width: 1140px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@font-face {
+  font-family: faunaOne;
+  src: url(fonts/FaunaOne-Regular.ttf);
+}
+.aspirations p{
+  margin-top:20px;
+  font: faunaOne, Georgia, serif;
+}
+
+/*-------------------------------------------------------------------------*/
+/*CONTACTS*/
+/*-------------------------------------------------------------------------*/
+.contacts{
+  background: url(img/phone-hand-iron-man.png) center center;
+  background-size: cover;
+}
+
+.btn-icon i::before {
+  color: #000;
+  margin-top: 50%;
+  font-size: 200%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
 }
