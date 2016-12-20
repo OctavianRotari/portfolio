@@ -59,22 +59,135 @@ header {
   transition: left 0.31s;
 }
 
+.navigation-arrow {
+  position: absolute;
+  left: 50%;
+  top: 100vh;
+  transform: translate(-50%, -50%);
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 1px;	
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+/*------Buttons------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+  background-color: #22A4EB;
+  border: 1px solid #22A4EB;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #22a4eb;
+  color: #22a4eb;
+}
+
+.btn:hover,
+.btn:active {
+  border: 1px solid #028FDA;
+  background-color: #028FDA;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+  border: 1px solid #028FDA;
+  color: #fff;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+  border: 1px solid #028FDA;
+  color: #fff;
+}
+
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
 
 .section-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/mac-keyboard.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/desk-mac.jpeg);
   background-size: cover;
   height:100vh;
 }
 
 .text-box {
-  text-align:center;
+  margin-top: 20%;
+  margin-left: 1%;
+}
+
+@font-face {
+  font-family: philosopher;
+  src: url(fonts/Philosopher-Regular.ttf);
 }
 
 .text-box h1{
-  font-family: 'Playfair Display', serif;
+  height:84px;
+  margin-bottom:6%;
+  text-transform:none;
+  font-family: philosopher, serif;
   font-weight: 400;
   font-size: 190%;
   color: #ecf0f1;
@@ -394,6 +507,13 @@ header {
 /*-------------------------------------------------------------------------*/
 /*PROJECTS*/
 /*-------------------------------------------------------------------------*/
+.keyboard{
+  z-index: 999;
+  position: absolute;
+  top: 94%;
+  left: 61%;
+}
+
 .projects{
   font-family: 'Lato', 'Arial', sans-serif;
   color: #FFFFFF;
