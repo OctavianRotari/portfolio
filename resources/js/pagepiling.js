@@ -7,8 +7,8 @@ $(document).ready(function() {
     anchors: [],
     scrollingSpeed: 700,
     easing: 'swing',
-    loopBottom: false,
-    loopTop: false,
+    loopBottom: true,
+    loopTop: true,
     css3: true,
     navigation: {
       'textColor': '#000',

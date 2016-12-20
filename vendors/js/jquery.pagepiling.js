@@ -32,8 +32,8 @@
       anchors: [],
       scrollingSpeed: 700,
       easing: 'easeInQuart',
-      loopBottom: false,
-      loopTop: false,
+      loopBottom: true,
+      loopTop: true,
       css3: true,
       navigation: {
         textColor: '#1E8BC3',
