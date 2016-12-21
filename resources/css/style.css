@@ -42,7 +42,6 @@ h2{
 /*-------------------------------------------------------------------------*/
 
 .row {
-  width: 100%;
   margin: 0 auto;
   width: 1140px;
 }
@@ -515,8 +514,13 @@ input[type=submit]:active{
 }
 
 .projects{
+  background-color: #fff;
   font-family: 'Lato', 'Arial', sans-serif;
-  color: #FFFFFF;
+  color: #555;
+}
+
+.projects .project-name{
+  text-align:center;
 }
 
 .projects h2, h3{
@@ -534,136 +538,51 @@ input[type=submit]:active{
 }
 
 .projects p{
+  font-size:16px;
   margin:20px;
   text-align: justify;
 }
 
-.first-row{
-  height:50%;
+.projects .photo{
+  height:50vh;
 }
 
-.first-row>div{
-  width:32.66%;
-  margin-bottom:0.5%;
-  margin-top:0px;
-  margin-left:1%;
-}
-
-.first-photo,
-.second-photo{
-  height:98%;
-  background-color: #02446E;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: 40%;
-}
-
-.first-photo .pop-up,
-.second-photo .pop-up{
-  height:96%;
-}
-
-.project-name {
-  height:98%;
-  background-color:#2980b9;
-  text-align:center;
-}
-
-.project-name h3{
-  display:inline-block
-}
-
-.second-row{
-  text-align:center;
-  top:50%;
-  height:50%;
-}
-
-.second-row>div{
-  width:32.66%;
-  margin-top:0.5%;
-  margin-bottom:0px;
-  margin-left:1%;
-}
-
-.approach{
-  height:98%;
-  background-color:#2980B9;
-}
-
-.facts{
-  text-align:left;
-  height:98%;
-  background-color:#02446E;
-}
-
-.project-facts{
-  margin: 1% 5%;
-}
-
-.facts img,
-.facts h3{
-  margin:10px 0;
-}
-
-.facts a{
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.conclusion{
-  height:98%;
-  background-color:#2980b9;
+.projects .project-facts{
+  height:50vh;
 }
 
 /*-------------------------------------------------------------------------*/
 /*accounting rails*/
-.accounting-rails .first-photo{
-  background-image: url(img/desktop-home-contabilita.png);
+.accounting-rails .photo{
+  background: url(img/desktop-contabilita-dashboard.png) center center;
+  background-size: cover;
 }
-
-.accounting-rails .second-photo{
-  background-image: url(img/desktop-contabilita-dashboard.png);
-}
-
 /*-------------------------------------------------------------------------*/
 /*autotrasporti-rotari*/
-.autotrasporti-rotari .first-photo{
-  background-image: url(img/autotrasporti-home.png);
-}
-
-.autotrasporti-rotari .second-photo{
-  background-image: url(img/autotrasporti-flotta.png);
+.autotrasporti-rotari .photo{
+  background: url(img/autotrasporti-home.png) center center;
+  background-size: cover;
 }
 
 /*-------------------------------------------------------------------------*/
 /*cms-php*/
-.cms-php .first-photo{
-  background-image: url(img/cms-php-home.png);
-}
-
-.cms-php .second-photo{
-  background-image: url(img/cms-php-admin.png);
+.cms-php .photo{
+  background: url(img/cms-php-home.png) center center;
+  background-size: cover;
 }
 
 /*-------------------------------------------------------------------------*/
 /*omnifood*/
-.omnifood .first-photo{
-  background-image: url(img/omnifood-home.png);
-}
-
-.omnifood .second-photo{
-  background-image: url(img/omnifood-about.png);
+.omnifood .photo{
+  background: url(img/omnifood-home.png) center center;
+  background-size: cover;
 }
 
 /*-------------------------------------------------------------------------*/
 /*maker-pair rails*/
-.maker-pair .first-photo{
-  background-image: url(img/maker-pair-home.png);
-}
-
-.maker-pair .second-photo{
-  background-image: url(img/maker-pair-profile.png);
+.maker-pair .photo{
+  background: url(img/maker-pair-home.png) center center;
+  background-size: cover;
 }
 
 /*-------------------------------------------------------------------------*/
