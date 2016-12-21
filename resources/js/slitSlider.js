@@ -410,6 +410,7 @@
       this.$el.css( cssStyle ).find( 'div.sl-content-wrapper' ).css( cssStyle );
 
     },
+
     _loadEvents : function() {
 
       var self = this;

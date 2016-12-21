@@ -1,7 +1,7 @@
 $(function() {
   var Page = (function() {
     var $navArrows = $( '#nav-arrows' ),
-      $nav = $( '#nav-dots > span' ),
+      $nav = $( '#nav-dots span' ),
       slitslider = $( '#slider' ).slitslider( {
         onBeforeChange : function( slide, pos ) {
           $nav.removeClass( 'nav-dot-current' );
@@ -36,4 +36,18 @@ $(function() {
     return { init : init };
   })();
   Page.init();
+
+  /* Navigation tooltips*/
+  $(document).on({
+    mouseenter: function(){
+      var tooltip = $(this).data('tooltip');
+      $('<div class="tooltip">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(10);
+    },
+    mouseleave: function(){
+      $(this).find('.tooltip').fadeOut(10, function() {
+        $(this).remove();
+      });
+    }
+  }, '#nav-dots li');
+
 });

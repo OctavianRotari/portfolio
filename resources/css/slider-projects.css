@@ -116,35 +116,55 @@
 /* custom navigations dots */
 
 .nav-dots {
-  text-align:center;
-  position:absolute;
-  bottom:2%;
-  height:30px;
-  width:100%;
-  left:0;
-  z-index:1000;
+  right: 17px;
+    color: #1E8BC3;
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 250%;
+    opacity: 1;
+}
+
+#nav-dots .tooltip {
+  position: absolute;
+  top: -2px;
+  color: #1E8BC3;
+  font-size: 14px;
+  font-family: arial, helvetica, sans-serif;
+  white-space: nowrap;
+  max-width: 220px;
+  right: 20px;
+}
+
+.nav-dots ul{
+  margin: 0;
+  padding: 0;
+}
+
+.nav-dots li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 7px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .nav-dots span {
-  display:inline-block;
-  position:relative;
-  width:16px;
-  height:16px;
-  border-radius:50%;
-  margin: 3px;
-  background: #ddd;
-  background: rgba(150,150,150,0.4);
-  cursor:pointer;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #1E8BC3;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
 }
 
-.nav-dots span.nav-dot-current:after{
-  content: "";
-  position:absolute;
-  width:16px;
-  height:16px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.8);
-  left: -1px;
+.nav-dots span.nav-dot-current{
+  background: #1E8BC3;
 }
 
 /* First Slide */
