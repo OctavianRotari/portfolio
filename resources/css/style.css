@@ -304,22 +304,35 @@ input[type=submit]:active{
 }
 
 @font-face {
-  font-family: bevan;
-  src: url(fonts/Bevan.ttf);
+  font-family: chonburi;
+  src: url(fonts/Chonburi-Regular.ttf);
+}
+
+.accountant .title {
+  margin: 27px 0 0 5px;
+  background-color: #CF000F;
+  width: 400px;
+  display: inline-block;
+}
+
+.accountant .brief-introduction{
+  display: inline-block;
 }
 
 .accountant h2 {
+  padding-top: 0px;
   text-align: center;
-  font-family: bevan;
+  font-family: chonburi;
   font-weight: 400;
   font-size: 220%;
-  color: #00B16A;
+  color: #fff;
 }
 
 .accountant .text {
-  margin-top: 35px;
+  margin-top: 8%;
   padding: 20px 20px;
-  background: rgba(0, 0, 0, 0.25)
+  background: rgba(0, 0, 0, 0.25);
+  margin-left: 5px;
 }
 
 .accountant .long-text {
@@ -331,8 +344,8 @@ input[type=submit]:active{
 }
 
 @font-face {
-  font-family: openSans;
-  src: url(fonts/OpenSans-Semibold.ttf);
+  font-family: bioRhyme;
+  src: url(fonts/BioRhyme-Regular.ttf);
 }
 
 .accountant h3{
@@ -345,9 +358,10 @@ input[type=submit]:active{
 .accountant p{
   color: #E2EAFF;
   font-family: openSans;
-  font-size: 90%;
+  font-size: 100%;
   line-height: 145%;
   display: inline-block;
+  margin-left: 10px;
 }
 /*-------------------------------------------------------------------------*/
 /*bartender*/
@@ -442,25 +456,25 @@ input[type=submit]:active{
 }
 
 @font-face {
-  font-family: meriendaOne;
-  src: url(fonts/MeriendaOne-Regular.ttf);
+  font-family: yesevaOne;
+  src: url(fonts/YesevaOne-Regular.ttf);
 }
 
 .traveler h2 {
   text-align: center;
   font-size: 220%;
-  font-family: meriendaOne;
+  font-family: yesevaOne;
   color: #2B0A00;
 }
 
 @font-face {
-  font-family: quicksand;
-  src: url(fonts/Quicksand-Bold.ttf);
+  font-family: merriweatherSans;
+  src: url(fonts/MerriweatherSans-Regular.ttf);
 }
 
 .traveler .travel-quote {
   padding-top: 30px;
-  font-family: quicksand, sans-serif;
+  font-family: merriweatherSans, sans-serif;
   color: #FFFFFF;
   font-size: 160%;
 }
@@ -472,7 +486,7 @@ input[type=submit]:active{
 
 .traveler .personal-quote {
   padding-top: 15%;
-  font-family: quicksand, sans-serif;
+  font-family: merriweatherSans, sans-serif;
   color: #FFFFFF;
   font-size: 160%;
 }
@@ -482,14 +496,14 @@ input[type=submit]:active{
 }
 
 @font-face {
-  font-family: rokkitt;
-  src: url(fonts/Rokkitt-Bold.ttf);
+  font-family: merriweather;
+  src: url(fonts/Merriweather-Regular.ttf);
 }
 
 .traveler h3 {
   margin: 10px 0;
   font-size: 180%;
-  font-family: rokkitt;
+  font-family: merriweather;
   color: #240011;
 }
 
@@ -533,7 +547,6 @@ input[type=submit]:active{
 }
 
 .projects h3{
-  display:inline-block;
   font-size: 110%;
 }
 
@@ -548,7 +561,22 @@ input[type=submit]:active{
 }
 
 .projects .project-facts{
+  margin-left: 78px;
   height:50vh;
+}
+
+.project-facts p {
+  margin:0;
+}
+
+.project-facts p,
+.project-facts h3.coffee{
+  display:inline-block;
+}
+
+
+.project-facts h3{
+  margin-top:10px;
 }
 
 /*-------------------------------------------------------------------------*/
