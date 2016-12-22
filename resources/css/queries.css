@@ -190,6 +190,140 @@
 
 /*small phones to small tablets from 481px to 767px */
 @media only screen and (max-width: 767px) {
+  .row {
+    width: 470px;
+  }
+  .bt-menu-trigger {
+    left: 13px;
+    width: 40px;
+    height: 35px;
+  }
+  .text-box h1 {
+    font-size: 130%;
+  }
+  .btn:link, .btn:visited, input[type="submit"] {
+    padding: 6px 20px;
+  }
+  .text-box {
+    margin-top: 55%;
+  }
+  .web-developer .image h2 {
+    font-size: 150%;
+    padding-top: 20px;
+  }
+  .web-developer .span-1-of-2 {
+    width: 98%;
+  }
+  .web-developer .text .long-text p {
+    font-size: 87%;
+    margin-top: 15px;
+  }
+  #pagepiling #pp-nav.right {
+    right: 0px;
+  }
+  .web-developer .skills{
+    text-align: center;
+  }
+  .web-developer .skills h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 85%;
+  }
+  .makers-accademy-img {
+    width: 80%;
+    margin-top: 10px;
+  }
+  .makers-accademy {
+    margin-top: 5px;
+    margin-left: -9px;
+  }
+  .web-developer .skills h2, .web-developer .certificates h2 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .web-developer .certificates {
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 0;
+  }
+  .certificates .img-list-small {
+    width: 89px;
+    height: 70px;
+  }
+  .accountant .title {
+    margin: 20px auto 0px auto;
+  }
+  .accountant .brief-introduction {
+    width: 100%;
+    margin: 10px auto 0px auto;
+  }
+  .accountant p {
+    font-size: 95%;
+  }
+  .accountant .text {
+    padding: 4px 19px 0 2px;
+  }
+  .bartender h2 {
+    font-size: 200%;
+  }
+  .bartender .quote {
+    font-size: 120%;
+  }
+  .traveler h2 {
+    font-size: 200%;
+  }
+  .traveler .travel-quote {
+    font-size: 100%;
+  }
+  .traveler .personal-quote {
+    font-size: 100%;
+  }
+  .traveler .content {
+    height: 55vh;
+  }
+  .traveler h3 {
+    font-size: 140%;
+  }
+  .traveler .footer .flags {
+    margin-left: 15%;
+  }
+  .projects .photo {
+    height: 25vh;
+  }
+  .projects .project-facts {
+    margin-left: 0px;
+  }
+  .projects h3 {
+    font-size: 80%;
+  }
+  .projects .project-description {
+    position: absolute;
+    margin-left: -50%;
+    margin-top: 75%;
+    width: 50%;
+  }
+  .nav-dots {
+    right: 0px;
+  }
+  .project-name h1 {
+    font-size: 130%;
+    margin: 5px 0;
+  }
+  .projects h2 {
+    padding-top: 5px;
+    font-size: 90%;
+  }
+  .aspirations blockquote {
+    font-size: 90%;
+    margin-top: 10%;
+  }
+  .aspirations blockquote::before {
+    font-size: 200%;
+  }
+
+  .why-front-end .span-1-of-3 {
+    width: 97%;
+  }
 }
 
 /*small phones from 0 to 480*/
