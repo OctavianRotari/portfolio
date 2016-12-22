@@ -16,16 +16,19 @@ $(document).ready(function() {
       'position': 'right',
       'tooltips': ['A developer', 'An accountant', 'A bartender', 'A traveler']
     },
+    afterLoad: function(anchorLink, index){
+      if(index === 3){
+        $('.personal>.invented-cocktail').addClass('animated shake');
+      }
+    },
     normalScrollElements: null,
     normalScrollElementTouchThreshold: 5,
     touchSensitivity: 5,
     keyboardScrolling: true,
     sectionSelector: '.horizontal',
     animateAnchor: false,
-
     //events
     onLeave: function(index, nextIndex, direction){},
-    afterLoad: function(anchorLink, index){},
     afterRender: function(){},
   });
 

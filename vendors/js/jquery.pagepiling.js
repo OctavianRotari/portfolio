@@ -468,17 +468,6 @@
               if(options.keyboardScrolling && !isMoving() && $('#who-am-i').visible()){
                 //Moving the main page with the keyboard arrows if keyboard scrolling is enabled
                 switch (e.which) {
-                    //up
-                  case 38:
-                  case 33:
-                    PP.moveSectionUp();
-                    break;
-
-                    //down
-                  case 40:
-                  case 34:
-                    PP.moveSectionDown();
-                    break;
 
                     //Home
                   case 36:

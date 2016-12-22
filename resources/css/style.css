@@ -21,6 +21,11 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+a:focus{
+  border: none;
+  outline: none;
+}
+
 h1,
 h2{
   padding-top: 15px;
@@ -261,6 +266,7 @@ input[type=submit]:active{
 .img-list-small {
   width: 84px;
   height: 84px;
+  visibility: hidden;
 }
 
 .makers-accademy {
@@ -309,7 +315,7 @@ input[type=submit]:active{
 }
 
 .accountant .title {
-  margin: 27px 0 0 5px;
+  margin: 27px 0 0 10px;
   background-color: #CF000F;
   width: 400px;
   display: inline-block;
@@ -329,10 +335,10 @@ input[type=submit]:active{
 }
 
 .accountant .text {
-  margin-top: 8%;
+  margin-top: 5%;
   padding: 20px 20px;
   background: rgba(0, 0, 0, 0.25);
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .accountant .long-text {
@@ -492,6 +498,7 @@ input[type=submit]:active{
 }
 
 .traveler .footer {
+  text-align:center;
   height: 30vh;
 }
 
@@ -507,14 +514,13 @@ input[type=submit]:active{
   color: #240011;
 }
 
-.countries-visited {
-  text-align: right;
-  padding-top: 3%;
-}
-
 .traveler h3 span{
   color: #FFFFFF;
   font-size: 160%;
+}
+
+.traveler .footer .flags{
+  margin-left: 5%;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -651,7 +657,6 @@ input[type=submit]:active{
 }
 
 .aspirations .why-front-end{
-  width: 1140px;
   margin: 0 auto;
   text-align: justify;
 }
@@ -660,9 +665,10 @@ input[type=submit]:active{
   font-family: faunaOne;
   src: url(fonts/FaunaOne-Regular.ttf);
 }
+
 .aspirations p{
   margin-top:20px;
-  font: faunaOne, Georgia, serif;
+  font-family: faunaOne, Georgia, serif;
 }
 
 /*-------------------------------------------------------------------------*/

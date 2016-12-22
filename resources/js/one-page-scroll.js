@@ -12,6 +12,12 @@ $(document).ready(function(){
     responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
     // the browser's width is less than 600, the fallback will kick in.
-    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+    direction: "vertical",            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+    afterMove: function(index) {
+      if(index === 2){
+        $('.skills>.img-list-small').addClass('animated flipInX');
+        $('.certificates .img-list-small').addClass('animated pulse');
+      }
+    }
   });
 });
