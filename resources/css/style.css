@@ -167,6 +167,17 @@ input[type=submit]:active{
   color: #fff;
 }
 
+.img-list-small {
+  width: 84px;
+  height: 84px;
+  visibility: hidden;
+}
+
+.icons-coffee{
+  display: inline-block;
+  margin-left: 5px;
+}
+
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
@@ -178,22 +189,38 @@ input[type=submit]:active{
 }
 
 .text-box {
-  margin-top: 20%;
-  margin-left: 1%;
-}
+  margin-top: 13%;
+  font-weight: 400;
+} 
 
 @font-face {
   font-family: philosopher;
-  src: url(fonts/Philosopher-Regular.ttf);
+  src: url(fonts/Philosopher-Bold.ttf);
 }
 
-.text-box h1{
-  height:84px;
-  margin-bottom:6%;
-  text-transform:none;
+.text-box .auto-type h1{
   font-family: philosopher, serif;
-  font-weight: 400;
+  text-transform:none;
+  height:84px;
+  margin-bottom:3%;
   font-size: 190%;
+  color: #ecf0f1;
+}
+
+@font-face {
+  font-family: openSans;
+  src: url(fonts/OpenSans-Light.ttf);
+}
+
+.text-box .brief-introduction{
+  width: 70%;
+}
+
+.text-box .brief-introduction h2{
+  font-family: openSans, serif;
+  text-transform:none;
+  margin-bottom:3%;
+  font-size: 150%;
   color: #ecf0f1;
 }
 
@@ -216,6 +243,8 @@ input[type=submit]:active{
 .web-developer {
   height: 100vh;
   background-color: #fff;
+  font-family: openSans, serif;
+  line-height:120%;
 }
 
 .web-developer .image {
@@ -236,20 +265,18 @@ input[type=submit]:active{
   font-size: 220%;
 }
 
-.web-developer .text .long-text {
+.web-developer .long-text {
   padding-top: 10px;
   position:center;
   color: #fff;
 }
 
-.web-developer .text .long-text p{
+.web-developer .long-text p{
   font-size:100%;
-  font-family: 'Yrsa', serif;
-  font-weight: 300;
   color: #ecf0f1;
 }
 
-.web-developer .text .long-text p img{
+.web-developer .long-text p img{
   height: 1.5em;
 }
 
@@ -259,41 +286,12 @@ input[type=submit]:active{
   margin-bottom: 3%;
 }
 
-.web-developer .skills h2{
-  margin-top: 15%;
-}
-
-.img-list-small {
-  width: 84px;
-  height: 84px;
-  visibility: hidden;
-}
-
-.makers-accademy {
-  margin-top: 12%;
-  text-align: center;
+.web-developer .makers-accademy p{
+  margin: 10px auto;
 }
 
 .makers-accademy-img {
-  width: 70%;
-  margin-bottom: 3%;
-}
-
-.makers-accademy ul {
-  text-align: left;
-  margin-left: 20%;
-  text-align: left;
-  font-size:100%;
-  font-family: 'Yrsa', serif;
-  font-weight: 300;
-}
-
-.web-developer .certificates {
-  margin-left: 17%;
-}
-
-.web-developer .certificates h2 {
-  margin-top: 13%;
+  width: 35%;
 }
 
 .certificates .img-list-small{
@@ -304,9 +302,16 @@ input[type=submit]:active{
 /*accountant*/
 
 .accountant {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/accounting.jpg);
+  height: 100%;
+  background-color: #fff;
+}
+
+.accountant .image {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/accounting.jpg) center center;
   background-size: cover;
-  height: 100vh;
+  background-repeat: no-repeat;
+  height:30%;
+  text-align: center;
 }
 
 @font-face {
@@ -314,23 +319,16 @@ input[type=submit]:active{
   src: url(fonts/Chonburi-Regular.ttf);
 }
 
-.accountant .title {
-  margin: 27px 0 0 10px;
-  width: 400px;
-  display: inline-block;
+.accountant .image h2 {
+  font-weight: 700;
+  font-size: 220%;
+  font-family: chonburi;
+  color: #27ae60;
 }
 
 .accountant .brief-introduction{
   display: inline-block;
-}
-
-.accountant h2 {
-  background-color: #CF000F;
-  padding-top: 0px;
-  text-align: center;
-  font-family: chonburi;
-  font-weight: 400;
-  font-size: 220%;
+  width: 680px;
   color: #fff;
 }
 
@@ -345,10 +343,6 @@ input[type=submit]:active{
   padding-bottom: 15px;
 }
 
-.accountant i {
-  color: #fff;
-}
-
 @font-face {
   font-family: bioRhyme;
   src: url(fonts/BioRhyme-Regular.ttf);
@@ -357,12 +351,15 @@ input[type=submit]:active{
 .accountant h3{
   font-family: openSans;
   margin-top: 15px;
+  color: #27ae60;
+}
+
+.accountant .icons-coffe {
+  margin-left: 10px;
   display: inline-block;
-  color: #0B8C6F;
 }
 
 .accountant p{
-  color: #E2EAFF;
   font-family: openSans;
   font-size: 100%;
   line-height: 145%;
@@ -373,9 +370,28 @@ input[type=submit]:active{
 /*bartender*/
 
 .bartender {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/cocktail.jpg);
+  height: 100%;
+  background-color: #fff;
+}
+
+.bartender .image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/cocktail.jpg) center center;
   background-size: cover;
-  height: 100vh;
+  background-repeat: no-repeat;
+  height:30%;
+  text-align: center;
+}
+
+@font-face {
+  font-family: lobsterRegular;
+  src: url(fonts/Lobster-Regular.ttf);
+}
+
+.bartender .image h2 {
+  font-weight: 700;
+  font-size: 220%;
+  font-family: lobsterRegular;
+  color: #ecf0f1;
 }
 
 @font-face {
@@ -384,24 +400,9 @@ input[type=submit]:active{
 }
 
 .bartender .quote {
-  padding: 50px 0;
-  text-align: center;
   font-family: gravitasOne;
   font-size: 180%;
   color: #e67e22;
-}
-
-
-@font-face {
-  font-family: lobsterRegular;
-  src: url(fonts/Lobster-Regular.ttf);
-}
-
-.bartender h2 {
-  text-align: center;
-  font-size: 220%;
-  font-family: lobsterRegular;
-  color: #9A0012;
 }
 
 .bartender .info h3 {
@@ -415,13 +416,11 @@ input[type=submit]:active{
 
 .bartender .info p {
   margin: 10px 0;
-  color: #fff;
 }
 .bartender .personal{
   font-family: gravitasOne;
   position: relative;
   text-align:center;
-  color: #fff;
 }
 
 .bartender .personal h3{
@@ -435,30 +434,25 @@ input[type=submit]:active{
   font-family: openSans;
 }
 
-.bartender .invented-cocktail{
-  float: left;
-}
-
 .bartender .invented-cocktail i{
   padding-top: 30px;
   font-size: 350%;
-}
-
-.bartender .favorite-coctail{
-  float: right;
 }
 
 /*-------------------------------------------------------------------------*/
 /*traveler*/
 
 .traveler {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/travel.jpg);
-  background-size: cover;
-  height: 100vh;
+  height: 100%;
+  background-color: #fff;
 }
 
-.traveler .content {
-  height: 70vh;
+.traveler .image {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/travel.jpg) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:30%;
+  text-align: center;
 }
 
 @font-face {
@@ -466,11 +460,11 @@ input[type=submit]:active{
   src: url(fonts/YesevaOne-Regular.ttf);
 }
 
-.traveler h2 {
-  text-align: center;
+.traveler .image h2 {
+  font-weight: 700;
   font-size: 220%;
   font-family: yesevaOne;
-  color: #2B0A00;
+  color: #34495e;
 }
 
 @font-face {
@@ -479,7 +473,7 @@ input[type=submit]:active{
 }
 
 .traveler .travel-quote {
-  padding-top: 30px;
+  padding-top: 15px;
   font-family: merriweatherSans, sans-serif;
   color: #FFFFFF;
   font-size: 160%;
@@ -488,18 +482,7 @@ input[type=submit]:active{
 .traveler .travel-quote span{
   display: block;
   text-align: right;
-}
-
-.traveler .personal-quote {
-  padding-top: 15%;
-  font-family: merriweatherSans, sans-serif;
-  color: #FFFFFF;
-  font-size: 160%;
-}
-
-.traveler .footer {
-  text-align:center;
-  height: 30vh;
+  margin: 30px 70px;
 }
 
 @font-face {
@@ -515,12 +498,23 @@ input[type=submit]:active{
 }
 
 .traveler h3 span{
-  color: #FFFFFF;
   font-size: 160%;
+} 
+
+.traveler .languages-countries{
+  text-align: center;
+  margin-top: 2%;
 }
 
-.traveler .footer .flags{
-  margin-left: 5%;
+
+.traveler .footer {
+  text-align:center;
+}
+
+.traveler .personal-quote {
+  margin-top: 5%;
+  font-family: merriweatherSans, sans-serif;
+  font-size: 160%;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -572,15 +566,15 @@ input[type=submit]:active{
   height:50vh;
 }
 
-.project-facts p {
+.projects .coffee h3{
+  display: inline-block;
+}
+
+
+.projects .coffee p{
+  display: inline-block;
   margin:0;
 }
-
-.project-facts p,
-.project-facts h3.coffee{
-  display:inline-block;
-}
-
 
 .project-facts h3{
   margin-top:10px;
