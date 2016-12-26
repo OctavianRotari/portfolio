@@ -1,197 +1,109 @@
-/*small tablets to 1200px */
-@media only screen and (max-width: 1200px) {
-  .row {
-    width: 885px;
-  }
-  .text-box {
-    margin-top: 25%;
-    margin-left: 0%;
-  }
-  .img-list-small {
-    width: 65px;
-    height: 65px;
-  }
+/* ----------- iPhone 4 and 4S ----------- */
 
-  .web-developer .skills h2, .web-developer .certificates h2 {
-    font-size: 93%;
-  }
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
-  .makers-accademy {
-    margin-top: 15%;
-  }
-
-  .makers-accademy-img {
-    width: 70%;
-    margin-bottom: 1%;
-  }
-
-  .web-developer .certificates h2 {
-    margin-top: 10%;
-  }
-
-  .accountant .brief-introduction {
-    width: 471px;
-  }
-
-  .traveler .travel-quote {
-    font-size: 125%;
-  }
-
-  .traveler .personal-quote {
-    font-size: 125%;
-  }
-
-  .percircle {
-    font-size: 90px;
-  }
-
-  .pie, .percircle .bar, .gt50 .fill {
-    border: 7px solid #FFFFFF;
-  }
-
-  .traveler h3 {
-    font-size: 170%;
-  }
-
-  .projects .photo {
-    height: 40vh;
-  }
-
-  .project-name h1{
-    padding-top: 0px;
-    font-size: 150%;
-  }
-
-  .projects h2 {
-    padding-top: 0px;
-    font-size: 110%;
-  }
-
-  .projects p {
-    margin: 15px;
-  }
-
-  .aspirations blockquote::before {
-    font-size: 300%;
-  }
-
-  .aspirations blockquote {
-    font-size: 170%;
-    padding: 1%;
-    line-height: 115%;
-    margin-top: 5%;
-  }
-
-  .aspirations p{
-    font-size: 16px;
-  }
-  .btn-icon i::before {
-    margin-top: 75%;
-    font-size: 170%;
-  }
-
-  .menu .btn.trigger:hover {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
 }
 
-/*small tablet to big tablet from 768px to 1023px*/
-@media only screen and (max-width: 1023px){
-  .row {
-    width: 730px;
-  }
-
-  .text-box h1 {
-    font-size: 160%;
-  }
-
-  .web-developer .image h2 {
-    font-weight: 700;
-    font-size: 180%;
-    padding-top: 27px;
-  }
-
-  .web-developer .text .long-text p {
-    font-size: 95%;
-  }
-
-  .web-developer .text .long-text p img {
-    height: 20px;
-  }
-
-  .img-list-small {
-    width: 55px;
-    height: 55px;
-  }
-
-  .makers-accademy ul {
-    font-size: 83%;
-  }
-
-  .web-developer .skills h2, .web-developer .certificates h2 {
-    font-size: 78%;
-  }
-
-  .accountant .title {
-    margin: 28px auto 0px auto;
-    width: 270px;
-  }
-
-  .accountant h2 {
-    font-size: 160%;
-  }
-
-  .accountant .title {
-    display: block;
-  }
-
-  .accountant .brief-introduction {
-    width: 650px;
-    margin: 15px 0 0 55px;
-  }
-
-  .bartender .quote {
-    font-size: 140%;
-  }
-
-  .percircle {
-    font-size: 75px;
-  }
-
-  .pie, .percircle .bar, .gt50 .fill {
-    border: 6px solid #FFFFFF;
-  }
-
-  .projects .photo {
-    height: 35vh;
-  }
-
-  .projects p {
-    margin: 5px 25px 0 0;
-  }
-  .aspirations blockquote::before {
-    font-size: 280%;
-  }
-
-  .aspirations blockquote {
-    font-size: 145%;
-    margin-top: 15%;
-  }
-  .aspirations p {
-    font-size: 15px;
-  }
-
-  .btn-icon i::before {
-    margin-top: 82%;
-    font-size: 160%;
-  }
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
 }
 
-/*small phones to small tablets from 481px to 767px */
-@media only screen and (max-width: 767px) {
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
 }
 
-/*small phones from 0 to 480*/
-@media only screen and (max-width: 480px) {
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
 }

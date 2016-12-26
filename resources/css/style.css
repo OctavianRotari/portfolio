@@ -28,7 +28,6 @@ a:focus{
 
 h1,
 h2{
-  padding-top: 15px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -212,11 +211,11 @@ input[type=submit]:active{
   src: url(fonts/OpenSans-Light.ttf);
 }
 
-.text-box .brief-introduction{
+.text-box .brief-introduction-header{
   width: 70%;
 }
 
-.text-box .brief-introduction h2{
+.text-box .brief-introduction-header h2{
   font-family: openSans, serif;
   text-transform:none;
   margin-bottom:3%;
@@ -229,7 +228,25 @@ input[type=submit]:active{
 /*WHO AM I*/
 /*-------------------------------------------------------------------------*/
 
-.section-who-am-i {
+.section-who-am-i .brief-introduction {
+  margin:15px auto;
+  font-size:115%;
+  color: #ecf0f1;
+  width: 680px;
+}
+
+.section-who-am-i .long-text {
+  font-size:100%;
+}
+.section-who-am-i .section-title {
+  margin-top: 2.5%;
+}
+
+.section-who-am-i .long-text p{
+  font-family: openSans;
+  font-size: 100%;
+  line-height: 145%;
+  margin-bottom: 15px;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -258,25 +275,14 @@ input[type=submit]:active{
 .web-developer h2 {
   font-family: robotoCondensed, sans-serif;
   color: #19B5FE;
+  font-weight:700;
 }
 
 .web-developer .image h2 {
-  font-weight: 700;
   font-size: 220%;
 }
 
-.web-developer .long-text {
-  padding-top: 10px;
-  position:center;
-  color: #fff;
-}
-
-.web-developer .long-text p{
-  font-size:100%;
-  color: #ecf0f1;
-}
-
-.web-developer .long-text p img{
+.web-developer .brief-introduction p img{
   height: 1.5em;
 }
 
@@ -287,7 +293,7 @@ input[type=submit]:active{
 }
 
 .web-developer .makers-accademy p{
-  margin: 10px auto;
+  margin-bottom: 15px;
 }
 
 .makers-accademy-img {
@@ -304,6 +310,8 @@ input[type=submit]:active{
 .accountant {
   height: 100%;
   background-color: #fff;
+  font-family: openSans, serif;
+  line-height:120%;
 }
 
 .accountant .image {
@@ -326,28 +334,6 @@ input[type=submit]:active{
   color: #27ae60;
 }
 
-.accountant .brief-introduction{
-  display: inline-block;
-  width: 680px;
-  color: #fff;
-}
-
-.accountant .text {
-  margin-top: 5%;
-  padding: 20px 20px;
-  background: rgba(0, 0, 0, 0.25);
-  margin-left: 10px;
-}
-
-.accountant .long-text {
-  padding-bottom: 15px;
-}
-
-@font-face {
-  font-family: bioRhyme;
-  src: url(fonts/BioRhyme-Regular.ttf);
-}
-
 .accountant h3{
   font-family: openSans;
   margin-top: 15px;
@@ -359,13 +345,6 @@ input[type=submit]:active{
   display: inline-block;
 }
 
-.accountant p{
-  font-family: openSans;
-  font-size: 100%;
-  line-height: 145%;
-  display: inline-block;
-  margin-left: 10px;
-}
 /*-------------------------------------------------------------------------*/
 /*bartender*/
 
@@ -397,12 +376,6 @@ input[type=submit]:active{
 @font-face {
   font-family: gravitasOne;
   src: url(fonts/GravitasOne.ttf);
-}
-
-.bartender .quote {
-  font-family: gravitasOne;
-  font-size: 180%;
-  color: #e67e22;
 }
 
 .bartender .info h3 {
