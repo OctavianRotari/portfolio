@@ -15,7 +15,8 @@ $(document).ready(function(){
     direction: "vertical",            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
     afterMove: function(index) {
       if(index === 2){
-        $('.skills>.img-list-small').addClass('animated flipInX');
+        $('.skills>.languages>.img-list-small').addClass('animated flipInX');
+        $('.skills>.frameworks>.img-list-small').addClass('animated flipInX');
         $('.certificates .img-list-small').addClass('animated pulse');
       }
     }

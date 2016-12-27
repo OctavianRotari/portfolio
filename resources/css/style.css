@@ -177,6 +177,31 @@ input[type=submit]:active{
   margin-left: 5px;
 }
 
+section .horizontal .section-title{
+  transform: rotate(45deg);
+  margin-top: 10%;
+  margin-right: -30%;
+  text-align: center;
+}
+
+section .horizontal .image{
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+  float: right;
+  shape-outside: polygon(100% 100%, 0% 0%, 100% 0%);
+}
+
+section .horizontal .image h2 {
+  line-height: 150%;
+  font-size: 220%;
+}
+
+section .horizontal .long-text{
+  padding: 70px 50px 10px 80px;
+}
+
+
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
@@ -238,9 +263,6 @@ input[type=submit]:active{
 .section-who-am-i .long-text {
   font-size:100%;
 }
-.section-who-am-i .section-title {
-  margin-top: 2.5%;
-}
 
 .section-who-am-i .long-text p{
   font-family: openSans;
@@ -251,7 +273,6 @@ input[type=submit]:active{
 
 /*-------------------------------------------------------------------------*/
 /*web developer*/
-
 @font-face {
   font-family: robotocondensed:;
   src: url(fonts/robotocondensed-bold.ttf);
@@ -265,20 +286,29 @@ input[type=submit]:active{
 }
 
 .web-developer .image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/code-min.jpg);
+  background: url(img/code-triangle.png) center;
   background-size: cover;
-  background-repeat: no-repeat;
-  height:30%;
-  text-align: center;
+  height: 300px;
+  width: 300px;
+  float: right;
+}
+
+.web-developer .section-title{
+  margin-top:-7% !important;
+  margin-right: -50% !important;
+}
+
+.web-developer .section-title .image h2 {
+  line-height: normal !important;
 }
 
 .web-developer h2 {
   font-family: robotoCondensed, sans-serif;
   color: #19B5FE;
-  font-weight:700;
 }
 
 .web-developer .image h2 {
+  line-height: normal;
   font-size: 220%;
 }
 
@@ -290,6 +320,21 @@ input[type=submit]:active{
 .web-developer .certificates h2 {
   font-size: 100%;
   margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.web-developer .skills {
+  text-align:center;
+  margin: 10px auto;
+}
+
+.web-developer .skills .languages,
+.web-developer  .skills .frameworks{
+  display: inline-block;
+}
+
+.web-developer .skills .languages:first-child{
+  padding-right:30px;
 }
 
 .web-developer .makers-accademy p{
@@ -301,8 +346,8 @@ input[type=submit]:active{
 }
 
 .certificates .img-list-small{
-  width: 25%;
-  height: none;
+  width: 150px;
+  height: 100px;
 }
 /*-------------------------------------------------------------------------*/
 /*accountant*/
@@ -315,11 +360,7 @@ input[type=submit]:active{
 }
 
 .accountant .image {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/accounting.jpg) center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height:30%;
-  text-align: center;
+  background-image: url(img/accounting-triangle.png);
 }
 
 @font-face {
@@ -328,8 +369,6 @@ input[type=submit]:active{
 }
 
 .accountant .image h2 {
-  font-weight: 700;
-  font-size: 220%;
   font-family: chonburi;
   color: #27ae60;
 }
@@ -354,11 +393,7 @@ input[type=submit]:active{
 }
 
 .bartender .image {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/cocktail.jpg) center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height:30%;
-  text-align: center;
+  background-image: url(img/cocktail-triangle.png);
 }
 
 @font-face {
@@ -368,7 +403,6 @@ input[type=submit]:active{
 
 .bartender .image h2 {
   font-weight: 700;
-  font-size: 220%;
   font-family: lobsterRegular;
   color: #ecf0f1;
 }
@@ -421,11 +455,7 @@ input[type=submit]:active{
 }
 
 .traveler .image {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/travel.jpg) center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height:30%;
-  text-align: center;
+  background-image:url(img/travel-triangle.png);
 }
 
 @font-face {
@@ -435,7 +465,6 @@ input[type=submit]:active{
 
 .traveler .image h2 {
   font-weight: 700;
-  font-size: 220%;
   font-family: yesevaOne;
   color: #34495e;
 }
