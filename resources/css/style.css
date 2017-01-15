@@ -21,6 +21,10 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+section{
+  background-color:#161525;
+}
+
 a:focus{
   border: none;
   outline: none;
@@ -89,6 +93,10 @@ h2{
 /*-------------------------------------------------------------------------*/
 /*REUSABLE CONTENTS*/
 /*-------------------------------------------------------------------------*/
+
+.hidden{
+  display:none;
+}
 
 .row {
   margin: 0 auto;
@@ -214,7 +222,6 @@ input[type=submit]:active{
 .img-list-small {
   width: 84px;
   height: 84px;
-  visibility: hidden;
 }
 
 .icons-coffee{
@@ -246,18 +253,18 @@ section .horizontal .long-text{
   padding: 70px 50px 10px 80px;
 }
 
+.icons-who-am-i{
+  font-size: 350%;
+  margin-bottom: 2%;
+}
+
 
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
 
-.section-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/desk-mac.jpeg);
-  background-size: cover;
-  height:100vh;
-}
-
 .text-box {
+  position:absolute;
   margin-top: 13%;
   font-weight: 400;
 }
@@ -287,7 +294,9 @@ section .horizontal .long-text{
 /*-------------------------------------------------------------------------*/
 /*WHO AM I*/
 /*-------------------------------------------------------------------------*/
+
 .section-who-am-i .summary-who-am-i{
+  text-align:center;
   background-color:#161525;
   height:100%;
   width:100%;
@@ -295,10 +304,19 @@ section .horizontal .long-text{
   z-index:9;
 }
 
+section canvas{
+  position: absolute;
+}
+
+.section-who-am-i .summary-who-am-i #intro{
+  height:100%;
+  width:100%;
+  position: absolute;
+}
+
 .summary-who-am-i .title{
   line-height: 150%;
   font-size: 140%;
-  text-align:center;
   margin-top:8%;
 }
 
@@ -309,7 +327,7 @@ section .horizontal .long-text{
 
 .summary-who-am-i .menu-bartender .title,
 .summary-who-am-i .menu-traveler .title{
-  margin-top:0;
+  margin-top:2%;
 }
 
 .summary-who-am-i a{
@@ -317,8 +335,7 @@ section .horizontal .long-text{
 }
 
 .summary-who-am-i .icons-who-am-i{
-  font-size: 350%;
-  margin-bottom: 2%;
+  visibility: hidden;
 }
 
 .summary-who-am-i .menu-web-developer .icons-who-am-i{
@@ -327,7 +344,7 @@ section .horizontal .long-text{
 
 .section-who-am-i .brief-introduction {
   margin:20px 40px;
-  font-size:115%;
+  font-size:104%;
   color: #ecf0f1;
   line-height: 145%;
   list-style:none;
@@ -355,11 +372,11 @@ section .horizontal .long-text{
 .summary-who-am-i .menu-traveler h2{
   font-weight: 700;
   font-family: yesevaOne;
-  color: #34495e;
+  color: #f8e8b5;
 }
 
 .summary-who-am-i .menu-traveler .icons-who-am-i{
-  color: #34495e;
+  color: #f8e8b5;
 }
 
 .summary-who-am-i .menu-web-developer h2{
@@ -380,38 +397,17 @@ section .horizontal .long-text{
 
 /*-------------------------------------------------------------------------*/
 /*web developer*/
-.web-developer {
-  height: 100vh;
-  background-color:#161525;
+.horizontal .web-developer {
+  height: 100%;
   font-family: openSans, serif;
   line-height:120%;
 }
 
-.web-developer .image {
-  background: url(img/code-triangle.png) center;
-  background-size: cover;
-  height: 300px;
-  width: 300px;
-  float: right;
-}
-
-.web-developer .section-title{
-  margin-top:-7% !important;
-  margin-right: -50% !important;
-}
-
-.web-developer .section-title .image h2 {
-  line-height: normal !important;
-}
-
-.web-developer h2 {
-  font-family: robotoCondensed, sans-serif;
+.web-developer .icons-who-am-i{
   color: #19B5FE;
-}
-
-.web-developer .image h2 {
-  line-height: normal;
-  font-size: 220%;
+  float: right;
+  margin-right: 20px;
+  font-size: 700%;
 }
 
 .web-developer .skills h2,
@@ -450,20 +446,17 @@ section .horizontal .long-text{
 /*-------------------------------------------------------------------------*/
 /*accountant*/
 
-.accountant {
+.horizontal .accountant {
   height: 100%;
-  background-color:#161525;
   font-family: openSans, serif;
   line-height:120%;
 }
 
-.accountant .image {
-  background-image: url(img/accounting-triangle.png);
-}
-
-.accountant .image h2 {
-  font-family: chonburi;
+.accountant .icons-who-am-i{
   color: #27ae60;
+  float: right;
+  margin-right: 20px;
+  font-size: 700%;
 }
 
 .accountant h3{
@@ -480,19 +473,15 @@ section .horizontal .long-text{
 /*-------------------------------------------------------------------------*/
 /*bartender*/
 
-.bartender {
+.horizontal .bartender {
   height: 100%;
-  background-color:#161525;
 }
 
-.bartender .image {
-  background-image: url(img/cocktail-triangle.png);
-}
-
-.bartender .image h2 {
-  font-weight: 700;
-  font-family: lobsterRegular;
-  color: #ecf0f1;
+.bartender .icons-who-am-i{
+  color: #c0392b;
+  float: right;
+  margin-right: 20px;
+  font-size: 700%;
 }
 
 .bartender .info h3 {
@@ -532,19 +521,15 @@ section .horizontal .long-text{
 /*-------------------------------------------------------------------------*/
 /*traveler*/
 
-.traveler {
+.horizontal .traveler {
   height: 100%;
-  background-color:#161525;
 }
 
-.traveler .image {
-  background-image:url(img/travel-triangle.png);
-}
-
-.traveler .image h2 {
-  font-weight: 700;
-  font-family: yesevaOne;
-  color: #34495e;
+.traveler .icons-who-am-i{
+  color: #f8e8b5;
+  float: right;
+  margin-right: 20px;
+  font-size: 700%;
 }
 
 .traveler .travel-quote {
@@ -575,7 +560,6 @@ section .horizontal .long-text{
   text-align: center;
   margin-top: 2%;
 }
-
 
 .traveler .footer {
   text-align:center;

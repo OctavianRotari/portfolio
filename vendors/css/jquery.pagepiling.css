@@ -23,6 +23,7 @@
   transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
   /* custom */
 }
+
 #pagepiling #pp-nav {
   color: #1E8BC3;
   position: fixed;
@@ -41,12 +42,14 @@
 }
 #pagepiling .pp-section.pp-table{
   display: table;
+  background-color: #161525;
 }
 #pagepiling .pp-tableCell {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
-  height: 100%;
+  z-index: 2;
+  position: absolute;
 }
 #pagepiling .pp-slidesNav{
   position: absolute;
