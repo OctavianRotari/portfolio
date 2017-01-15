@@ -30,6 +30,7 @@
   margin-top: -32px;
   top: 150%;
   opacity: 1;
+  z-index: 8;
 }
 
 #pagepiling #pp-nav.right {

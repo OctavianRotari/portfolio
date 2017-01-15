@@ -4,7 +4,7 @@ $(document).ready(function() {
     direction: 'horizontal',
     verticalCentered: true,
     sectionsColor: [],
-    anchors: [],
+    anchors: ['accountant', 'bartender', 'traveler', 'developer'],
     scrollingSpeed: 700,
     easing: 'swing',
     loopBottom: true,
@@ -14,13 +14,9 @@ $(document).ready(function() {
       'textColor': '#000',
       'bulletsColor': '#000',
       'position': 'right',
-      'tooltips': ['A developer', 'An accountant', 'A bartender', 'A traveler']
+      'tooltips': ['An accountant', 'A bartender', 'A traveler', 'A developer']
     },
-    afterLoad: function(anchorLink, index){
-      if(index === 3){
-        $('.personal>.invented-cocktail').addClass('animated shake');
-      }
-    },
+    afterLoad: function(anchorLink, index){},
     normalScrollElements: null,
     normalScrollElementTouchThreshold: 5,
     touchSensitivity: 5,
