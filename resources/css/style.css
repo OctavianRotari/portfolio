@@ -250,7 +250,7 @@ section .horizontal .image h2 {
 }
 
 section .horizontal .long-text{
-  padding: 70px 50px 10px 80px;
+  margin-top: 35%;
 }
 
 .icons-who-am-i{
@@ -385,14 +385,15 @@ section canvas{
 }
 
 .section-who-am-i .long-text {
+  color:#fff;
   font-size:100%;
 }
 
 .section-who-am-i .long-text p{
   font-family: openSans;
-  font-size: 100%;
+  font-size: 120%;
   line-height: 145%;
-  margin-bottom: 15px;
+  margin-bottom: 10%;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -405,9 +406,10 @@ section canvas{
 
 .web-developer .icons-who-am-i{
   color: #19B5FE;
-  float: right;
   margin-right: 20px;
   font-size: 700%;
+  position:absolute;
+  right:0;
 }
 
 .web-developer .skills h2,
@@ -454,15 +456,29 @@ section canvas{
 
 .accountant .icons-who-am-i{
   color: #27ae60;
-  float: right;
   margin-right: 20px;
   font-size: 700%;
+  position:absolute;
+  right:0;
 }
 
-.accountant h3{
+.accountant .general-facts{
+  margin-top: 25%;
+  text-align: center;
+  color:#fff;
+}
+
+.accountant h2{
   font-family: openSans;
-  margin-top: 15px;
   color: #27ae60;
+}
+
+.accountant .facts{
+  line-height: 200%;
+}
+
+.accountant .facts .coffee p{
+  display: inline-block;
 }
 
 .accountant .icons-coffe {
@@ -479,12 +495,17 @@ section canvas{
 
 .bartender .icons-who-am-i{
   color: #c0392b;
-  float: right;
   margin-right: 20px;
   font-size: 700%;
+  position:absolute;
+  right:0;
 }
 
-.bartender .info h3 {
+.bartender .long-text {
+  margin-top:10% !important;
+}
+
+.bartender .info h2 {
   font-family: lobsterRegular;
 }
 
@@ -502,15 +523,25 @@ section canvas{
   text-align:center;
 }
 
-.bartender .personal h3{
-  color: #9A0012;
+.bartender .personal h2{
+  color: #c0392b;
   font-family: gravitasOne;
-  font-size: 100%;
+  font-size: 160%;
+  margin-bottom:10%;
+}
+
+
+.bartender .personal img{
+  width:30%;
 }
 
 .bartender .personal p{
   margin: 10px 0;
   font-family: openSans;
+}
+
+.bartender .general-facts{
+  margin-top: 30%;
 }
 
 .bartender .invented-cocktail i{
@@ -527,9 +558,10 @@ section canvas{
 
 .traveler .icons-who-am-i{
   color: #f8e8b5;
-  float: right;
   margin-right: 20px;
   font-size: 700%;
+  position:absolute;
+  right:0;
 }
 
 .traveler .travel-quote {
@@ -545,15 +577,27 @@ section canvas{
   margin: 30px 70px;
 }
 
-.traveler h3 {
-  margin: 10px 0;
+.traveler h2 {
+  margin: 10% 0;
   font-size: 180%;
   font-family: merriweather;
-  color: #240011;
+  color: #f8e8b5;
 }
 
-.traveler h3 span{
+.traveler h2 span{
   font-size: 160%;
+  color: #fff;
+}
+
+
+.traveler .general-facts{
+  margin-top: 30%;
+  text-align: center;
+}
+
+.traveler .general-facts .flags{
+  height: 120px;
+  margin: 0 15px;
 }
 
 .traveler .languages-countries{
