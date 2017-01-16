@@ -220,8 +220,8 @@ input[type=submit]:active{
 }
 
 .img-list-small {
-  width: 84px;
-  height: 84px;
+  width: 70px;
+  margin-right: 15px;
 }
 
 .icons-coffee{
