@@ -4,7 +4,9 @@ $(document).ready(function(){
     setTimeout(function() {
       $('.summary-who-am-i').addClass('hidden');
     }, 1500);
-    $('.horizontal').addClass('animated fadeIn');
+  })
+  $('.js--who-am-i-back').click(function(){
+    $('.summary-who-am-i').removeClass('hidden animated fadeOut');
   })
 });
 

@@ -404,6 +404,29 @@ section canvas{
   line-height:120%;
 }
 
+.horizontal .web-developer h2{
+  font-family: robotoCondensed, sans-serif;
+  font-size: 130%;
+  line-height: 125%;
+}
+
+.web-developer .long-text {
+    margin-top: 10% !important;
+}
+
+.web-developer .long-text h2{
+  font-size: 140%;
+  color: #19B5FE;
+  text-align:center;
+  margin-bottom: 20px;
+}
+
+.web-developer .long-text ul{
+  text-align:center;
+  list-style:none;
+  line-height:35px;
+}
+
 .web-developer .icons-who-am-i{
   color: #19B5FE;
   margin-right: 20px;
@@ -412,11 +435,19 @@ section canvas{
   right:0;
 }
 
+.web-developer .icons-who-am-i a{
+  cursor: pointer;
+}
+
+.web-developer .general-facts{
+    margin-top: 25%;
+}
+
 .web-developer .skills h2,
 .web-developer .certificates h2 {
-  font-size: 100%;
   margin-bottom: 3%;
   margin-top: 3%;
+  color: #19B5FE;
 }
 
 .web-developer .skills {
@@ -431,14 +462,6 @@ section canvas{
 
 .web-developer .skills .languages:first-child{
   padding-right:30px;
-}
-
-.web-developer .makers-accademy p{
-  margin-bottom: 15px;
-}
-
-.makers-accademy-img {
-  width: 35%;
 }
 
 .certificates .img-list-small{
@@ -460,6 +483,10 @@ section canvas{
   font-size: 700%;
   position:absolute;
   right:0;
+}
+
+.accountant .icons-who-am-i a{
+  cursor: pointer;
 }
 
 .accountant .general-facts{
@@ -499,6 +526,10 @@ section canvas{
   font-size: 700%;
   position:absolute;
   right:0;
+}
+
+.bartender .icons-who-am-i a{
+  cursor: pointer;
 }
 
 .bartender .long-text {
@@ -562,6 +593,10 @@ section canvas{
   font-size: 700%;
   position:absolute;
   right:0;
+}
+
+.traveler .icons-who-am-i a{
+  cursor: pointer;
 }
 
 .traveler .travel-quote {
