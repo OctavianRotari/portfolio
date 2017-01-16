@@ -7,19 +7,16 @@
 		<link rel="stylesheet" href="vendors/css/normalize.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/Grid.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/cursor-typed.css" type='text/css'>
-		<link rel="stylesheet" href="vendors/css/onepage-scroll.css" type='text/css'>
+		<link rel="stylesheet" href="vendors/css/jquery.fullPage.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/component.css" type='text/css'>
-		<link rel="stylesheet" href="vendors/css/jquery.pagepiling.css" type="text/css">
 		<link rel="stylesheet" href="resources/css/style.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/ionicons.min.css" type="text/css">
 		<link rel="stylesheet" href="resources/css/icons.css" type='text/css'>
 		<link rel="stylesheet" href="vendors/css/navigation.css" type="text/css"/>
-		<link rel="stylesheet" href="vendors/css/jquery.jscrollpane.css" type="text/css"  />
 		<link rel="stylesheet" href="vendors/css/animate.css" type="text/css"/>
 		<link rel="stylesheet" href="vendors/css/flag-icon.css" type="text/css"/>
 		<link rel="stylesheet" href="vendors/css/percircle.css" type="text/css"/>
 		<link rel="stylesheet" href="vendors/css/popup.css" type="text/css"/>
-		<link rel="stylesheet" href="resources/css/slider-projects.css" type='text/css'>
 		<link rel="stylesheet" href="resources/css/contacts.css" type='text/css'>
 		<link rel="stylesheet" href="resources/css/queries.css" type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -30,11 +27,11 @@
 		<header>
 			<nav id="bt-menu" class="bt-menu">
 				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-				<ul class="main-nav js--main-nav">
-					<li id='1'><a href="#" class="bt-icon icon-home-house-streamline">Home</a></li>
-					<li id='2'><a href="#" class="bt-icon icon-monocle-mustache-streamline">Who am I?</a></li>
-					<li id='3'><a href="#" class="bt-icon icon-photo-pictures-streamline">Projects</a></li>
-					<li id='5'><a href="#" class="bt-icon icon-speech-streamline-talk-user">Contacts</a></li>
+				<ul class="main-nav" id="menu">
+					<li data-menuanchor="#home" class="active"><a href="#home" class="bt-icon icon-home-house-streamline">Home</a></li>
+					<li data-menuanchor="#who-am-i"><a href="#who-am-i" class="bt-icon icon-monocle-mustache-streamline">Who am I?</a></li>
+					<li data-menuanchor="#projects"><a href="#projects" class="bt-icon icon-photo-pictures-streamline">Projects</a></li>
+					<li data-menuanchor="#contacts"><a href="#contacts" class="bt-icon icon-speech-streamline-talk-user">Contacts</a></li>
 					<li>
 						<a class="ion-social-github" target="_blank" href="https://github.com/OctavianRotari">GitHub</a>
 					</li>
@@ -55,8 +52,8 @@
 				</svg>
 			</div>
 		</header>
-		<div class="js--main">
-			<section class='section-header' id='home'>
+		<div id="fullpage">
+			<div class="section section-header">
 				<div class="row">
 					<div class="text-box">
 						<div class="auto-type">
@@ -73,8 +70,8 @@
 						<a class="btn btn-ghost" href="#">Need a website</a>
 					</div>
 				</div>
-			</section>
-			<section class="section-who-am-i js--who-am-i" id='who-am-i'>
+			</div>
+			<div class="section section-who-am-i js--who-am-i">
 				<div id='js--summary-who-am-i' class="summary-who-am-i" >
 					<div id="intro">
 						<div class="row">
@@ -151,217 +148,215 @@
 						</div>
 					</div>
 				</div>
-				<div id="pagepiling">
-					<div class="horizontal">
-						<div class="accountant">
-							<div class="icons-who-am-i">
-								<a class="js--who-am-i-back">
-									<i class="ion-ios-calculator-outline"></i>
-								</a>
-							</div>
-							<div class="row">
-								<div class="col span-1-of-2">
-									<div class="personal-info">
-										<div class="long-text">
-											<p>
-												My first step towards web developing was night school in accounting.
-												Throughout and upon completion of this course, it occurred to me that
-												the attraction I found to it,
-											</p>
-											<p>
-												was less in the arithmetic and more in
-												the attention to detail that had to be exercised in all the small yet crucial
-												components involved in arriving at final profit overview
-											</p>
-										</div>
+				<div class="slide">
+					<div class="accountant">
+						<div class="icons-who-am-i">
+							<a class="js--who-am-i-back">
+								<i class="ion-ios-calculator-outline"></i>
+							</a>
+						</div>
+						<div class="row">
+							<div class="col span-1-of-2">
+								<div class="personal-info">
+									<div class="long-text">
+										<p>
+											My first step towards web developing was night school in accounting.
+											Throughout and upon completion of this course, it occurred to me that
+											the attraction I found to it,
+										</p>
+										<p>
+											was less in the arithmetic and more in
+											the attention to detail that had to be exercised in all the small yet crucial
+											components involved in arriving at final profit overview
+										</p>
 									</div>
 								</div>
-								<div class="col span-1-of-2">
-									<div class="general-facts">
-										<div class="facts">
-											<h2>Work&nbsp;</h2><p> 8 hours/day in factory</p>
-											<h2>School&nbsp;</h2><p> 5 hours/day</p>
-											<div class="coffee">
-												<h2>Coffee&nbsp;</h2>
-												<div class="icons-coffee">
-													<i class='icon-coffee'></i>
-													<i class='icon-coffee'></i>
-													<i class='icon-coffee'></i>
-													<i class='icon-coffee'></i>
-													<i class='icon-coffee'></i>
-												</div>
-												<p>/day</p>
+							</div>
+							<div class="col span-1-of-2">
+								<div class="general-facts">
+									<div class="facts">
+										<h2>Work&nbsp;</h2><p> 8 hours/day in factory</p>
+										<h2>School&nbsp;</h2><p> 5 hours/day</p>
+										<div class="coffee">
+											<h2>Coffee&nbsp;</h2>
+											<div class="icons-coffee">
+												<i class='icon-coffee'></i>
+												<i class='icon-coffee'></i>
+												<i class='icon-coffee'></i>
+												<i class='icon-coffee'></i>
+												<i class='icon-coffee'></i>
 											</div>
-											<h2>Duration&nbsp;</h2><p>3 years</p>
-											<h2>Result&nbsp;</h2><p>Graduated on 06/2015 with 98/100</p>
+											<p>/day</p>
+										</div>
+										<h2>Duration&nbsp;</h2><p>3 years</p>
+										<h2>Result&nbsp;</h2><p>Graduated on 06/2015 with 98/100</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="bartender">
+						<div class="icons-who-am-i">
+							<a class="js--who-am-i-back">
+								<i class="ion-bowtie"></i>
+							</a>
+						</div>
+						<div class="row">
+							<div class="col span-1-of-2">
+								<div class="personal-info">
+									<div class="long-text">
+										<p>
+											Next was EBS bartender school which had the same appeal.
+											The combining and experimenting with ingredients and flavours,
+											resulting in a unique, enjoyable taste experience is what i strived upon.
+										</p>
+										<p>
+											Organization: while working as a bartender I had to manage my time to the minute,
+											because in my free time I was studying and working as a web developer on personal
+											projects.
+										</p>
+										<p>
+											Team work: the cocktail bar where I was working was one of the most prestigious in
+											Rome and almost erery night the place was full and I think that without collaboration
+											we will never had accomplished what we did, making it one of the best cocktail bar in Rome.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col span-1-of-2">
+								<div class="general-facts">
+									<div class="personal">
+										<div class="icons-cocktail">
+											<h2>Cocktail I have invented</h2>
+											<img src="resources/favicons/cocktail.svg" alt="">
+											<img src="resources/favicons/cocktail-1.svg" alt="">
+											<img src="resources/favicons/cocktail-2.svg" alt="">
+											<img src="resources/favicons/cocktail-3.svg" alt="">
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="horizontal">
-						<div class="bartender">
-							<div class="icons-who-am-i">
-								<a class="js--who-am-i-back">
-									<i class="ion-bowtie"></i>
-								</a>
-							</div>
-							<div class="row">
-								<div class="col span-1-of-2">
-									<div class="personal-info">
-										<div class="long-text">
-											<p>
-												Next was EBS bartender school which had the same appeal.
-												The combining and experimenting with ingredients and flavours,
-												resulting in a unique, enjoyable taste experience is what i strived upon.
-											</p>
-											<p>
-												Organization: while working as a bartender I had to manage my time to the minute,
-												because in my free time I was studying and working as a web developer on personal
-												projects.
-											</p>
-											<p>
-												Team work: the cocktail bar where I was working was one of the most prestigious in
-												Rome and almost erery night the place was full and I think that without collaboration
-												we will never had accomplished what we did, making it one of the best cocktail bar in Rome.
-											</p>
-										</div>
+				</div>
+				<div class="slide">
+					<div class="traveler">
+						<div class="icons-who-am-i">
+							<a class="js--who-am-i-back">
+								<i class="ion-android-compass"></i>
+							</a>
+						</div>
+						<div class="row">
+							<div class="col span-1-of-2">
+								<div class="personal-info">
+									<div class="long-text">
+										<p>
+											Finally, traveling. in the space of 2 years I went to 20 countries.
+											This immersion in varying cultures gave me great self fulfilment and
+											also a profound depth of understanding how to connect with other people.
+											I now have many friends all over the world.
+										</p>
+										<p>
+											Traveling had given me a lot, a better understanding of my self,
+											and a better understanding of others with their ideas, belives and culture.
+										</p>
 									</div>
 								</div>
-								<div class="col span-1-of-2">
-									<div class="general-facts">
-										<div class="personal">
-											<div class="icons-cocktail">
-												<h2>Cocktail I have invented</h2>
-												<img src="resources/favicons/cocktail.svg" alt="">
-												<img src="resources/favicons/cocktail-1.svg" alt="">
-												<img src="resources/favicons/cocktail-2.svg" alt="">
-												<img src="resources/favicons/cocktail-3.svg" alt="">
+							</div>
+							<div class="col span-1-of-2">
+								<div class="general-facts">
+									<div class="languages">
+										<h2>Spoken languages</h2>
+										<div class="flags">
+											<div id="bluecircle-it" data-percent="90" class="percircle animate">
+												<span class="flag-icon flag-icon-it flag-icon-squared"></span>
+											</div>
+											<div id="bluecircle-gb" data-percent="85" class="percircle animate">
+												<span class="flag-icon flag-icon-gb flag-icon-squared"></span>
+											</div>
+											<div id="bluecircle-md" data-percent="85" class="percircle animate">
+												<span class="flag-icon flag-icon-md flag-icon-squared"></span>
+											</div>
+											<div id="bluecircle-ru" data-percent="70" class="percircle animate">
+												<span class="flag-icon flag-icon-ru flag-icon-squared"></span>
 											</div>
 										</div>
+									</div>
+									<div class="countries-visited">
+										<h2>Visited countries</h2>
+										<h2><span>20/195</span></h2>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="horizontal">
-						<div class="traveler">
-							<div class="icons-who-am-i">
-								<a class="js--who-am-i-back">
-									<i class="ion-android-compass"></i>
-								</a>
-							</div>
-							<div class="row">
-								<div class="col span-1-of-2">
-									<div class="personal-info">
-										<div class="long-text">
-											<p>
-												Finally, traveling. in the space of 2 years I went to 20 countries.
-												This immersion in varying cultures gave me great self fulfilment and
-												also a profound depth of understanding how to connect with other people.
-												I now have many friends all over the world.
-											</p>
-											<p>
-												Traveling had given me a lot, a better understanding of my self,
-												and a better understanding of others with their ideas, belives and culture.
-											</p>
-										</div>
+				</div>
+				<div class="slide">
+					<div class="web-developer">
+						<div class="icons-who-am-i">
+							<a class="js--who-am-i-back">
+								<i class="ion-laptop"></i>
+							</a>
+						</div>
+						<div class="row">
+							<div class="col span-1-of-2">
+								<div class="personal-info">
+									<div class="long-text">
+										<p>
+											This interest in the necessary processes involved to reach an endpoint,
+											as well as a natural fascination with computer technology, guided me
+											to apply for Makers Academy and become qualified in web development.
+										</p>
+										<p>
+											Using my eye for detail, innate perfectionism and a genuine desire
+											to please the multi cultured world- wide audience, I want to make elaborate
+											coding and iconic websites.
+										</p>
+										<h2>Makers Academy</h2>
+										<ul>
+											<li>Independent learner and problem-solver</li>
+											<li>Curiosity and hungry passion for code</li>
+											<li>OOP, TDD, SOLID, MVC</li>
+											<li>Agile methodologies</li>
+											<li>Pair-programming</li>
+										</ul>
 									</div>
 								</div>
-								<div class="col span-1-of-2">
-									<div class="general-facts">
+							</div>
+							<div class="col span-1-of-2">
+								<div class="general-facts">
+									<div class="skills">
 										<div class="languages">
-											<h2>Spoken languages</h2>
-											<div class="flags">
-												<div id="bluecircle-it" data-percent="90" class="percircle animate">
-													<span class="flag-icon flag-icon-it flag-icon-squared"></span>
-												</div>
-												<div id="bluecircle-gb" data-percent="85" class="percircle animate">
-													<span class="flag-icon flag-icon-gb flag-icon-squared"></span>
-												</div>
-												<div id="bluecircle-md" data-percent="85" class="percircle animate">
-													<span class="flag-icon flag-icon-md flag-icon-squared"></span>
-												</div>
-												<div id="bluecircle-ru" data-percent="70" class="percircle animate">
-													<span class="flag-icon flag-icon-ru flag-icon-squared"></span>
-												</div>
-											</div>
+											<h2 id='title-languages'>Languages with which I've worked</h2>
+											<img class='img-list-small' src="resources/img/HTML5.png" alt="">
+											<img class='img-list-small' src="resources/img/CSS3.png" alt="">
+											<img class='img-list-small' src="resources/img/js.png" alt="">
+											<img class='img-list-small' src="resources/img/ruby.png" alt="">
+											<img class='img-list-small' src="resources/img/PHP.png" alt="">
 										</div>
-										<div class="countries-visited">
-											<h2>Visited countries</h2>
-											<h2><span>20/195</span></h2>
+										<div class="frameworks">
+											<h2 id='title-frameworks'>Frameworks with which I've experimented</h2>
+											<img class='img-list-small' src="resources/img/ruby_on_rails.png" alt="">
+											<img class='img-list-small' src="resources/img/jquery.png" alt="">
+											<img class='img-list-small' src="resources/img/nodejs.png" alt="">
+											<img class='img-list-small' src="resources/img/angular.png" alt="">
+											<img class='img-list-small' src="resources/img/firebase_logo_shot.png" alt="">
+											<img class='img-list-small' src="resources/img/ionic.png" alt="">
 										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="horizontal">
-						<div class="web-developer">
-							<div class="icons-who-am-i">
-								<a class="js--who-am-i-back">
-									<i class="ion-laptop"></i>
-								</a>
-							</div>
-							<div class="row">
-								<div class="col span-1-of-2">
-									<div class="personal-info">
-										<div class="long-text">
-											<p>
-												This interest in the necessary processes involved to reach an endpoint,
-												as well as a natural fascination with computer technology, guided me
-												to apply for Makers Academy and become qualified in web development.
-											</p>
-											<p>
-												Using my eye for detail, innate perfectionism and a genuine desire
-												to please the multi cultured world- wide audience, I want to make elaborate
-												coding and iconic websites.
-											</p>
-											<h2>Makers Academy</h2>
-											<ul>
-												<li>Independent learner and problem-solver</li>
-												<li>Curiosity and hungry passion for code</li>
-												<li>OOP, TDD, SOLID, MVC</li>
-												<li>Agile methodologies</li>
-												<li>Pair-programming</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col span-1-of-2">
-									<div class="general-facts">
-										<div class="skills">
-											<div class="languages">
-												<h2 id='title-languages'>Languages with which I've worked</h2>
-												<img class='img-list-small' src="resources/img/HTML5.png" alt="">
-												<img class='img-list-small' src="resources/img/CSS3.png" alt="">
-												<img class='img-list-small' src="resources/img/js.png" alt="">
-												<img class='img-list-small' src="resources/img/ruby.png" alt="">
-												<img class='img-list-small' src="resources/img/PHP.png" alt="">
-											</div>
-											<div class="frameworks">
-												<h2 id='title-frameworks'>Frameworks with which I've experimented</h2>
-												<img class='img-list-small' src="resources/img/ruby_on_rails.png" alt="">
-												<img class='img-list-small' src="resources/img/jquery.png" alt="">
-												<img class='img-list-small' src="resources/img/nodejs.png" alt="">
-												<img class='img-list-small' src="resources/img/angular.png" alt="">
-												<img class='img-list-small' src="resources/img/firebase_logo_shot.png" alt="">
-												<img class='img-list-small' src="resources/img/ionic.png" alt="">
-											</div>
-											<div class='certificates'>
-												<h2>Certificates</h2>
-												<div class="certificates-images">
-													<a class="test-popup-link" href="resources/img/jscourse.png">
-														<img class='img-list-small' src="resources/img/jscourse.png" alt="">
-													</a>
-													<a class="test-popup-link" href="resources/img/webdesign.png">
-														<img class='img-list-small' src="resources/img/webdesign.png" alt="">
-													</a>
-													<a class="test-popup-link" href="resources/img/php-certificate.png">
-														<img class='img-list-small' src="resources/img/php-certificate.png" alt="">
-													</a>
-												</div>
+										<div class='certificates'>
+											<h2>Certificates</h2>
+											<div class="certificates-images">
+												<a class="test-popup-link" href="resources/img/jscourse.png">
+													<img class='img-list-small' src="resources/img/jscourse.png" alt="">
+												</a>
+												<a class="test-popup-link" href="resources/img/webdesign.png">
+													<img class='img-list-small' src="resources/img/webdesign.png" alt="">
+												</a>
+												<a class="test-popup-link" href="resources/img/php-certificate.png">
+													<img class='img-list-small' src="resources/img/php-certificate.png" alt="">
+												</a>
 											</div>
 										</div>
 									</div>
@@ -371,344 +366,321 @@
 					</div>
 				</div>
 				<img class="keyboard" src="vendors/fonts/keyboard.svg" alt="Toggle gradients with the arrow keys">
-			</section>
-			<section id="projects" class="projects">
-				<div id="slider" class="sl-slider-wrapper">
-					<div class="sl-slider">
-						<div class="sl-slide bg-1" data-orientation="vertical" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-							<div class="sl-slide-inner">
-								<div class="accounting-rails clearfix">
-									<div class="row project-name">
-										<h1>Contabilita</h1>
+			</div>
+			<div class="section">
+				<div class="slide">
+					<div class="accounting-rails clearfix">
+						<div class="row project-name">
+							<h1>Contabilita</h1>
+						</div>
+						<div class="row project-info">
+							<div class="col span-1-of-2">
+								<div class="photo">
+									<a class="test-popup-link" href="resources/css/img/desktop-contabilita-dashboard.png">
+										<div class="photo pop-up"></div>
+									</a>
+								</div>
+								<div class="project-facts">
+									<div class="languages">
+										<img class='img-list-small' src="resources/img/ruby_on_rails.png" alt="">
+										<img class='img-list-small' src="resources/img/HTML5.png" alt="">
+										<img class='img-list-small' src="resources/img/CSS3.png" alt="">
 									</div>
-									<div class="row project-info">
-										<div class="col span-1-of-2">
-											<div class="photo">
-												<a class="test-popup-link" href="resources/css/img/desktop-contabilita-dashboard.png">
-													<div class="photo pop-up"></div>
-												</a>
-											</div>
-											<div class="project-facts">
-												<div class="languages">
-													<img class='img-list-small' src="resources/img/ruby_on_rails.png" alt="">
-													<img class='img-list-small' src="resources/img/HTML5.png" alt="">
-													<img class='img-list-small' src="resources/img/CSS3.png" alt="">
-												</div>
-												<div class="coffee">
-													<h3>Coffee:&nbsp;</h3>
-													<div class="icons-coffee">
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-													</div>
-													<p>/day</p>
-												</div>
-												<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/contabilita_rails">contabilita_rails</a></h3>
-												<h3>Website: <a target="_blank" href="https://quiet-sea-15101.herokuapp.com/">Contabilita</a></h3>
-											</div>
+									<div class="coffee">
+										<h3>Coffee:&nbsp;</h3>
+										<div class="icons-coffee">
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
 										</div>
-										<div class="col span-1-of-2">
-											<div class="project-description">
-												<p> This is a web-app developed with Rails. The pourpose of it is to help little
-													transport companies with the accountability.
-													By registering all the expences (invoices, tickets etc) which belong to
-													companies, categories and vehicles, the user can see how much has been
-													spent per year or per month for every category, company and vehicle.
-												</p>
-											</div>
-											<div class="approach">
-												<h2>Approach</h2>
-												<p> I've first started by trying to understand how the accoutability of a
-													company works. Then by talking to a potential user, I've tried to
-													understand the critical points of how the costs should be calculated and
-													which are those costs.
-													Then I've sketched the neccessary views and the neccessary objects/class
-													that were needed to make the app function. Then by researching and trial and
-													error I've started developing the web-app.
-												</p>
-											</div>
-											<div class="conclusion">
-												<h2>Conclusions</h2>
-												<p>I've learnt a lot during the process of developing this app. First and more
-													important thing that I've learnt is the importance of testing, and the more
-													the app was growing the more important the tests were.
-													I've also learnt the importance of sketching and developing ideas on how the
-													app should be. I've also learnt the importance of communication with a
-													possible user to understand fully what the app should do.
-												</p>
-											</div>
-										</div>
+										<p>/day</p>
 									</div>
+									<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/contabilita_rails">contabilita_rails</a></h3>
+									<h3>Website: <a target="_blank" href="https://quiet-sea-15101.herokuapp.com/">Contabilita</a></h3>
+								</div>
+							</div>
+							<div class="col span-1-of-2">
+								<div class="project-description">
+									<p> This is a web-app developed with Rails. The pourpose of it is to help little
+										transport companies with the accountability.
+										By registering all the expences (invoices, tickets etc) which belong to
+										companies, categories and vehicles, the user can see how much has been
+										spent per year or per month for every category, company and vehicle.
+									</p>
+								</div>
+								<div class="approach">
+									<h2>Approach</h2>
+									<p> I've first started by trying to understand how the accoutability of a
+										company works. Then by talking to a potential user, I've tried to
+										understand the critical points of how the costs should be calculated and
+										which are those costs.
+										Then I've sketched the neccessary views and the neccessary objects/class
+										that were needed to make the app function. Then by researching and trial and
+										error I've started developing the web-app.
+									</p>
+								</div>
+								<div class="conclusion">
+									<h2>Conclusions</h2>
+									<p>I've learnt a lot during the process of developing this app. First and more
+										important thing that I've learnt is the importance of testing, and the more
+										the app was growing the more important the tests were.
+										I've also learnt the importance of sketching and developing ideas on how the
+										app should be. I've also learnt the importance of communication with a
+										possible user to understand fully what the app should do.
+									</p>
 								</div>
 							</div>
 						</div>
-						<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-							<div class="sl-slide-inner">
-								<div class="autotrasporti-rotari clearfix">
-									<div class="row project-name">
-										<h1>Autotrasporti Rotari</h1>
-									</div>
-									<div class="row project-info">
-										<div class="col span-1-of-2">
-											<div class="photo">
-												<a class="test-popup-link" href="resources/css/img/autotrasporti-home.png">
-													<div class="photo pop-up"></div>
-												</a>
-											</div>
-											<div class="project-facts">
-												<div class="languages">
-													<img class='img-list-small' src="resources/img/PHP.png" alt="">
-													<img class='img-list-small' src="resources/img/bootstrap.png" alt="">
-												</div>
-												<div class="coffee">
-													<h3>Coffee:&nbsp;</h3>
-													<div class="icons-coffee">
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-													</div>
-													<p>/day</p>
-												</div>
-												<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/autotrasportiPhp">autotrasporti_php</a></h3>
-												<h3>Website: <a target="_blank" href="http://www.autotrasportirotari.it">autotrasportirotari</a></h3>
-											</div>
-										</div>
-										<div class="col span-1-of-2">
-											<div class="project-description">
-												<p> I’ve decided to develop this project for free for the company of my parents,
-													this way the company would had a presence on-line and I would had the possibility
-													to improve my skills. The company had already bought a domain name on an Apache
-													server so I had to adapt consecutively. This project was one of my first projects
-													after Makers Academy but my intention now is to start working on it again so
-													I could improve it with my newly acquired knowledges.
-												</p>
-											</div>
-											<div class="approach">
-												<h2>Approach</h2>
-												<p>Since I did not know anything about php I decided to follow a course first
-													and then I’ve started developing it. First I tried to understand what type
-													of audience could visit the website and then by keeping in head that I started
-													sketching and writing the possible content of every page. After making sure
-													everything worked I deployed it on the server.
-												</p>
-											</div>
-											<div class="conclusion">
-												<h2>Conclusions</h2>
-												<p>During this project I understood the importance of planning, because without
-													planning the possibilities to lose a lot of time are a lot higher because
-													there is no idea how the final product could look.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sl-slide bg-3" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-							<div class="sl-slide-inner">
-								<div class="cms-php clearfix">
-									<div class="row project-name">
-										<h1>CMS php</h1>
-									</div>
-									<div class="row project-info">
-										<div class="col span-1-of-2">
-											<div class="photo">
-												<a class="test-popup-link" href="resources/css/img/cms-php-home.png">
-													<div class="photo pop-up"></div>
-												</a>
-											</div>
-											<div class="project-facts">
-												<div class="languages">
-													<img class='img-list-small' src="resources/img/PHP.png" alt="">
-													<img class='img-list-small' src="resources/img/bootstrap.png" alt="">
-												</div>
-												<div class="coffee">
-													<h3>Coffee:&nbsp;</h3>
-													<div class="icons-coffee">
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-													</div>
-													<p>/day</p>
-												</div>
-												<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/cms_php">cms_php</a></h3>
-												<h3>Website: <a target="_blank" href="http://www.autotrasportirotari.it/cms_php_project/posts.php?page=1">cms_php_project</a></h3>
-											</div>
-										</div>
-										<div class="col span-1-of-2">
-											<div class="project-description">
-												<p> Since I did not knew a lot about php before starting the website for my parents company,
-													I decided to take a course so I could learn it. This course taught me the fundamentals
-													on php. As a final project in the course I had to build a CMS (content management system),
-													this project was made of two parts the blog part which every user could access and see all
-													the blog posts that had been published and an admin part where the registered users could
-													manage their own blog posts categories and contents.
-												</p>
-											</div>
-											<div class="approach">
-												<h2>Approach</h2>
-												<p>I decided to work on this project without using a framework because from my point of view
-													a framework is better understood when facing the needs that created that framework.
-													It was hard at the beginning but by using the resources from the course and also
-													all the resources on line I’ve made it through.
-												</p>
-											</div>
-											<div class="conclusion">
-												<h2>Conclusions</h2>
-												<p>I liked working with PHP because it is very easy to understand when coming from a
-													Ruby environment and also is very easy to understand in general, but I prefer
-													by far ruby and it’s frameworks because they were created with testing in mind
-													so they are far more easy to test. And I know that tests are very important when
-													working on medium large projects
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-							<div class="sl-slide-inner">
-								<div class="omnifood clearfix">
-									<div class="row project-name">
-										<h1>Omnifood</h1>
-									</div>
-									<div class="row project-info">
-										<div class="col span-1-of-2">
-											<div class="photo">
-												<a class="test-popup-link" href="resources/css/img/omnifood-home.png">
-													<div class="photo pop-up"></div>
-												</a>
-											</div>
-											<div class="project-facts">
-												<div class="languages">
-													<img class='img-list-small' src="resources/img/jquery.png" alt="">
-													<img class='img-list-small' src="resources/img/HTML5.png" alt="">
-													<img class='img-list-small' src="resources/img/CSS3.png" alt="">
-												</div>
-												<div class="coffee">
-													<h3>Coffee:&nbsp;</h3>
-													<div class="icons-coffee">
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-													</div>
-													<p>/day</p>
-												</div>
-												<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/Omnifood">Omnifood</a></h3>
-											</div>
-										</div>
-										<div class="col span-1-of-2">
-											<div class="project-description">
-												<p> I wanted to improve my web-designing skill because I really want to become a
-													front-end developer (I like to make things look cool), so I decided to take
-													a course on web-design, and as a final project in this course I had to create a
-													website for an imaginary client Omnifood. The main focus of this web-site was to
-													attract user to subscribe on a monthly plan for food delivery. The course explained
-													every step on the project but I prefered to pause it and do it by myself and then
-													check with the course.
-												</p>
-											</div>
-											<div class="approach">
-												<h2>Approach</h2>
-												<p>Before starting coding I started planning, sketching and thinking about the content.
-													After having all the content ready I started coding and with every line of code I
-													understood how important is to keep the code organized and clean, because as the
-													project grows the possibility to have a mess in code is really high so the best
-													way to avoid it is to keep it clean from the beginning.
-												</p>
-											</div>
-											<div class="conclusion">
-												<h2>Conclusions</h2>
-												<p>During this project I understood how JQuery plugins works and how to arrange CSS
-													code and also how the box model in HTML works with all the properties.
-													I also gained a deeper understanding of design principles as colors, fonts, images,
-													arrangement of the content and also how to optimize the website before launching it online.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sl-slide bg-5" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-							<div class="sl-slide-inner">
-								<div class="maker-pair clearfix">
-									<div class="row project-name">
-										<h1>Maker Pair</h1>
-									</div>
-									<div class="row project-info">
-										<div class="col span-1-of-2">
-											<div class="photo">
-												<a class="test-popup-link" href="resources/css/img/maker-pair-home.png">
-													<div class="photo pop-up"></div>
-												</a>
-											</div>
-											<div class="project-facts">
-												<div class="languages">
-													<img class='img-list-small' src="resources/img/ruby_on_rails.png" alt="">
-													<img class='img-list-small' src="resources/img/bootstrap.png" alt="">
-												</div>
-												<div class="coffee">
-													<h3>Coffee:&nbsp;</h3>
-													<div class="icons-coffee">
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-														<i class='icon-coffee'></i>
-													</div>
-													<p>/day</p>
-												</div>
-												<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/maker-pair">maker-pair</a></h3>
-											</div>
-										</div>
-										<div class="col span-1-of-2">
-											<div class="project-description">
-												<p>This was a project that I worked in team with other fellow coders when I was
-													still studying at Makers Academy. This project was meant to be used by new
-													students who were starting the course at Makers Academy, by registering the
-													student gets an access to all the students that had already finished the course
-													and after consulting its criterias the new user can pair with the senior student
-													for a pair programming session.
-												</p>
-											</div>
-											<div class="approach">
-												<h2>Approach</h2>
-												<p>We first started by defining the MVP (minimum viable product) and after deciding
-													that we started deciding the tasks for each pair, front-end and back-end. We rotated
-													so all the people in the group could develop both sides of the project. The whole
-													project was developed in two days by four people.
-												</p>
-											</div>
-											<div class="conclusion">
-												<h2>Conclusions</h2>
-												<p>During the period developing this project I understood the importance of communication
-													skills and listening skills when working in teams. I also learnt how important is
-													to develop an MVP before starting working on a project, because when having an MVP
-													is far easier to respect the deadline rather than getting lost on features.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<nav id="nav-dots" class="nav-dots">
-							<ul>
-								<li data-tooltip="Contabilita'"><span class='nav-dot-current'></span></li>
-								<li data-tooltip="Autotrasporti"><span></span></li>
-								<li data-tooltip="CMS Php"><span></span></li>
-								<li data-tooltip="Omnifood"><span></span></li>
-								<li data-tooltip="Maker Pair"><span></span></li>
-							</ul>
-						</nav>
 					</div>
-					<img class="keyboard" src="vendors/fonts/keyboard.svg" alt="Toggle gradients with the arrow keys">
 				</div>
-			</section>
-			<section class="contacts">
+				<div class="slide">
+					<div class="autotrasporti-rotari clearfix">
+						<div class="row project-name">
+							<h1>Autotrasporti Rotari</h1>
+						</div>
+						<div class="row project-info">
+							<div class="col span-1-of-2">
+								<div class="photo">
+									<a class="test-popup-link" href="resources/css/img/autotrasporti-home.png">
+										<div class="photo pop-up"></div>
+									</a>
+								</div>
+								<div class="project-facts">
+									<div class="languages">
+										<img class='img-list-small' src="resources/img/PHP.png" alt="">
+										<img class='img-list-small' src="resources/img/bootstrap.png" alt="">
+									</div>
+									<div class="coffee">
+										<h3>Coffee:&nbsp;</h3>
+										<div class="icons-coffee">
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+										</div>
+										<p>/day</p>
+									</div>
+									<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/autotrasportiPhp">autotrasporti_php</a></h3>
+									<h3>Website: <a target="_blank" href="http://www.autotrasportirotari.it">autotrasportirotari</a></h3>
+								</div>
+							</div>
+							<div class="col span-1-of-2">
+								<div class="project-description">
+									<p> I’ve decided to develop this project for free for the company of my parents,
+										this way the company would had a presence on-line and I would had the possibility
+										to improve my skills. The company had already bought a domain name on an Apache
+										server so I had to adapt consecutively. This project was one of my first projects
+										after Makers Academy but my intention now is to start working on it again so
+										I could improve it with my newly acquired knowledges.
+									</p>
+								</div>
+								<div class="approach">
+									<h2>Approach</h2>
+									<p>Since I did not know anything about php I decided to follow a course first
+										and then I’ve started developing it. First I tried to understand what type
+										of audience could visit the website and then by keeping in head that I started
+										sketching and writing the possible content of every page. After making sure
+										everything worked I deployed it on the server.
+									</p>
+								</div>
+								<div class="conclusion">
+									<h2>Conclusions</h2>
+									<p>During this project I understood the importance of planning, because without
+										planning the possibilities to lose a lot of time are a lot higher because
+										there is no idea how the final product could look.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="cms-php clearfix">
+						<div class="row project-name">
+							<h1>CMS php</h1>
+						</div>
+						<div class="row project-info">
+							<div class="col span-1-of-2">
+								<div class="photo">
+									<a class="test-popup-link" href="resources/css/img/cms-php-home.png">
+										<div class="photo pop-up"></div>
+									</a>
+								</div>
+								<div class="project-facts">
+									<div class="languages">
+										<img class='img-list-small' src="resources/img/PHP.png" alt="">
+										<img class='img-list-small' src="resources/img/bootstrap.png" alt="">
+									</div>
+									<div class="coffee">
+										<h3>Coffee:&nbsp;</h3>
+										<div class="icons-coffee">
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+										</div>
+										<p>/day</p>
+									</div>
+									<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/cms_php">cms_php</a></h3>
+									<h3>Website: <a target="_blank" href="http://www.autotrasportirotari.it/cms_php_project/posts.php?page=1">cms_php_project</a></h3>
+								</div>
+							</div>
+							<div class="col span-1-of-2">
+								<div class="project-description">
+									<p> Since I did not knew a lot about php before starting the website for my parents company,
+										I decided to take a course so I could learn it. This course taught me the fundamentals
+										on php. As a final project in the course I had to build a CMS (content management system),
+										this project was made of two parts the blog part which every user could access and see all
+										the blog posts that had been published and an admin part where the registered users could
+										manage their own blog posts categories and contents.
+									</p>
+								</div>
+								<div class="approach">
+									<h2>Approach</h2>
+									<p>I decided to work on this project without using a framework because from my point of view
+										a framework is better understood when facing the needs that created that framework.
+										It was hard at the beginning but by using the resources from the course and also
+										all the resources on line I’ve made it through.
+									</p>
+								</div>
+								<div class="conclusion">
+									<h2>Conclusions</h2>
+									<p>I liked working with PHP because it is very easy to understand when coming from a
+										Ruby environment and also is very easy to understand in general, but I prefer
+										by far ruby and it’s frameworks because they were created with testing in mind
+										so they are far more easy to test. And I know that tests are very important when
+										working on medium large projects
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="omnifood clearfix">
+						<div class="row project-name">
+							<h1>Omnifood</h1>
+						</div>
+						<div class="row project-info">
+							<div class="col span-1-of-2">
+								<div class="photo">
+									<a class="test-popup-link" href="resources/css/img/omnifood-home.png">
+										<div class="photo pop-up"></div>
+									</a>
+								</div>
+								<div class="project-facts">
+									<div class="languages">
+										<img class='img-list-small' src="resources/img/jquery.png" alt="">
+										<img class='img-list-small' src="resources/img/HTML5.png" alt="">
+										<img class='img-list-small' src="resources/img/CSS3.png" alt="">
+									</div>
+									<div class="coffee">
+										<h3>Coffee:&nbsp;</h3>
+										<div class="icons-coffee">
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+										</div>
+										<p>/day</p>
+									</div>
+									<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/Omnifood">Omnifood</a></h3>
+								</div>
+							</div>
+							<div class="col span-1-of-2">
+								<div class="project-description">
+									<p> I wanted to improve my web-designing skill because I really want to become a
+										front-end developer (I like to make things look cool), so I decided to take
+										a course on web-design, and as a final project in this course I had to create a
+										website for an imaginary client Omnifood. The main focus of this web-site was to
+										attract user to subscribe on a monthly plan for food delivery. The course explained
+										every step on the project but I prefered to pause it and do it by myself and then
+										check with the course.
+									</p>
+								</div>
+								<div class="approach">
+									<h2>Approach</h2>
+									<p>Before starting coding I started planning, sketching and thinking about the content.
+										After having all the content ready I started coding and with every line of code I
+										understood how important is to keep the code organized and clean, because as the
+										project grows the possibility to have a mess in code is really high so the best
+										way to avoid it is to keep it clean from the beginning.
+									</p>
+								</div>
+								<div class="conclusion">
+									<h2>Conclusions</h2>
+									<p>During this project I understood how JQuery plugins works and how to arrange CSS
+										code and also how the box model in HTML works with all the properties.
+										I also gained a deeper understanding of design principles as colors, fonts, images,
+										arrangement of the content and also how to optimize the website before launching it online.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="maker-pair clearfix">
+						<div class="row project-name">
+							<h1>Maker Pair</h1>
+						</div>
+						<div class="row project-info">
+							<div class="col span-1-of-2">
+								<div class="photo">
+									<a class="test-popup-link" href="resources/css/img/maker-pair-home.png">
+										<div class="photo pop-up"></div>
+									</a>
+								</div>
+								<div class="project-facts">
+									<div class="languages">
+										<img class='img-list-small' src="resources/img/ruby_on_rails.png" alt="">
+										<img class='img-list-small' src="resources/img/bootstrap.png" alt="">
+									</div>
+									<div class="coffee">
+										<h3>Coffee:&nbsp;</h3>
+										<div class="icons-coffee">
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+											<i class='icon-coffee'></i>
+										</div>
+										<p>/day</p>
+									</div>
+									<h3>GitHub: <a target="_blank" href="https://github.com/OctavianRotari/maker-pair">maker-pair</a></h3>
+								</div>
+							</div>
+							<div class="col span-1-of-2">
+								<div class="project-description">
+									<p>This was a project that I worked in team with other fellow coders when I was
+										still studying at Makers Academy. This project was meant to be used by new
+										students who were starting the course at Makers Academy, by registering the
+										student gets an access to all the students that had already finished the course
+										and after consulting its criterias the new user can pair with the senior student
+										for a pair programming session.
+									</p>
+								</div>
+								<div class="approach">
+									<h2>Approach</h2>
+									<p>We first started by defining the MVP (minimum viable product) and after deciding
+										that we started deciding the tasks for each pair, front-end and back-end. We rotated
+										so all the people in the group could develop both sides of the project. The whole
+										project was developed in two days by four people.
+									</p>
+								</div>
+								<div class="conclusion">
+									<h2>Conclusions</h2>
+									<p>During the period developing this project I understood the importance of communication
+										skills and listening skills when working in teams. I also learnt how important is
+										to develop an MVP before starting working on a project, because when having an MVP
+										is far easier to respect the deadline rather than getting lost on features.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img class="keyboard" src="vendors/fonts/keyboard.svg" alt="Toggle gradients with the arrow keys">
+			</div>
+			<div class="section">
 				<div class="menu">
 					<div class="btn trigger">
 						<span class="line"></span>
@@ -753,18 +725,16 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</div>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="vendors/js/jquery.visible.js"></script>
-		<script type="text/javascript" src="vendors/js/jquery.onepage-scroll.js"></script>
 		<script type="text/javascript" src="vendors/js/modernizr.custom.25376.js"></script>
-		<script type="text/javascript" src="resources/js/one-page-scroll.js"></script>
+		<script type="text/javascript" src="vendors/js/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="resources/js/fullPage.js"></script>
 		<script type="text/javascript" src="resources/js/navigation.js"></script>
-		<script type="text/javascript" src="vendors/js/jquery.pagepiling.js"></script>
 		<script type="text/javascript" src="vendors/js/classie.js"></script>
 		<script type="text/javascript" src="vendors/js/borderMenu.js"></script>
-		<script type="text/javascript" src="resources/js/pagepiling.js"></script>
 		<script type="text/javascript" src="vendors/js/jquery.particleground.js"></script>
 		<script type="text/javascript" src="resources/js/particleground.js"></script>
 		<script type="text/javascript" src="vendors/js/typed.js"></script>
@@ -778,8 +748,6 @@
 		<script type="text/javascript" src="vendors/js/pop-up.js"></script>
 		<script type="text/javascript" src="resources/js/popup.js"></script>
 		<script type="text/javascript" src="vendors/js/jquery.ba-cond.js"></script>
-		<script type="text/javascript" src="resources/js/slitSlider.js"></script>
-		<script type="text/javascript" src="resources/js/slitSliderInit.js"></script>
 		<script type="text/javascript" src="resources/js/contacts.js"></script>
 	</body>
 </html>

@@ -229,27 +229,19 @@ input[type=submit]:active{
   margin-left: 5px;
 }
 
-section .horizontal .section-title{
+.slide .section-title{
   transform: rotate(45deg);
   margin-top: 10%;
   margin-right: -30%;
   text-align: center;
 }
 
-section .horizontal .image{
-  background-size: cover;
-  height: 300px;
-  width: 300px;
-  float: right;
-  shape-outside: polygon(100% 100%, 0% 0%, 100% 0%);
-}
-
-section .horizontal .image h2 {
+.slide .image h2 {
   line-height: 150%;
   font-size: 220%;
 }
 
-section .horizontal .long-text{
+.slide .long-text{
   margin-top: 35%;
 }
 
@@ -264,8 +256,6 @@ section .horizontal .long-text{
 /*-------------------------------------------------------------------------*/
 
 .text-box {
-  position:absolute;
-  margin-top: 13%;
   font-weight: 400;
 }
 
@@ -304,7 +294,7 @@ section .horizontal .long-text{
   z-index:9;
 }
 
-section canvas{
+.section canvas{
   position: absolute;
 }
 
@@ -431,16 +421,11 @@ section canvas{
   color: #19B5FE;
   margin-right: 20px;
   font-size: 700%;
-  position:absolute;
-  right:0;
+  float:right;
 }
 
 .web-developer .icons-who-am-i a{
   cursor: pointer;
-}
-
-.web-developer .general-facts{
-    margin-top: 25%;
 }
 
 .web-developer .skills h2,
@@ -481,8 +466,7 @@ section canvas{
   color: #27ae60;
   margin-right: 20px;
   font-size: 700%;
-  position:absolute;
-  right:0;
+  float:right;
 }
 
 .accountant .icons-who-am-i a{
@@ -524,8 +508,7 @@ section canvas{
   color: #c0392b;
   margin-right: 20px;
   font-size: 700%;
-  position:absolute;
-  right:0;
+  float:right;
 }
 
 .bartender .icons-who-am-i a{
@@ -591,8 +574,7 @@ section canvas{
   color: #f8e8b5;
   margin-right: 20px;
   font-size: 700%;
-  position:absolute;
-  right:0;
+  float:right;
 }
 
 .traveler .icons-who-am-i a{
