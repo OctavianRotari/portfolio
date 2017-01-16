@@ -220,7 +220,7 @@ input[type=submit]:active{
 }
 
 .img-list-small {
-  width: 70px;
+  height: 70px;
   margin-right: 15px;
 }
 
@@ -247,9 +247,12 @@ input[type=submit]:active{
 
 .icons-who-am-i{
   font-size: 350%;
-  margin-bottom: 2%;
 }
 
+
+.section canvas{
+  position: absolute;
+}
 
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
@@ -285,23 +288,15 @@ input[type=submit]:active{
 /*WHO AM I*/
 /*-------------------------------------------------------------------------*/
 
+.icons-who-am-i a,
+.icons-who-am-i i{
+  cursor: pointer;
+}
+
 .section-who-am-i .summary-who-am-i{
   text-align:center;
-  background-color:#161525;
   height:100%;
   width:100%;
-  position:absolute;
-  z-index:9;
-}
-
-.section canvas{
-  position: absolute;
-}
-
-.section-who-am-i .summary-who-am-i #intro{
-  height:100%;
-  width:100%;
-  position: absolute;
 }
 
 .summary-who-am-i .title{
@@ -388,20 +383,19 @@ input[type=submit]:active{
 
 /*-------------------------------------------------------------------------*/
 /*web developer*/
-.horizontal .web-developer {
+.web-developer {
   height: 100%;
   font-family: openSans, serif;
   line-height:120%;
 }
 
-.horizontal .web-developer h2{
+.web-developer h2{
   font-family: robotoCondensed, sans-serif;
-  font-size: 130%;
-  line-height: 125%;
+  font-size: 140%;
 }
 
 .web-developer .long-text {
-    margin-top: 10% !important;
+  margin-top: 10% !important;
 }
 
 .web-developer .long-text h2{
@@ -424,29 +418,20 @@ input[type=submit]:active{
   float:right;
 }
 
-.web-developer .icons-who-am-i a{
-  cursor: pointer;
-}
-
 .web-developer .skills h2,
 .web-developer .certificates h2 {
-  margin-bottom: 3%;
-  margin-top: 3%;
+  margin: 5% 0;
   color: #19B5FE;
 }
 
 .web-developer .skills {
   text-align:center;
-  margin: 10px auto;
 }
 
 .web-developer .skills .languages,
 .web-developer  .skills .frameworks{
   display: inline-block;
-}
-
-.web-developer .skills .languages:first-child{
-  padding-right:30px;
+  margin: 15px;
 }
 
 .certificates .img-list-small{
@@ -456,10 +441,9 @@ input[type=submit]:active{
 /*-------------------------------------------------------------------------*/
 /*accountant*/
 
-.horizontal .accountant {
+.accountant {
   height: 100%;
   font-family: openSans, serif;
-  line-height:120%;
 }
 
 .accountant .icons-who-am-i{
@@ -469,19 +453,17 @@ input[type=submit]:active{
   float:right;
 }
 
-.accountant .icons-who-am-i a{
-  cursor: pointer;
-}
-
 .accountant .general-facts{
   margin-top: 25%;
   text-align: center;
   color:#fff;
+  display:inline;
 }
 
 .accountant h2{
   font-family: openSans;
   color: #27ae60;
+  font-size: 140%;
 }
 
 .accountant .facts{
@@ -500,7 +482,7 @@ input[type=submit]:active{
 /*-------------------------------------------------------------------------*/
 /*bartender*/
 
-.horizontal .bartender {
+.bartender {
   height: 100%;
 }
 
@@ -511,15 +493,12 @@ input[type=submit]:active{
   float:right;
 }
 
-.bartender .icons-who-am-i a{
-  cursor: pointer;
-}
-
 .bartender .long-text {
   margin-top:10% !important;
 }
 
 .bartender .info h2 {
+  font-size: 140%;
   font-family: lobsterRegular;
 }
 
@@ -540,8 +519,8 @@ input[type=submit]:active{
 .bartender .personal h2{
   color: #c0392b;
   font-family: gravitasOne;
-  font-size: 160%;
-  margin-bottom:10%;
+  font-size: 140%;
+  margin-bottom:5%;
 }
 
 
@@ -556,6 +535,7 @@ input[type=submit]:active{
 
 .bartender .general-facts{
   margin-top: 30%;
+  display:inline;
 }
 
 .bartender .invented-cocktail i{
@@ -566,7 +546,7 @@ input[type=submit]:active{
 /*-------------------------------------------------------------------------*/
 /*traveler*/
 
-.horizontal .traveler {
+.traveler {
   height: 100%;
 }
 
@@ -575,10 +555,6 @@ input[type=submit]:active{
   margin-right: 20px;
   font-size: 700%;
   float:right;
-}
-
-.traveler .icons-who-am-i a{
-  cursor: pointer;
 }
 
 .traveler .travel-quote {
@@ -595,8 +571,8 @@ input[type=submit]:active{
 }
 
 .traveler h2 {
-  margin: 10% 0;
-  font-size: 180%;
+  margin: 5% 0;
+  font-size: 140%;
   font-family: merriweather;
   color: #f8e8b5;
 }
@@ -608,13 +584,13 @@ input[type=submit]:active{
 
 
 .traveler .general-facts{
-  margin-top: 30%;
   text-align: center;
+  display:inline;
 }
 
 .traveler .general-facts .flags{
   height: 120px;
-  margin: 0 15px;
+  margin: 0 10%;
 }
 
 .traveler .languages-countries{

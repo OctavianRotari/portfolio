@@ -1,13 +1,13 @@
 $(document).ready(function(){
-  $('.js--navigation-who-am-i').click(function(){
-    $('.summary-who-am-i').addClass('animated fadeOut');
-    setTimeout(function() {
-      $('.summary-who-am-i').addClass('hidden');
-    }, 1500);
+  $('.js--navigation-who-am-i').click(function(e){
+    // Scroll to index
+    var id = parseInt(this.id);
+    $.fn.fullpage.silentMoveTo('who-am-i', id);
+    e.preventDefault();
   })
-  $('.js--who-am-i-back').click(function(){
-    $('.summary-who-am-i').removeClass('hidden animated fadeOut');
+  $('.js--who-am-i-back').click(function(e){
+    var id = parseInt(this.id);
+    $.fn.fullpage.silentMoveTo('who-am-i', id);
+    e.preventDefault();
   })
 });
-
-

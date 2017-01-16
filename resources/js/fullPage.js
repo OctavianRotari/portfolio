@@ -45,7 +45,7 @@ $(document).ready(function(){
     recordHistory: true,
 
     //Design
-    controlArrows: true,
+    controlArrows: false,
     verticalCentered: true,
     sectionsColor : ['#161525', '#161525'],
     paddingTop: '0',
@@ -62,12 +62,24 @@ $(document).ready(function(){
     lazyLoading: true,
 
     //events
-    onLeave: function(index, nextIndex, direction){},
-    afterLoad: function(anchorLink, index){},
+    onLeave: function(index, nextIndex, direction){
+    },
+    afterLoad: function(anchorLink, index){
+      if(index===2){
+        $('.icons-who-am-i').addClass('animated flipInX');
+      }
+    },
     afterRender: function(){},
     afterResize: function(){},
     afterResponsive: function(isResponsive){},
-    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-    onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      if(slideIndex===0){
+        $('.icons-who-am-i').addClass('animated flipInX');
+      }
+    },
+    onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+      if(slideIndex===0){
+      }
+    }
   });
 });
