@@ -20,7 +20,7 @@ $(document).ready(function(){
     scrollBar: false,
     easing: 'easeInOutCubic',
     easingcss3: 'ease',
-    loopBottom: true,
+    loopBottom: false,
     loopTop: false,
     loopHorizontal: true,
     continuousVertical: false,
@@ -68,18 +68,19 @@ $(document).ready(function(){
       if(index===2){
         $('.icons-who-am-i').addClass('animated flipInX');
       }
+      if(index!==3){
+        $('.navigation-arrow').removeClass('hidden');
+      }
+      if(index===3){
+        $('.navigation-arrow').addClass('hidden');
+      }
     },
     afterRender: function(){},
     afterResize: function(){},
     afterResponsive: function(isResponsive){},
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-      if(slideIndex===0){
-        $('.icons-who-am-i').addClass('animated flipInX');
-      }
     },
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
-      if(slideIndex===0){
-      }
     }
   });
 });

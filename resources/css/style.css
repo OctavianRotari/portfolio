@@ -56,11 +56,6 @@ h2{
 }
 
 @font-face {
-  font-family: openSans;
-  src: url(fonts/OpenSans-Light.ttf);
-}
-
-@font-face {
   font-family: chonburi;
   src: url(fonts/Chonburi-Regular.ttf);
 }
@@ -88,6 +83,11 @@ h2{
 @font-face {
   font-family: merriweather;
   src: url(fonts/Merriweather-Regular.ttf);
+}
+
+@font-face {
+  font-family: monda;
+  src: url(fonts/Muli-ExtraLight.ttf);
 }
 
 /*-------------------------------------------------------------------------*/
@@ -278,7 +278,7 @@ input[type=submit]:active{
 }
 
 .text-box .brief-introduction-header h2{
-  font-family: openSans, serif;
+  font-family: monda;
   text-transform:none;
   margin-bottom:3%;
   font-size: 150%;
@@ -299,6 +299,7 @@ input[type=submit]:active{
   text-align:center;
   height:100%;
   width:100%;
+  font-family: monda;
 }
 
 .summary-who-am-i .title{
@@ -323,6 +324,7 @@ input[type=submit]:active{
 
 .summary-who-am-i .icons-who-am-i{
   visibility: hidden;
+  margin-bottom: 20px;
 }
 
 .summary-who-am-i .menu-web-developer .icons-who-am-i{
@@ -331,9 +333,8 @@ input[type=submit]:active{
 
 .section-who-am-i .brief-introduction {
   margin:20px 40px;
-  font-size:104%;
+  font-size:100%;
   color: #ecf0f1;
-  line-height: 145%;
   list-style:none;
 }
 
@@ -377,7 +378,7 @@ input[type=submit]:active{
 }
 
 .section-who-am-i .long-text p{
-  font-family: openSans;
+  font-family: monda;
   font-size: 120%;
   line-height: 145%;
   margin-bottom: 10%;
@@ -387,7 +388,7 @@ input[type=submit]:active{
 /*web developer*/
 .web-developer {
   height: 100%;
-  font-family: openSans, serif;
+  font-family: monda;
   line-height:120%;
 }
 
@@ -411,6 +412,7 @@ input[type=submit]:active{
   text-align:center;
   list-style:none;
   line-height:35px;
+  font-size: 120%;
 }
 
 .web-developer .icons-who-am-i{
@@ -445,7 +447,7 @@ input[type=submit]:active{
 
 .accountant {
   height: 100%;
-  font-family: openSans, serif;
+  font-family: monda;
 }
 
 .accountant .icons-who-am-i{
@@ -463,7 +465,7 @@ input[type=submit]:active{
 }
 
 .accountant h2{
-  font-family: openSans;
+  font-family: chonburi;
   color: #27ae60;
   font-size: 140%;
 }
@@ -532,7 +534,7 @@ input[type=submit]:active{
 
 .bartender .personal p{
   margin: 10px 0;
-  font-family: openSans;
+  font-family: monda;
 }
 
 .bartender .general-facts{
@@ -622,75 +624,73 @@ input[type=submit]:active{
 
 .section-projects{
   background-color: rgb(22, 21, 37);
-  font-family: 'Lato', 'Arial', sans-serif;
   color: #fff;
+  font-family: monda;
 }
-
-.section-projects .projects-summary h1{
-  text-align:center;
-  font-size: 150%;
-  margin-bottom:0;
-  color:#19B5FE;
-}
-
-.section-projects .screen-shot {
-    width: 70%;
-}
-
-.section-projects .projects-summary {
-    text-align: center;
-}
-
-.section-projects .projects-summary .first-row h1{
-  margin-top:0;
-}
-
 
 .section-projects .img-list-small {
-    height: 50px;
+  height: 50px;
 }
 
-.section-projects .projects-summary h3 {
-  text-transform: uppercase;
-  margin: 5px;
+.section-projects .accounting-rails .photo,
+.section-projects .autotrasporti-rotari .photo,
+.section-projects .cms-php .photo,
+.section-projects .omnifood .photo,
+.section-projects .maker-pair .photo{
+  perspective: 1700px;
+  display: inline-block;
+  width: 50%;
+  margin-left: 2%;
 }
 
-.section-projects .projects-summary a {
-  cursor:pointer;
-  text-decoration:none;
-  color:#19B5FE;
+.section-projects .photo img{
+  width: 100%;
+  transition:0.3s;
+  transform: rotateY(40deg);
 }
 
-.section-projects .photo{
-  text-align:center;
+.section-projects .photo img:hover{
+  transform: rotate(0);
+  width: 190%;
+  margin-left: 2%;
+  margin-top: -4%;
 }
 
-.section-projects .project-info .screen-shot{
-  width: 90%;
+.section-projects .project-info{
+  width: 35%;
+  float: right;
+  margin-right: 5%;
 }
 
-.section-projects .project-name,
-.section-projects .project-description{
-  text-align:center;
-}
-
-.section-projects h2, h3{
-  font-weight: 300;
+.section-projects .languages{
+  display: inline-block;
+  margin-left: 15%;
 }
 
 .section-projects h2{
-  color:#fff;
-  font-size: 150%;
+  font-family: robotoCondensed, sans-serif;
+  font-size: 110%;
+  font-weight: 300;
+  color: #fff;
+  font-size: 100%;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0px;
 }
 
-.section-projects h3{
-  font-size: 110%;
+.section-projects h1{
+  color: #19B5FE;
+  font-family: yesevaOne;
+  letter-spacing: 4px;
+  font-size: 200%;
+  position: absolute;
+  z-index: 2;
+  top: 4%;
+  margin-left: 1%;
 }
 
 .section-projects p{
-  font-size:100%;
-  margin:20px;
-  text-align: justify;
+  font-size:110%;
 }
 
 .section-projects .coffee{
@@ -704,24 +704,4 @@ input[type=submit]:active{
 .section-projects .coffee p{
   display: inline-block;
   margin:0;
-}
-
-.project-facts h3{
-  margin-top:10px;
-}
-
-/*-------------------------------------------------------------------------*/
-/*CONTACTS*/
-/*-------------------------------------------------------------------------*/
-.contacts{
-  background: url(img/phone-hand-iron-man.png) center center;
-  background-size: cover;
-}
-
-.btn-icon i::before {
-  color: #000;
-  margin-top: 50%;
-  font-size: 200%;
-  margin-left: 50%;
-  transform: translate(-50%, -50%);
 }
