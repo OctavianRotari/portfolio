@@ -63,11 +63,11 @@ $(document).ready(function(){
 
     //events
     onLeave: function(index, nextIndex, direction){
+      if(nextIndex===2){
+        $('.icons-who-am-i').addClass('animated fadeIn');
+      }
     },
     afterLoad: function(anchorLink, index){
-      if(index===2){
-        $('.icons-who-am-i').addClass('animated flipInX');
-      }
       if(index!==3){
         $('.navigation-arrow').removeClass('hidden');
       }

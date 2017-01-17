@@ -9,8 +9,8 @@
  */
 
 .animated {
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -29,8 +29,8 @@
 .animated.flipOutY,
 .animated.bounceIn,
 .animated.bounceOut {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes bounce {
@@ -158,8 +158,6 @@
 }
 
 .pulse {
-  -webkit-visibility: visible !important;
-  visibility: visible !important;
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
@@ -1911,8 +1909,8 @@
 }
 
 .flipInX {
-  -webkit-visibility: visible !important;
-  visibility: visible !important;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
   animation-name: flipInX;
 }

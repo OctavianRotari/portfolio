@@ -323,7 +323,6 @@ input[type=submit]:active{
 }
 
 .summary-who-am-i .icons-who-am-i{
-  visibility: hidden;
   margin-bottom: 20px;
 }
 
@@ -397,8 +396,8 @@ input[type=submit]:active{
   font-size: 140%;
 }
 
-.web-developer .long-text {
-  margin-top: 10% !important;
+.web-developer .long-text{
+  margin-top: 25% !important;
 }
 
 .web-developer .long-text h2{
@@ -497,23 +496,6 @@ input[type=submit]:active{
   float:right;
 }
 
-.bartender .long-text {
-  margin-top:10% !important;
-}
-
-.bartender .info h2 {
-  font-size: 140%;
-  font-family: lobsterRegular;
-}
-
-.bartender .info {
-  color: #260004;
-  text-align: center;
-}
-
-.bartender .info p {
-  margin: 10px 0;
-}
 .bartender .personal{
   font-family: gravitasOne;
   position: relative;
@@ -522,14 +504,15 @@ input[type=submit]:active{
 
 .bartender .personal h2{
   color: #c0392b;
-  font-family: gravitasOne;
+  font-family: lobsterRegular;
   font-size: 140%;
-  margin-bottom:5%;
+  margin: 5% auto;
 }
 
 
 .bartender .personal img{
-  width:30%;
+  width: 24%;
+  margin-top: 5%;
 }
 
 .bartender .personal p{
@@ -651,15 +634,15 @@ input[type=submit]:active{
 
 .section-projects .photo img:hover{
   transform: rotate(0);
-  width: 190%;
-  margin-left: 2%;
+  width: 170%;
+  margin-left: 10%;
   margin-top: -4%;
 }
 
 .section-projects .project-info{
   width: 35%;
   float: right;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 .section-projects .languages{
@@ -669,13 +652,17 @@ input[type=submit]:active{
 
 .section-projects h2{
   font-family: robotoCondensed, sans-serif;
-  font-size: 110%;
   font-weight: 300;
   color: #fff;
-  font-size: 100%;
-  text-decoration: none;
+  font-size: 115%;
   display: inline-block;
-  margin: 10px 0px;
+  text-transform: none;
+  margin: 5% 1% 5% 0;
+}
+
+.section-projects h2 a{
+  text-decoration: none;
+  color: #19B5FE;
 }
 
 .section-projects h1{
@@ -690,10 +677,16 @@ input[type=submit]:active{
 }
 
 .section-projects p{
-  font-size:110%;
+  font-size: 110%;
+  line-height: 150%;
+}
+
+.section-projects .project-facts{
+  text-align:center;
 }
 
 .section-projects .coffee{
+  font-size: 180%;
   margin: 10px;
 }
 
