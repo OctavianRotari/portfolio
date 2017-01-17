@@ -6,10 +6,10 @@ $(document).ready(function(){
     anchors:['home', 'who-am-i', 'projects', 'contacts'],
     navigation: false,
     navigationPosition: 'right',
-    navigationTooltips: ['firstSlide', 'secondSlide'],
+    navigationTooltips: ['firstSlide' ],
     showActiveTooltip: false,
-    slidesNavigation: false,
-    slidesNavPosition: 'bottom',
+    slidesNavigation: true,
+    slidesNavPosition: 'top',
 
     //Scrolling
     css3: true,
