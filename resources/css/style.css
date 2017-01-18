@@ -490,13 +490,9 @@ font-size: 110%;
   margin-top: 20%;
 }
 
-.accountant .facts .first-two-accounting-facts,
-.accountant .facts .last-two-accounting-facts{
-  display:inline-grid;
-}
-
-.accountant .facts .first-two-accounting-facts{
-  margin-right: 20%;
+.accountant .facts .accounting-facts{
+  display:inline-block;
+  margin: 0 5%;
 }
 
 .accountant .facts .coffee{
