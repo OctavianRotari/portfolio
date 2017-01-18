@@ -120,7 +120,7 @@
 .percircle .bar,
 .gt50 .fill {
   position: absolute;
-  border: 8px solid #2980b9;
+  border: 5px solid #2980b9;
   width: 0.84em;
   height: 0.84em;
   clip: rect(0, 0.5em, 1em, 0);
@@ -151,7 +151,7 @@
 }
 .percircle {
   position: relative;
-  font-size: 100px;
+  font-size: 70px;
   width: 1em;
   height: 1em;
   -webkit-border-radius: 50%;

@@ -90,6 +90,15 @@ h2{
   src: url(fonts/Muli-ExtraLight.ttf);
 }
 
+@font-face {
+  font-family: lato;
+  src: url(fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: poiret-one;
+  src: url(fonts/PoiretOne-Regular.ttf);
+}
 /*-------------------------------------------------------------------------*/
 /*REUSABLE CONTENTS*/
 /*-------------------------------------------------------------------------*/
@@ -116,6 +125,7 @@ header {
 }
 
 .navigation-arrow {
+  display:none;
   position: absolute;
   left: 50%;
   top: 100vh;
@@ -222,8 +232,8 @@ input[type=submit]:active{
 }
 
 .img-list-small {
-  height: 70px;
-  margin-right: 15px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .icons-coffee{
@@ -335,7 +345,7 @@ input[type=submit]:active{
 .summary-who-am-i .menu-accountant .title,
 .summary-who-am-i .menu-bartender .title,
 .summary-who-am-i .menu-traveler .title{
-  margin-top: 5%;
+  margin-top: 8%;
 }
 
 .summary-who-am-i a{
@@ -408,37 +418,33 @@ input[type=submit]:active{
 
 .web-developer h2{
   font-family: robotoCondensed, sans-serif;
-  font-size: 140%;
-}
-
-.web-developer .long-text{
-  margin-top: 25% !important;
+font-size: 110%;
 }
 
 .web-developer .long-text h2{
-  font-size: 140%;
-  color: #19B5FE;
-  text-align:center;
-  margin-bottom: 20px;
+font-size: 110%;
+    color: #19B5FE;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .web-developer .long-text ul{
-  text-align:center;
-  list-style:none;
-  line-height:35px;
-  font-size: 120%;
+  text-align: center;
+  list-style: none;
+  line-height: 20px;
+  font-size: 100%;
 }
 
 .web-developer .icons-who-am-i{
   color: #19B5FE;
   margin-right: 20px;
-  font-size: 700%;
+  font-size: 300%;
   float:right;
 }
 
 .web-developer .skills h2,
 .web-developer .certificates h2 {
-  margin: 5% 0;
+  margin: 1% 0;
   color: #19B5FE;
 }
 
@@ -449,12 +455,11 @@ input[type=submit]:active{
 .web-developer .skills .languages,
 .web-developer  .skills .frameworks{
   display: inline-block;
-  margin: 15px;
+  margin: 5px;
 }
 
 .certificates .img-list-small{
-  width: 150px;
-  height: 100px;
+  height: 65px;
 }
 /*-------------------------------------------------------------------------*/
 /*accountant*/
@@ -516,7 +521,7 @@ input[type=submit]:active{
 .bartender .icons-who-am-i{
   color: #c0392b;
   margin-right: 20px;
-  font-size: 700%;
+  font-size: 300%;
   float:right;
 }
 
@@ -535,7 +540,7 @@ input[type=submit]:active{
 
 
 .bartender .personal img{
-  width: 24%;
+  width: 20%;
   margin-top: 5%;
 }
 
@@ -564,7 +569,7 @@ input[type=submit]:active{
 .traveler .icons-who-am-i{
   color: #f8e8b5;
   margin-right: 20px;
-  font-size: 700%;
+  font-size: 300%;
   float:right;
 }
 
@@ -582,7 +587,6 @@ input[type=submit]:active{
 }
 
 .traveler h2 {
-  margin: 5% 0;
   font-size: 140%;
   font-family: merriweather;
   color: #f8e8b5;
@@ -600,7 +604,7 @@ input[type=submit]:active{
 }
 
 .traveler .general-facts .flags{
-  height: 120px;
+  height: 70px;
   margin: 0 10%;
 }
 
@@ -627,12 +631,17 @@ input[type=submit]:active{
   position: absolute;
   top: 94%;
   left: 61%;
+  display:none;
 }
 
 .section-projects{
   background-color: rgb(22, 21, 37);
   color: #fff;
   font-family: monda;
+}
+
+.section-projects .project-name{
+    text-align: center;
 }
 
 .section-projects .img-list-small {
@@ -644,29 +653,49 @@ input[type=submit]:active{
 .section-projects .cms-php .photo,
 .section-projects .omnifood .photo,
 .section-projects .maker-pair .photo{
-  perspective: 1700px;
   display: inline-block;
-  width: 50%;
-  margin-left: 2%;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.section-projects .accounting-rails h1 {
+  font-family:lato;
+  color:#27ae60;
+}
+
+.section-projects .autotrasporti-rotari h1 {
+  font-family:Georgia;
+  color:#39658C;
+}
+.section-projects .cms-php h1 {
+  font-family:Georgia;
+  color:#39658C;
+}
+.section-projects .omnifood h1 {
+  font-family:lato;
+  color:#e67e22;
+}
+.section-projects .maker-pair h1 {
+  font-family:poiret-one;
+  color: #228B22;
 }
 
 .section-projects .photo img{
-  width: 100%;
-  transition:0.3s;
-  transform: rotateY(40deg);
+  width: 70%;
+  /*transition:0.3s;*/
+  /*transform: rotateY(40deg);*/
 }
 
-.section-projects .photo img:hover{
-  transform: rotate(0);
-  width: 170%;
-  margin-left: 10%;
-  margin-top: -4%;
-}
+/*.section-projects .photo img:hover{*/
+  /*transform: rotate(0);*/
+  /*width: 170%;*/
+  /*margin-left: 10%;*/
+  /*margin-top: -4%;*/
+/*}*/
 
 .section-projects .project-info{
-  width: 35%;
   float: right;
-  margin-right: 10%;
+  margin: 0 10px;
 }
 
 .section-projects .languages{
@@ -693,16 +722,11 @@ input[type=submit]:active{
   color: #19B5FE;
   font-family: yesevaOne;
   letter-spacing: 4px;
-  font-size: 200%;
-  position: absolute;
-  z-index: 2;
-  top: 4%;
-  margin-left: 1%;
+  font-size: 150%;
 }
 
 .section-projects p{
-  font-size: 110%;
-  line-height: 150%;
+  font-size: 100%;
 }
 
 .section-projects .project-facts{
@@ -710,7 +734,7 @@ input[type=submit]:active{
 }
 
 .section-projects .coffee{
-  font-size: 180%;
+  font-size: 120%;
   margin: 10px;
 }
 
