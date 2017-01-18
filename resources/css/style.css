@@ -14,7 +14,7 @@ body {
   color: #555;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
   overflow:hidden;
   /*Avoid flicker on slides transitions for mobile phones #336 */
@@ -100,7 +100,7 @@ h2{
 
 .row {
   margin: 0 auto;
-  width: 1140px;
+  width: 100%;
 }
 
 /*------Main navigation------*/
@@ -190,13 +190,15 @@ input[type=submit] {
   background-color: #22A4EB;
   border: 1px solid #22A4EB;
   color: #fff;
-  margin-right: 15px;
+  margin-bottom: 10px;
+  width: 90%;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
   border: 1px solid #22a4eb;
   color: #22a4eb;
+  width: 90%;
 }
 
 .btn:hover,
@@ -241,12 +243,8 @@ input[type=submit]:active{
   font-size: 220%;
 }
 
-.slide .long-text{
-  margin-top: 35%;
-}
-
 .icons-who-am-i{
-  font-size: 350%;
+  font-size: 300%;
 }
 
 
@@ -261,28 +259,34 @@ input[type=submit]:active{
 .text-box {
   font-weight: 400;
   position: absolute;
-  top: 20%;
+  top: 12%;
 }
 
 .text-box .auto-type h1{
   font-family: philosopher, serif;
-  text-transform:none;
-  height:84px;
-  margin-bottom:3%;
-  font-size: 190%;
+  text-transform: none;
+  height: 72px;
+  margin: 0px 10px 10px 10px;
+  font-size: 135%;
   color: #ecf0f1;
 }
 
 .text-box .brief-introduction-header{
-  width: 70%;
+  width: 100%;
+  margin-top: 10%;
 }
 
 .text-box .brief-introduction-header h2{
   font-family: monda;
-  text-transform:none;
-  margin-bottom:3%;
-  font-size: 150%;
+  text-transform: none;
+  margin: 10px;
+  font-size: 115%;
   color: #ecf0f1;
+}
+
+.text-box .contact-me{
+  margin: 15% auto;
+  text-align:center;
 }
 
 
@@ -302,28 +306,40 @@ input[type=submit]:active{
   font-family: monda;
 }
 
+.section-who-am-i .summary-who-am-i .icon{
+  display: inline-block;
+  width: 10%;
+  float: left;
+  margin: 5% 0 0 10px;
+}
+
+.summary-who-am-i #intro .fun-facts{
+  display:inline-block;
+  width:85%
+}
+
 .summary-who-am-i .title{
   line-height: 150%;
-  font-size: 140%;
+  font-size: 100%;
   margin-top:8%;
 }
 
-.summary-who-am-i .menu-web-developer .title,
-.summary-who-am-i .menu-accountant .title{
-  margin-top:8%;
+.summary-who-am-i .menu-web-developer{
+  margin-top: 10%;
 }
 
+.summary-who-am-i .menu-web-developer .title{
+  margin-top: 2%;
+}
+
+.summary-who-am-i .menu-accountant .title,
 .summary-who-am-i .menu-bartender .title,
 .summary-who-am-i .menu-traveler .title{
-  margin-top:2%;
+  margin-top: 5%;
 }
 
 .summary-who-am-i a{
   text-decoration: none;
-}
-
-.summary-who-am-i .icons-who-am-i{
-  margin-bottom: 20px;
 }
 
 .summary-who-am-i .menu-web-developer .icons-who-am-i{
@@ -331,8 +347,7 @@ input[type=submit]:active{
 }
 
 .section-who-am-i .brief-introduction {
-  margin:20px 40px;
-  font-size:100%;
+  font-size:95%;
   color: #ecf0f1;
   list-style:none;
 }
@@ -373,14 +388,14 @@ input[type=submit]:active{
 
 .section-who-am-i .long-text {
   color:#fff;
-  font-size:100%;
+  margin: 0 10px;
 }
 
 .section-who-am-i .long-text p{
   font-family: monda;
-  font-size: 120%;
+  font-size: 100%;
   line-height: 145%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -451,9 +466,9 @@ input[type=submit]:active{
 
 .accountant .icons-who-am-i{
   color: #27ae60;
-  margin-right: 20px;
-  font-size: 700%;
-  float:right;
+  margin-right: 10px;
+  font-size: 300%;
+  float: right;
 }
 
 .accountant .general-facts{
@@ -467,12 +482,21 @@ input[type=submit]:active{
   font-family: chonburi;
   color: #27ae60;
   font-size: 140%;
+  margin-top: 20%;
 }
 
-.accountant .facts{
-  line-height: 200%;
+.accountant .facts .first-two-accounting-facts,
+.accountant .facts .last-two-accounting-facts{
+  display:inline-grid;
 }
 
+.accountant .facts .first-two-accounting-facts{
+  margin-right: 20%;
+}
+
+.accountant .facts .coffee{
+  display:none;
+}
 .accountant .facts .coffee p{
   display: inline-block;
 }
