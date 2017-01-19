@@ -1,0 +1,16 @@
+@media only screen and (min-height: 689px)  {
+  html, body {font-size: 17px;}
+  .web-developer .long-text .makers-academy {display: block;}
+  .web-developer .skills {padding-top: 50px;}
+  .section-projects .photo img {width: 100%;}
+  .bt-menu .contacts {margin-top: 250px;}
+}
+
+@media only screen and (min-height: 730px)  {
+}
+
+@media only screen and (min-height: 960px)  {
+}
+
+@media only screen and (min-width: 600px)  {
+}

@@ -266,11 +266,24 @@ input[type=submit]:active{
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
 .bt-menu-trigger {
-    top: 0%;
+  margin-top: -3%;
+  left: 90%;
 }
 
 .fp-slidesNav.top {
-    top: 10px;
+  top: 10px;
+}
+
+.bt-menu.bt-menu-open {
+  border-width: 0 45px 0 0;
+}
+
+.bt-menu ul {
+  right: 45px;
+}
+
+.bt-menu.bt-menu-open ul li {
+  width: 45px;
 }
 
 .bt-menu .contacts{
@@ -280,34 +293,40 @@ input[type=submit]:active{
 .text-box {
   font-weight: 400;
   position: absolute;
-  top: 12%;
+  margin-top: 10%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+
+.text-box .auto-type{
+  height: 30%;
 }
 
 .text-box .auto-type h1{
   font-family: philosopher, serif;
   text-transform: none;
-  height: 72px;
-  margin: 0px 10px 10px 10px;
   font-size: 135%;
   color: #ecf0f1;
 }
 
 .text-box .brief-introduction-header{
   width: 100%;
-  margin-top: 10%;
+  height: 40%;
 }
 
 .text-box .brief-introduction-header h2{
   font-family: monda;
   text-transform: none;
-  margin: 10px;
   font-size: 115%;
   color: #ecf0f1;
 }
 
 .text-box .contact-me{
-  margin: 15% auto;
-  text-align:center;
+  text-align: center;
+  height: 40%;
+  width: 100%;
 }
 
 
@@ -354,7 +373,7 @@ input[type=submit]:active{
 .summary-who-am-i .menu-web-developer,
 .summary-who-am-i .menu-traveler{
   height: 25%;
-  margin: 1%;
+  padding: 1%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -481,7 +500,7 @@ input[type=submit]:active{
   color: #19B5FE;
   font-size: 300%;
   position: absolute;
-  right: 0;
+  right: 17%;
 }
 
 .web-developer .skills h2,
@@ -510,7 +529,7 @@ input[type=submit]:active{
   color: #27ae60;
   font-size: 300%;
   position: absolute;
-  right: 60%;
+  right: 78%;
 }
 
 .accountant .general-facts{
@@ -550,7 +569,7 @@ input[type=submit]:active{
   color: #c0392b;
   font-size: 300%;
   position: absolute;
-  right: 40%;
+  right: 57.3%;
 }
 
 .bartender .general-facts{
@@ -590,7 +609,7 @@ input[type=submit]:active{
   color: #f8e8b5;
   font-size: 300%;
   position: absolute;
-  right: 20%;
+  right: 37.2%;
 }
 
 .traveler .travel-quote {
@@ -646,9 +665,12 @@ input[type=submit]:active{
 /*-------------------------------------------------------------------------*/
 /*PROJECTS*/
 /*-------------------------------------------------------------------------*/
-.section-projects .project{
-  margin-top:10%;
-  height:90%;
+.section-projects .project {
+  margin-top: 10%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
 }
 
 .keyboard{
@@ -667,6 +689,7 @@ input[type=submit]:active{
 
 .section-projects .project-name{
   text-align: center;
+  width: 100%;
 }
 
 .section-projects .img-list-small {
