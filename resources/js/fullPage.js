@@ -46,7 +46,7 @@ $(document).ready(function(){
 
     //Design
     controlArrows: false,
-    verticalCentered: true,
+    verticalCentered: false,
     sectionsColor : ['#161525', '#161525'],
     paddingTop: '0',
     paddingBottom: '0',
