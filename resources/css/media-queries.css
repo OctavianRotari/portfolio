@@ -7,10 +7,179 @@
 }
 
 @media only screen and (min-height: 730px)  {
+  .text-box .brief-introduction-header {height: 50%;}
+  .text-box .contact-me {height: 30%;}
+  .bt-menu .contacts {margin-top: 290px;}
+  .section-who-am-i .about-me {
+    height: 80%;
+    margin-top: 20%;
+  }
 }
 
-@media only screen and (min-height: 960px)  {
+@media only screen and (min-width: 500px) {
+  .bt-menu-trigger {
+    margin-top: 0%;
+    left: 91%;
+  }
+  .text-box {padding: 4%;}
+  .icons-who-am-i a, .icons-who-am-i i {font-size: 110%;}
+  .summary-who-am-i .fun-facts {
+    width: 85%;
+  }
+  .section-who-am-i .summary-who-am-i .icons-who-am-i {
+    width: 15%;
+  }
+  .summary-who-am-i .title {
+    padding-bottom: 10px;
+  }
+  html, body {
+    font-size: 17px;
+  }
+  .bt-menu.bt-menu-open {
+    border-width: 0 50px 0 0;
+  }
+  .bt-menu ul {
+    right: 49px;
+  }
+  .bt-menu .contacts {
+    margin-top: 385px;
+  }
+
+  .navigation-arrow {
+    display: block;
+  }
+  .section-who-am-i .about-me {
+    height: 80%;
+    margin-top: 20%;
+    padding: 3%;
+  }
+  .section-who-am-i .about-me .icons-who-am-i {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .traveler .languages{
+    padding-bottom: 20%;
+  }
+  .traveler .general-facts .flags {
+    height: 70px;
+    margin: 0 auto;
+    display: block;
+    width: 308px;
+    padding-top: 20px;
+  }
+  .img-list-small {
+    height: 50px;
+  }
+  .web-developer .long-text h2 {
+    font-size: 150%;
+  }
+  .web-developer .long-text ul {
+    line-height: 28px;
+  }
+  .web-developer h2 {
+    font-family: robotoCondensed, sans-serif;
+    font-size: 150%;
+  }
+  .section-projects h1 {
+    font-size: 179%;
+  }
+  .section-projects .project {
+    padding: 4%;
+  }
 }
 
-@media only screen and (min-width: 600px)  {
+@media only screen and (min-width: 570px) {
+  .bt-menu-trigger {
+    left: 92%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .section-who-am-i .brief-introduction {
+    font-size: 100%;
+    color: #ecf0f1;
+    list-style: none;
+  }
+  .bt-menu-trigger {
+    margin-top: 0%;
+    left: 92.5%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .text-box .auto-type h1 {
+    font-size: 150%;
+  }
+  .bt-menu-trigger {
+    margin-top: 0%;
+    left: 93%;
+  }
+  .icons-who-am-i a, .icons-who-am-i i {
+    font-size: 120%;
+  }
+  .section-projects h1 {
+    font-size: 200%;
+  }
+  .btn-ghost:link, .btn-ghost:visited {
+    width: 48%;
+    display: inline-block;
+  }
+  .btn-full:link, .btn-full:visited, input[type=submit] {
+    width: 48%;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  html, body {
+    font-size: 19px;
+  }
+  .bt-menu-trigger {
+    left: 94%;
+  }
+}
+
+@media only screen and (min-height: 1280px) {
+  .bt-menu-trigger {
+    width: 50px;
+  }
+  .bt-menu-trigger {
+    left: 91%;
+  }
+  .bt-menu-trigger span {
+    height: 4px;
+  }
+  .bt-menu.bt-menu-open {
+    border-width: 0 80px 0 0;
+  }
+  .bt-menu ul li a:before {
+    font-size: 50px;
+  }
+  .bt-menu ul {
+    right: 63px;
+  }
+  .bt-menu .contacts {
+    margin-top: 700px;
+  }
+  .text-box .auto-type h1 {
+    font-size: 180%;
+  }
+  .text-box .brief-introduction-header h2 {
+    font-family: monda;
+    text-transform: none;
+    font-size: 150%;
+    color: #ecf0f1;
+  }
+  .img-list-small {
+    height: 80px;
+  }
+  .certificates .img-list-small {
+    height: 100px;
+  }
+  html, body {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
 }

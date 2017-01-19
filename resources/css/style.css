@@ -267,7 +267,7 @@ input[type=submit]:active{
 /*-------------------------------------------------------------------------*/
 .bt-menu-trigger {
   margin-top: -3%;
-  left: 90%;
+  left: 89%;
 }
 
 .fp-slidesNav.top {
@@ -439,8 +439,8 @@ input[type=submit]:active{
 }
 
 .section-who-am-i .long-text {
-  color:#fff;
-  margin: 0 10px;
+  color: #fff;
+  padding-top: 10px;
 }
 
 .section-who-am-i .long-text p{
@@ -454,11 +454,11 @@ input[type=submit]:active{
   margin-top: 10%;
   display: flex;
   flex-wrap: wrap;
+  padding: 2%;
 }
 
 .section-who-am-i .about-me .icons-who-am-i{
   top: -15px;
-  margin-right: 10px;
 }
 
 .section-who-am-i .about-me .personal-info,
@@ -642,9 +642,10 @@ input[type=submit]:active{
   display:inline;
 }
 
-.traveler .general-facts .flags{
+.traveler .general-facts .flags {
   height: 70px;
-  margin: 0 10%;
+  margin: 0 auto;
+  width: 308px;
 }
 
 .traveler .languages-countries{
