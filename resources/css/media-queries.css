@@ -251,6 +251,9 @@
   .section-who-am-i .about-me .general-facts .certificates{
     padding-top: 30px;
   }
+  .section-projects .project {
+    margin-top: 5%;
+  }
   .section-projects .project-name {
     height: 0%;
   }
