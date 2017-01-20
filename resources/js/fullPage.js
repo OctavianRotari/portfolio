@@ -64,16 +64,10 @@ $(document).ready(function(){
     //events
     onLeave: function(index, nextIndex, direction){
       if(nextIndex===2){
-        $('.icons-who-am-i').addClass('animated fadeIn');
+        $('.icons-who-am-i').animateCss('animated flipInX')
       }
     },
     afterLoad: function(anchorLink, index){
-      if(index!==3){
-        $('.navigation-arrow').removeClass('hidden');
-      }
-      if(index===3){
-        $('.navigation-arrow').addClass('hidden');
-      }
     },
     afterRender: function(){},
     afterResize: function(){},
@@ -81,6 +75,28 @@ $(document).ready(function(){
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
     },
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+      if(index===2){
+        if(nextSlideIndex===2){
+          $('.icons-cocktail img').animateCss('animated flip')
+        }
+        if(nextSlideIndex===3){
+          $('.traveler .flag-icon').animateCss('animated rotateIn');
+        }
+        if(nextSlideIndex===4){
+          $('.general-facts .languages img').animateCss('animated tada');
+          setTimeout(function(){
+            $('.general-facts .frameworks img').animateCss('animated tada');
+          }, 2000)
+          setTimeout(function(){
+            $('.general-facts .certificates img').animateCss('animated bounce');
+          }, 4000)
+        }
+      }
+      if(index===3){
+        if(nextSlideIndex){
+          $('.project-facts .icons-coffee').animateCss('animated hinge')
+        }
+      }
     }
   });
 });

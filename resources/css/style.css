@@ -14,7 +14,6 @@ body {
   color: #555;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
-  font-size: 16px;
   text-rendering: optimizeLegibility;
   overflow:hidden;
   /*Avoid flicker on slides transitions for mobile phones #336 */
@@ -117,7 +116,7 @@ h2{
 header {
   width:100%;
   position: fixed;
-  z-index: 9999;
+  z-index: 8;
 }
 
 .active {
@@ -127,6 +126,7 @@ header {
 .navigation-arrow {
   display:none;
   position: absolute;
+  z-index: 9;
   left: 50%;
   top: 100vh;
   transform: translate(-50%, -50%);
@@ -265,9 +265,24 @@ input[type=submit]:active{
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
-.bt-menu-trigger {
-  margin-top: -3%;
-  left: 89%;
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  left: 100px; top: 0;
+}
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: url(img/loader-128x/Preloader_2.gif) center no-repeat #161525;
 }
 
 .fp-slidesNav.top {
@@ -287,12 +302,13 @@ input[type=submit]:active{
 }
 
 .bt-menu .contacts{
-  margin-top: 60px;
+  position: fixed;
+  bottom: 0;
 }
 
 .text-box {
   font-weight: 400;
-  position: absolute;
+  position: fixed;
   margin-top: 10%;
   height: 90%;
   display: flex;
@@ -301,6 +317,7 @@ input[type=submit]:active{
 }
 
 .text-box .auto-type{
+  width: 100%;
   height: 30%;
 }
 
@@ -343,24 +360,22 @@ input[type=submit]:active{
 .section-who-am-i .summary-who-am-i{
   text-align: center;
   height: 90%;
-  margin-top:10%;
+  margin-top: 10%;
   width: 100%;
   font-family: monda;
 }
 
 .summary-who-am-i .intro{
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
 }
 
 .section-who-am-i .summary-who-am-i .icons-who-am-i{
   display: inline-block;
   float: left;
   width: 10%;
-}
-
-.summary-who-am-i #intro .fun-facts{
-  display:inline-block;
-  width:85%
 }
 
 .summary-who-am-i .title{
@@ -372,19 +387,14 @@ input[type=submit]:active{
 .summary-who-am-i .menu-bartender,
 .summary-who-am-i .menu-web-developer,
 .summary-who-am-i .menu-traveler{
+  width:100%;
   height: 25%;
-  padding: 1%;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .summary-who-am-i .fun-facts{
-  width: 10%;
   height: 100%;
-}
-
-.summary-who-am-i .fun-facts{
-  width:90%
+  width: 90%;
+  float: right;
 }
 
 .summary-who-am-i a{
@@ -499,8 +509,7 @@ input[type=submit]:active{
 .web-developer .icons-who-am-i{
   color: #19B5FE;
   font-size: 300%;
-  position: absolute;
-  right: 17%;
+  position: fixed;
 }
 
 .web-developer .skills h2,
@@ -528,8 +537,7 @@ input[type=submit]:active{
 .accountant .icons-who-am-i{
   color: #27ae60;
   font-size: 300%;
-  position: absolute;
-  right: 78%;
+  position: fixed;
 }
 
 .accountant .general-facts{
@@ -568,8 +576,7 @@ input[type=submit]:active{
 .bartender .icons-who-am-i{
   color: #c0392b;
   font-size: 300%;
-  position: absolute;
-  right: 57.3%;
+  position: fixed;
 }
 
 .bartender .general-facts{
@@ -608,8 +615,7 @@ input[type=submit]:active{
 .traveler .icons-who-am-i{
   color: #f8e8b5;
   font-size: 300%;
-  position: absolute;
-  right: 37.2%;
+  position: fixed;
 }
 
 .traveler .travel-quote {

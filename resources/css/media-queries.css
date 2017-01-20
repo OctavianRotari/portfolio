@@ -3,13 +3,11 @@
   .web-developer .long-text .makers-academy {display: block;}
   .web-developer .skills {padding-top: 50px;}
   .section-projects .photo img {width: 100%;}
-  .bt-menu .contacts {margin-top: 250px;}
 }
 
 @media only screen and (min-height: 730px)  {
   .text-box .brief-introduction-header {height: 50%;}
   .text-box .contact-me {height: 30%;}
-  .bt-menu .contacts {margin-top: 290px;}
   .section-who-am-i .about-me {
     height: 80%;
     margin-top: 20%;
@@ -17,10 +15,6 @@
 }
 
 @media only screen and (min-width: 500px) {
-  .bt-menu-trigger {
-    margin-top: 0%;
-    left: 91%;
-  }
   .text-box {padding: 4%;}
   .icons-who-am-i a, .icons-who-am-i i {font-size: 110%;}
   .summary-who-am-i .fun-facts {
@@ -40,9 +34,6 @@
   }
   .bt-menu ul {
     right: 49px;
-  }
-  .bt-menu .contacts {
-    margin-top: 385px;
   }
 
   .navigation-arrow {
@@ -89,9 +80,6 @@
 }
 
 @media only screen and (min-width: 570px) {
-  .bt-menu-trigger {
-    left: 92%;
-  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -100,19 +88,11 @@
     color: #ecf0f1;
     list-style: none;
   }
-  .bt-menu-trigger {
-    margin-top: 0%;
-    left: 92.5%;
-  }
 }
 
 @media only screen and (min-width: 650px) {
   .text-box .auto-type h1 {
     font-size: 150%;
-  }
-  .bt-menu-trigger {
-    margin-top: 0%;
-    left: 93%;
   }
   .icons-who-am-i a, .icons-who-am-i i {
     font-size: 120%;
@@ -134,18 +114,9 @@
   html, body {
     font-size: 19px;
   }
-  .bt-menu-trigger {
-    left: 94%;
-  }
 }
 
 @media only screen and (min-height: 1280px) {
-  .bt-menu-trigger {
-    width: 50px;
-  }
-  .bt-menu-trigger {
-    left: 91%;
-  }
   .bt-menu-trigger span {
     height: 4px;
   }
@@ -157,9 +128,6 @@
   }
   .bt-menu ul {
     right: 63px;
-  }
-  .bt-menu .contacts {
-    margin-top: 700px;
   }
   .text-box .auto-type h1 {
     font-size: 180%;
@@ -182,4 +150,173 @@
 }
 
 @media only screen and (min-width: 800px) {
+  .text-box .contact-me {
+    height: 30%;
+    text-align: left;
+  }
+  .btn-full:link, .btn-full:visited, input[type=submit] {
+    width: auto;
+    display: inline-block;
+  }
+  .btn-ghost:link, .btn-ghost:visited {
+    width: auto;
+    display: inline-block;
+  }
+  .text-box .brief-introduction-header {
+    height: 15%;
+  }
+  .img-list-small {
+    height: 35px;
+  }
+  .certificates .img-list-small {
+    height: 80px;
+  }
+  .section-projects .project {
+    padding: 0 4%;
+  }
+  .section-projects .photo img {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .traveler .languages {
+    padding-bottom: 10%;
+  }
+}
+
+@media only screen and (min-width: 1037px) {
+  .section-who-am-i .summary-who-am-i{margin-top: 5%;}
+  .text-box .brief-introduction-header {
+    height: 15%;
+    width: 61%;
+  }
+  .text-box .auto-type {
+    height: 10%;
+  }
+  .text-box .contact-me {
+    height: 40%;
+    text-align: left;
+  }
+  .summary-who-am-i .menu-accountant,
+  .summary-who-am-i .menu-bartender,
+  .summary-who-am-i .menu-web-developer,
+  .summary-who-am-i .menu-traveler {
+    width: 50%;
+    height: 25%;
+  }
+  .section-who-am-i .summary-who-am-i .icons-who-am-i {
+    width: 100%;
+  }
+  .summary-who-am-i .fun-facts {
+    width: 100%;
+  }
+  .keyboard {
+    display: block;
+  }
+  .traveler .general-facts .flags {
+    width: 396px;
+  }
+  .percircle {
+    font-size: 90px;
+  }
+  .pie, .percircle .bar, .gt50 .fill {
+    border: 7px solid #2980b9;
+  }
+  .section-who-am-i .about-me .personal-info,
+  .section-who-am-i .about-me .general-facts {
+    height: 50%;
+    width: 50%;
+  }
+  .section-who-am-i .about-me .general-facts .facts{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section-who-am-i .about-me {
+    height: 70%;
+    margin-top: 20%;
+    padding: 3%;
+  }
+  .accountant .facts .accounting-facts {
+    display: inline-block;
+    margin: 0;
+    width: 50%;
+  }
+  .accountant .facts .accounting-facts h2:first-child{
+    margin-top:0;
+  }
+  .web-developer .skills {
+    padding-top: 0;
+  }
+  .section-who-am-i .about-me .general-facts .certificates{
+    padding-top: 30px;
+  }
+  .section-projects .project-name {
+    height: 0%;
+  }
+  .section-projects .project .photo {
+    margin: 0; 
+    width: 50%;
+  }
+  .section-projects .project-info {
+    margin: 0; 
+    width: 50%;
+  }
+
+  .section-projects .photo img{
+    width: 90%;
+    transition:0.3s;
+  }
+
+  .section-projects .photo img:hover {
+    transform: rotate(0);
+    width: 200%;
+    margin-left: 0%;
+    margin-top: -30%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  html, body {
+    font-size: 20px;
+  }
+  .section-who-am-i .about-me {margin-top: 15%;}
+  .web-developer .skills .languages, 
+  .web-developer .skills .frameworks {padding: 10px;}
+  .img-list-small {height: 50px;}
+}
+
+@media only screen and (min-width: 1300px) {
+  html, body {
+    font-size: 23px;
+  }
+  .img-list-small {
+    height: 60px;
+  }
+  .certificates .img-list-small {
+    height: 95px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  html, body {
+    font-size: 24px;
+  }
+  .img-list-small {
+    height: 70px;
+  }
+  .web-developer .skills .languages, .web-developer .skills .frameworks {
+    display: inline-block;
+    padding: 25px;
+  }
+  .web-developer .long-text ul {
+    line-height: 40px;
+  }
+  .section-projects .photo img:hover {
+    width: 170%;
+    margin-left: 15%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  html, body {
+    font-size: 27px;
+  }
 }
