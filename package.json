@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/OctavianRotari/portfolio#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
     "gulp-debug": "^3.1.0",
-    "gulp-google-webfonts": "0.0.14",
+    "gulp-google-webfonts": "git+https://github.com/OctavianRotari/gulp-google-webfonts.git",
     "gulp-sass": "^3.1.0",
     "gulp-server-livereload": "^1.9.2"
   }

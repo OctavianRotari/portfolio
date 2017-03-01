@@ -13,7 +13,7 @@ html,
 body {
   background-color: #fff;
   color: #555;
-  font-family: 'Lato', 'Arial', sans-serif;
+  font-family: Lato;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   overflow:hidden;
@@ -229,7 +229,7 @@ if it's not present, don't show loader */
   width: 100%;
   height: 100%;
   z-index: 10;
-  background: url('/img/Preloader_2.gif') center no-repeat #161525;
+  background: url('./img/Preloader_2.gif') center no-repeat #161525;
 }
 
 .brief-introduction-header, span{
@@ -273,7 +273,7 @@ if it's not present, don't show loader */
 }
 
 .text-box .auto-type h1{
-  font-family: Philosopher, serif;
+  font-family: Philosopher;
   text-transform: none;
   font-size: 135%;
   color: #ecf0f1;
@@ -285,7 +285,6 @@ if it's not present, don't show loader */
 }
 
 .text-box .brief-introduction-header h2{
-  font-family: Muli;
   text-transform: none;
   font-size: 115%;
   color: #ecf0f1;
@@ -313,7 +312,6 @@ if it's not present, don't show loader */
   height: 90%;
   margin-top: 10%;
   width: 100%;
-  font-family: Muli;
 }
 
 .summary-who-am-i .intro{
@@ -395,7 +393,6 @@ if it's not present, don't show loader */
 }
 
 .summary-who-am-i .menu-web-developer h2{
-  font-family: Muli, sans-serif;
   color: #19B5FE;
 }
 
@@ -405,7 +402,6 @@ if it's not present, don't show loader */
 }
 
 .section-who-am-i .long-text p{
-  font-family: Muli;
   font-size: 100%;
   line-height: 145%;
   margin-bottom: 5%;
@@ -430,12 +426,8 @@ if it's not present, don't show loader */
 
 /*-------------------------------------------------------------------------*/
 /*web developer*/
-.web-developer {
-  font-family: Muli;
-}
 
 .web-developer h2{
-  font-family: Muli, sans-serif;
   font-size: 110%;
 }
 
@@ -552,7 +544,6 @@ if it's not present, don't show loader */
 
 .bartender .general-facts p{
   margin: 10px 0;
-  font-family: Muli;
 }
 
 .bartender .invented-cocktail i{
@@ -571,7 +562,7 @@ if it's not present, don't show loader */
 
 .traveler .travel-quote {
   padding-top: 15px;
-  font-family: Merriweather, sans-serif;
+  font-family: Merriweather;
   color: #FFFFFF;
   font-size: 160%;
 }
@@ -616,7 +607,7 @@ if it's not present, don't show loader */
 
 .traveler .personal-quote {
   margin-top: 5%;
-  font-family: merriweatherSans, sans-serif;
+  font-family: Merriweather;
   font-size: 160%;
 }
 
@@ -642,7 +633,7 @@ if it's not present, don't show loader */
 .section-projects{
   background-color: rgb(22, 21, 37);
   color: #fff;
-  font-family: Muli;
+  font-family: Lato;
 }
 
 .section-projects .project-name{
@@ -666,11 +657,11 @@ if it's not present, don't show loader */
 }
 
 .section-projects .autotrasporti-rotari h1 {
-  font-family:Georgia;
+  font-family: Georgia;
   color:#39658C;
 }
 .section-projects .cms-php h1 {
-  font-family:Georgia;
+  font-family: Georgia;
   color:#39658C;
 }
 .section-projects .omnifood h1 {
@@ -678,7 +669,6 @@ if it's not present, don't show loader */
   color:#e67e22;
 }
 .section-projects .maker-pair h1 {
-  font-family:poiret-one;
   color: #228B22;
 }
 
@@ -697,7 +687,6 @@ if it's not present, don't show loader */
 }
 
 .section-projects h2{
-  font-family: Muli, sans-serif;
   font-weight: 300;
   color: #fff;
   font-size: 115%;
