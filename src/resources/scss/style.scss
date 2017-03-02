@@ -1,4 +1,5 @@
 $light-blue: #19b5fe;
+$dark-blue: #161525;
 /*-------------------------------------------------------------------------*/
 /*BASIC SETUP*/
 /*-------------------------------------------------------------------------*/
@@ -23,7 +24,7 @@ body {
 }
 
 section{
-  background-color:#161525;
+  background-color: $dark-blue;
 }
 
 a:focus{
@@ -195,10 +196,6 @@ input[type=submit]:active{
   font-size: 220%;
 }
 
-.icons-who-am-i{
-  font-size: 300%;
-}
-
 nav {
   position: absolute;
   right: 0;
@@ -208,6 +205,10 @@ nav {
 }
 
 nav {
+  a:before {
+    color: #337ab7;
+  }
+
   .bt-menu-trigger {
     display: none;
   }
@@ -244,7 +245,7 @@ nav {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background: url('./img/Preloader_2.gif') center no-repeat #161525;
+  background: url('./img/Preloader_2.gif') center no-repeat $dark-blue;
 }
 
 .brief-introduction-header, span{
@@ -299,80 +300,168 @@ nav {
 }
 
 /*-------------------------------------------------------------------------*/
+/*PROJECTS*/
+/*-------------------------------------------------------------------------*/
+.keyboard{
+  z-index: 8;
+  position: absolute;
+  top: 94%;
+  left: 61%;
+  display:none;
+}
+
+.projects {
+  background-color: rgb(22, 21, 37);
+  color: #fff;
+  font-family: Lato;
+}
+
+.projects {
+  .project {
+    h1{
+      font-family: Lato;
+      color: $light-blue;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 2em;
+      color: #fff;
+      display: inline-block;
+      text-transform: none;
+    }
+
+    h3 a {
+      text-decoration: none;
+      color: $light-blue;
+    }
+
+    h3 {
+      font-size: 2em;
+      margin-bottom: 2em;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+
+  .accounting-rails h2 {
+    color:#27ae60;
+  }
+
+  .autotrasporti-rotari h2 {
+    font-family: Georgia;
+    color:#39658C;
+    font-size: 2.5em;
+  }
+
+  .cms-php h2 {
+    font-family: Georgia;
+    color:#39658C;
+  }
+
+  .omnifood h2 {
+    font-family: Lato;
+    color:#e67e22;
+  }
+
+  .photo img{
+    width: 100%;
+  }
+
+  .coffee {
+    h3, p{
+      display: inline-block;
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------*/
 /*WHO AM I*/
 /*-------------------------------------------------------------------------*/
 
-.icons-who-am-i a,
-.icons-who-am-i i{
-  cursor: pointer;
-  font-size: 90%;
-}
 
 .who-am-i {
+  .menu-web-developer,
+  .menu-accountant,
+  .menu-bartender,
+  .menu-traveler {
+    height: 50%;
+  }
+
+  .icons-who-am-i {
+    a, i {
+      cursor: pointer;
+      font-size: 2.5em;
+    }
+  }
+
+
   .icons-who-am-i{
-    display: inline-block;
-    float: left;
-    width: 10%;
+    display: block;
   }
 
   .title{
-    line-height: 150%;
-    font-size: 100%;
   }
 
   .fun-facts{
-    height: 100%;
-    width: 90%;
-    float: right;
   }
 
   a{
     text-decoration: none;
     display: block;
-    width: 100%;
-    height: 100%;
   }
 
-  .menu-web-developer .icons-who-am-i{
-    color: $light-blue;
+
+  .menu-web-developer {
+    h2{
+      color: $light-blue;
+    }
+    .icons-who-am-i{
+      color: $light-blue;
+    }
   }
 
-  .menu-accountant h2{
-    font-family: Chonburi;
-    color: #27ae60;
+  .menu-accountant {
+    h2{
+      font-family: Chonburi;
+      color: #27ae60;
+    }
+
+    .icons-who-am-i{
+      color: #27ae60;
+    }
   }
 
-  .menu-accountant .icons-who-am-i{
-    color: #27ae60;
-  }
+  .menu-bartender {
+    h2{
+      font-weight: 700;
+      font-family: Lobster;
+      color: #c0392b;
+    }
 
-  .menu-bartender h2{
-    font-weight: 700;
-    font-family: Lobster;
-    color: #c0392b;
+    .icons-who-am-i{
+      color: #c0392b;
+    }
   }
+  .menu-traveler {
+    h2{
+      font-weight: 700;
+      font-family: YesevaOne;
+      color: #f8e8b5;
+    }
 
-  .menu-bartender .icons-who-am-i{
-    color: #c0392b;
-  }
-
-  .menu-traveler h2{
-    font-weight: 700;
-    font-family: YesevaOne;
-    color: #f8e8b5;
-  }
-
-  .menu-traveler .icons-who-am-i{
-    color: #f8e8b5;
-  }
-
-  .menu-web-developer h2{
-    color: $light-blue;
+    .icons-who-am-i{
+      color: #f8e8b5;
+    }
   }
 }
 
 .brief-introduction {
-  font-size:90%;
+  font-size: 1.5em;
   color: #ecf0f1;
   list-style:none;
 
@@ -413,36 +502,23 @@ nav {
 
 .web-developer {
   h2{
-    font-size: 110%;
   }
 
   .long-text h2{
-    font-size: 110%;
     color: $light-blue;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .long-text .makers-academy{
-    display:none;
   }
 
   .long-text ul{
-    text-align: center;
     list-style: none;
-    line-height: 20px;
-    font-size: 100%;
   }
 
   .icons-who-am-i{
     color: $light-blue;
-    font-size: 300%;
     position: fixed;
   }
 
   .skills h2,
   .certificates h2 {
-    margin: 1% 0;
     color: $light-blue;
   }
 
@@ -451,15 +527,12 @@ nav {
   }
 
   .skills {
-    .languages,
-    .frameworks{
+    .languages, .frameworks{
       display: inline-block;
-      margin: 5px;
     }
   }
 
   .certificates .img-list-small{
-    height: 65px;
   }
 }
 
@@ -469,31 +542,23 @@ nav {
 .accountant {
   .icons-who-am-i{
     color: #27ae60;
-    font-size: 300%;
     position: fixed;
   }
 
   .general-facts{
-    text-align: center;
     color:#fff;
-    display:inline;
   }
 
   h2{
     font-family: Chonburi;
     color: #27ae60;
-    font-size: 140%;
-    margin-top: 20%;
   }
 
   .facts {
     .accounting-facts{
-      display:inline-block;
-      margin: 0 5%;
     }
 
     .coffee{
-      display:none;
     }
 
     .coffee p{
@@ -502,7 +567,6 @@ nav {
   }
 
   .icons-coffe {
-    margin-left: 10px;
     display: inline-block;
   }
 }
@@ -514,38 +578,27 @@ nav {
 .bartender {
   .icons-who-am-i{
     color: #c0392b;
-    font-size: 300%;
     position: fixed;
   }
 
   .general-facts{
-    display:inline;
     font-family: GravitasOne;
-    position: relative;
-    text-align:center;
   }
 
   .general-facts {
     h2{
       color: #c0392b;
       font-family: Lobster;
-      font-size: 140%;
-      margin: 5% auto;
     }
 
     img{
-      width: 20%;
-      margin-top: 5%;
     }
 
     p{
-      margin: 10px 0;
     }
   }
 
   .invented-cocktail i{
-    padding-top: 30px;
-    font-size: 350%;
   }
 }
 
@@ -555,31 +608,24 @@ nav {
 .traveler {
   .icons-who-am-i{
     color: #f8e8b5;
-    font-size: 300%;
     position: fixed;
   }
 
   .travel-quote {
-    padding-top: 15px;
     font-family: Merriweather;
     color: #FFFFFF;
-    font-size: 160%;
   }
 
   .travel-quote span{
     display: block;
-    text-align: right;
-    margin: 30px 70px;
   }
 
   h2 {
-    font-size: 140%;
     font-family: Merriweather;
     color: #f8e8b5;
   }
 
   h2 span{
-    font-size: 160%;
     color: #fff;
   }
 
@@ -590,123 +636,18 @@ nav {
 
   .general-facts {
     .flags {
-      height: 70px;
-      margin: 0 auto;
-      width: 308px;
     }
   }
 
   .languages-countries{
-    text-align: center;
-    margin-top: 2%;
   }
 
   .footer {
-    text-align:center;
   }
 
   .personal-quote {
-    margin-top: 5%;
     font-family: Merriweather;
-    font-size: 160%;
   }
 }
 
 
-/*-------------------------------------------------------------------------*/
-/*PROJECTS*/
-/*-------------------------------------------------------------------------*/
-.keyboard{
-  z-index: 8;
-  position: absolute;
-  top: 94%;
-  left: 61%;
-  display:none;
-}
-
-.projects {
-  background-color: rgb(22, 21, 37);
-  color: #fff;
-  font-family: Lato;
-
-  .project h1{
-    font-family: Lato;
-    color: $light-blue;
-    font-size: 2.5em;
-  }
-
-  .project h2{
-    font-size: 2em;
-    margin-bottom: 2em;
-  }
-
-  .project h3{
-    font-size: 2em;
-    margin-bottom: 2em;
-    font-weight: 300;
-  }
-
-  .project p {
-    font-size: 1.5em;
-  }
-
-  .accounting-rails h2 {
-    color:#27ae60;
-  }
-
-  .autotrasporti-rotari h2 {
-    font-family: Georgia;
-    color:#39658C;
-    font-size: 2.5em;
-  }
-
-  .cms-php h2 {
-    font-family: Georgia;
-    color:#39658C;
-  }
-
-  .omnifood h2 {
-    font-family: Lato;
-    color:#e67e22;
-  }
-
-  .photo img{
-    width: 100%;
-  }
-
-  .project-info{
-  }
-
-  .languages{
-  }
-
-  h2{
-    color: #fff;
-    display: inline-block;
-    text-transform: none;
-  }
-
-  h2 a{
-    text-decoration: none;
-    color: $light-blue;
-  }
-
-  h1{
-    color: $light-blue;
-    font-family: YesevaOne;
-  }
-
-  p{
-  }
-
-  .coffee{
-  }
-
-  .coffee h3{
-    display: inline-block;
-  }
-
-  .coffee p{
-    display: inline-block;
-  }
-}
