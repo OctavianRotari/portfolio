@@ -1,3 +1,4 @@
+$light-blue: #19b5fe;
 /*-------------------------------------------------------------------------*/
 /*BASIC SETUP*/
 /*-------------------------------------------------------------------------*/
@@ -273,13 +274,14 @@ nav {
   }
 } 
 
-.section-header {
+.header {
   height: 100%;
 }
 
-.section-header {
+.header {
   .intro {
-    transform: translateY(50%);
+    position: absolute;
+    top: 0;
   }
 
   .auto-type h1{
@@ -306,7 +308,7 @@ nav {
   font-size: 90%;
 }
 
-.section-who-am-i {
+.who-am-i {
   .icons-who-am-i{
     display: inline-block;
     float: left;
@@ -332,7 +334,7 @@ nav {
   }
 
   .menu-web-developer .icons-who-am-i{
-    color: #19B5FE;
+    color: $light-blue;
   }
 
   .menu-accountant h2{
@@ -365,7 +367,7 @@ nav {
   }
 
   .menu-web-developer h2{
-    color: #19B5FE;
+    color: $light-blue;
   }
 }
 
@@ -416,7 +418,7 @@ nav {
 
   .long-text h2{
     font-size: 110%;
-    color: #19B5FE;
+    color: $light-blue;
     text-align: center;
     margin-bottom: 10px;
   }
@@ -433,7 +435,7 @@ nav {
   }
 
   .icons-who-am-i{
-    color: #19B5FE;
+    color: $light-blue;
     font-size: 300%;
     position: fixed;
   }
@@ -441,7 +443,7 @@ nav {
   .skills h2,
   .certificates h2 {
     margin: 1% 0;
-    color: #19B5FE;
+    color: $light-blue;
   }
 
   .skills {
@@ -622,103 +624,82 @@ nav {
   display:none;
 }
 
-.section-projects{
+.projects {
   background-color: rgb(22, 21, 37);
   color: #fff;
   font-family: Lato;
-}
 
-.section-projects {
-  .project {
-    margin-top: 10%;
-    height: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1%;
-  }
-
-  .project-name{
-    text-align: center;
-    width: 100%;
-  }
-
-  .img-list-small {
-    height: 50px;
-  }
-
-  .project .photo{
-    display: inline-block;
-    margin: 0 10px;
-    text-align: center;
-  }
-
-  .accounting-rails h1 {
+  .project h1{
     font-family: Lato;
+    color: $light-blue;
+    font-size: 2.5em;
+  }
+
+  .project h2{
+    font-size: 2em;
+    margin-bottom: 2em;
+  }
+
+  .project h3{
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: 300;
+  }
+
+  .project p {
+    font-size: 1.5em;
+  }
+
+  .accounting-rails h2 {
     color:#27ae60;
   }
 
   .autotrasporti-rotari h1 {
     font-family: Georgia;
     color:#39658C;
+    font-size: 2.5em;
   }
-  .cms-php h1 {
+
+  .cms-php h2 {
     font-family: Georgia;
     color:#39658C;
   }
-  .omnifood h1 {
+
+  .omnifood h2 {
     font-family: Lato;
     color:#e67e22;
   }
-  .maker-pair h1 {
-    color: #228B22;
-  }
 
   .photo img{
-    width: 60%;
+    width: 100%;
   }
 
   .project-info{
-    float: right;
-    margin: 0 10px;
   }
 
   .languages{
-    display: inline-block;
-    margin-left: 15%;
   }
 
   h2{
-    font-weight: 300;
     color: #fff;
-    font-size: 115%;
     display: inline-block;
     text-transform: none;
-    margin: 5% 1% 5% 0;
   }
 
   h2 a{
     text-decoration: none;
-    color: #19B5FE;
+    color: $light-blue;
   }
 
   h1{
-    color: #19B5FE;
+    color: $light-blue;
     font-family: YesevaOne;
-    letter-spacing: 4px;
-    font-size: 150%;
   }
 
   p{
-    font-size: 100%;
-  }
-
-  .project-facts{
-    text-align:center;
   }
 
   .coffee{
-    font-size: 120%;
-    margin: 10px;
   }
 
   .coffee h3{
@@ -727,6 +708,5 @@ nav {
 
   .coffee p{
     display: inline-block;
-    margin:0;
   }
 }
