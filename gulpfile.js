@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var serverLiveReload = require('gulp-server-livereload');
+var rename = require('gulp-rename');
 var cleanCss = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var googleWebFonts = require('gulp-google-webfonts');
@@ -7,6 +8,7 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var clean = require('gulp-clean');
 var uglify = require('gulp-uglify');
+var imageResize = require('gulp-image-resize');
 //var debug = require('gulp-debug');
 
 var options = {
@@ -27,8 +29,16 @@ var jsFiles = [
   'src/resources/js/*.js'
 ];
 
+var projectsImage = [
+  'src/resources/img/*.{jpeg,jpg,png}'
+];
+
+var projectsImageSize = [
+  530, 1060
+];
+
 function cleanDist() {
-  return gulp.src([ 'dist/css/fonts/', 'dist/css/fonts/*.css', 'dist/js/' ])
+  return gulp.src([ 'dist/css/fonts/', 'dist/css/fonts/*.css', 'dist/js/', 'dist/img/' ])
     .pipe(clean());
 }
 
@@ -54,6 +64,21 @@ function javaScriptUglify() {
     .pipe(gulp.dest('dist/js'));
 }
 
+function resizeImages(done) {
+  projectsImageSize.forEach(function (imageSize) {
+    gulp.src(projectsImage)
+      .pipe(imageResize({
+        width: imageSize,
+        height: imageSize
+      }))
+      .pipe(rename( function (path) {
+        path.basename += '-' + imageSize;
+      }))
+      .pipe(gulp.dest('dist/img/'));
+    done();
+  });
+}
+
 function watch() {
   gulp.watch(cssFiles, style);
   gulp.watch(jsFiles, javaScriptUglify);
@@ -69,6 +94,6 @@ function server() {
     }));
 }
 
-var build = gulp.series(cleanDist, fonts, style, javaScriptUglify, gulp.parallel(watch, server));
+var build = gulp.series(cleanDist, fonts, style, javaScriptUglify, resizeImages, gulp.parallel(watch, server));
 
 gulp.task('default', build);
