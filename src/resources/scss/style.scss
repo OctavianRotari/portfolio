@@ -32,6 +32,10 @@ a:focus{
   outline: none;
 }
 
+.height-100 {
+  min-height: 100%;
+}
+
 h1,
 h2{
   font-weight: 300;
@@ -385,6 +389,13 @@ nav {
 
 
 .who-am-i {
+  h1 {
+    font-family: Lato;
+    color: $light-blue;
+    font-size: 3em;
+    margin: 0;
+  }
+
   .menu-web-developer,
   .menu-accountant,
   .menu-bartender,
@@ -395,7 +406,7 @@ nav {
   .icons-who-am-i {
     a, i {
       cursor: pointer;
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
   }
 
@@ -420,6 +431,7 @@ nav {
     h2{
       color: $light-blue;
     }
+
     .icons-who-am-i{
       color: $light-blue;
     }
@@ -447,6 +459,7 @@ nav {
       color: #c0392b;
     }
   }
+
   .menu-traveler {
     h2{
       font-weight: 700;
@@ -475,33 +488,28 @@ nav {
     line-height: 145%;
     margin-bottom: 5%;
   }
-  .about-me{
-    height: 90%;
-    margin-top: 10%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2%;
-  }
 
-  .about-me .icons-who-am-i{
-    top: -15px;
-  }
-
-  .about-me {
-    .personal-info,
-    .general-facts{
-      height: 50%;
-      width: 100%;
-    }
-  }
 }
 
+/*-------------------------------------------------------------------------*/
+/*about me*/
+
+.about-me{
+  color: #fff;
+}
+
+.about-me{
+  .long-text {
+    font-size: 2em;
+  }
+}
 
 /*-------------------------------------------------------------------------*/
 /*web developer*/
 
 .web-developer {
   h2{
+    color: $light-blue;
   }
 
   .long-text h2{
@@ -532,19 +540,55 @@ nav {
     }
   }
 
-  .certificates .img-list-small{
+  .certificates {
+    margin-top: 5em;
+  }
+
+  .certificates {
+    a{
+      display: inline-block;
+    }
+
+    .img-list-small{
+      width: 15em;
+      height: initial;
+    }
   }
 }
 
 /*-------------------------------------------------------------------------*/
+
+.description {
+  .icons-who-am-i {
+    .ion-ios-calculator-outline{
+      color: #27ae60;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+
+    .ion-bowtie{
+      color: #c0392b;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+
+    .ion-android-compass{
+      color: #f8e8b5;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+
+    .ion-laptop{
+      color: $light-blue;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+  } 
+}
+
 /*accountant*/
 
 .accountant {
-  .icons-who-am-i{
-    color: #27ae60;
-    position: fixed;
-  }
-
   .general-facts{
     color:#fff;
   }
@@ -554,16 +598,8 @@ nav {
     color: #27ae60;
   }
 
-  .facts {
-    .accounting-facts{
-    }
-
-    .coffee{
-    }
-
-    .coffee p{
-      display: inline-block;
-    }
+  .facts:last-child {
+    margin-top: 10em;
   }
 
   .icons-coffe {
@@ -576,13 +612,19 @@ nav {
 /*bartender*/
 
 .bartender {
-  .icons-who-am-i{
+  h2{
+    font-weight: 700;
+    font-family: Lobster;
     color: #c0392b;
-    position: fixed;
+  }
+
+  .personal-info{
+    height: 50%;
   }
 
   .general-facts{
     font-family: GravitasOne;
+    margin-top: 10em;
   }
 
   .general-facts {
@@ -592,13 +634,9 @@ nav {
     }
 
     img{
+      display: inline-block;
+      width: 15em;
     }
-
-    p{
-    }
-  }
-
-  .invented-cocktail i{
   }
 }
 
@@ -606,11 +644,6 @@ nav {
 /*traveler*/
 
 .traveler {
-  .icons-who-am-i{
-    color: #f8e8b5;
-    position: fixed;
-  }
-
   .travel-quote {
     font-family: Merriweather;
     color: #FFFFFF;
@@ -636,17 +669,9 @@ nav {
 
   .general-facts {
     .flags {
+      font-size: 8em;
+      margin-top: 1em;
     }
-  }
-
-  .languages-countries{
-  }
-
-  .footer {
-  }
-
-  .personal-quote {
-    font-family: Merriweather;
   }
 }
 

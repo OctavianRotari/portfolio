@@ -29,13 +29,13 @@ var jsFiles = [
   'src/resources/js/*.js'
 ];
 
-var projectsImage = [
-  'src/resources/img/*.{jpeg,jpg,png}'
-];
+var imgPath = {
+  projects: 'src/resources/img/projects/*.{jpeg,jpg,png}',
+  certificates: 'src/resources/img/certificates/*.{jpeg,jpg,png}'
+};
 
-var projectsImageSize = [
-  530, 1060
-];
+var projectsImageSize = [ 530, 1060 ];
+var certificateImageSize = [ 210, 420 ];
 
 function cleanDist() {
   return gulp.src([ 'dist/css/fonts/', 'dist/css/fonts/*.css', 'dist/js/', 'dist/img/' ])
@@ -66,17 +66,24 @@ function javaScriptUglify() {
 
 function resizeImages(done) {
   projectsImageSize.forEach(function (imageSize) {
-    gulp.src(projectsImage)
-      .pipe(imageResize({
-        width: imageSize,
-        height: imageSize
-      }))
-      .pipe(rename( function (path) {
-        path.basename += '-' + imageSize;
-      }))
-      .pipe(gulp.dest('dist/img/'));
-    done();
+    images(imageSize, imgPath.projects);
   });
+  certificateImageSize.forEach(function (imageSize) {
+    images(imageSize, imgPath.certificates);
+  });
+  done();
+}
+
+function images(imageSize, imagesPath) {
+  gulp.src(imagesPath)
+    .pipe(imageResize({
+      width: imageSize,
+      height: imageSize
+    }))
+    .pipe(rename( function (path) {
+      path.basename += '-' + imageSize;
+    }))
+    .pipe(gulp.dest('dist/img/'));
 }
 
 function watch() {

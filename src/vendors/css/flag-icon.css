@@ -11,6 +11,7 @@
   display: inline-block;
   width: 1.33333333em;
   line-height: 1em;
+  margin-right: 0.5em;
 }
 .flag-icon:before {
   content: "\00a0";
