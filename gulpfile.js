@@ -6,6 +6,7 @@ var googleWebFonts = require('gulp-google-webfonts');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var clean = require('gulp-clean');
+var uglify = require('gulp-uglify');
 //var debug = require('gulp-debug');
 
 var options = {
@@ -21,9 +22,14 @@ var cssFiles = [
   'src/resources/scss/*.{scss,css}'
 ];
 
+var jsFiles = [
+  'src/vendors/js/*.js',
+  'src/resources/js/*.js'
+];
+
 function cleanDist() {
-  return gulp.src([ 'dist/css/fonts/', 'dist/css/fonts/*.css' ])
-  .pipe(clean());
+  return gulp.src([ 'dist/css/fonts/', 'dist/css/fonts/*.css', 'dist/js/' ])
+    .pipe(clean());
 }
 
 function fonts() {
@@ -41,8 +47,16 @@ function style() {
     .pipe(gulp.dest('dist/css'));
 }
 
+function javaScriptUglify() {
+  return gulp.src(jsFiles)
+    .pipe(uglify())
+    .pipe(concat('scripts.min.js'))
+    .pipe(gulp.dest('dist/js'));
+}
+
 function watch() {
   gulp.watch(cssFiles, style);
+  gulp.watch(jsFiles, javaScriptUglify);
   gulp.watch('src/resources/fonts/fonts.list', fonts);
 }
 
@@ -50,12 +64,11 @@ function server() {
   return gulp.src('./')
     .pipe(serverLiveReload({
       directoryListing: true,
+      liverReload: true,
       open: true
     }));
 }
 
-var build = gulp.series(cleanDist, fonts, style, gulp.parallel(watch, server));
+var build = gulp.series(cleanDist, fonts, style, javaScriptUglify, gulp.parallel(watch, server));
 
 gulp.task('default', build);
-
-gulp.task('fonts', fonts);

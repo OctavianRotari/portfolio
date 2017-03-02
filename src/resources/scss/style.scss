@@ -49,13 +49,8 @@ h2{
 /*REUSABLE CONTENTS*/
 /*-------------------------------------------------------------------------*/
 
-.hidden{
+.hidden {
   display:none;
-}
-
-.row {
-  margin: 0 auto;
-  width: 100%;
 }
 
 /*------Main navigation------*/
@@ -147,15 +142,14 @@ input[type=submit] {
   background-color: #22A4EB;
   border: 1px solid #22A4EB;
   color: #fff;
-  margin-bottom: 10px;
-  width: 90%;
+  margin-top: 10px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
   border: 1px solid #22a4eb;
   color: #22a4eb;
-  width: 90%;
+  margin-top: 10px;
 }
 
 .btn:hover,
@@ -204,17 +198,37 @@ input[type=submit]:active{
   font-size: 300%;
 }
 
-
-.section canvas{
+nav {
   position: absolute;
+  right: 0;
+  font-size: 2.5em;
+  display: inline-block;
+  margin: .2em .2em .2em 0;
+}
+
+nav {
+  .bt-menu-trigger {
+    display: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a:focus, a:hover {
+    text-decoration: none;
+  }
+
+  a {
+    span {
+      display: none;
+    }
+  }
 }
 
 /*-------------------------------------------------------------------------*/
 /*HEADER*/
 /*-------------------------------------------------------------------------*/
-/* Paste this css to your style sheet file or under head tag */
-/* This only works with JavaScript,
-if it's not present, don't show loader */
 .no-js #loader { display: none;  }
 .js #loader {
   display: block;
@@ -244,58 +258,43 @@ if it's not present, don't show loader */
   border-width: 0 45px 0 0;
 }
 
-.bt-menu ul {
-  right: 45px;
-}
-
 .bt-menu.bt-menu-open ul li {
   width: 45px;
 }
 
-.bt-menu .contacts{
-  position: fixed;
-  bottom: 0;
+.bt-menu{
+  ul {
+    right: 45px;
+  }
+
+  .contacts{
+    position: fixed;
+    bottom: 0;
+  }
+} 
+
+.section-header {
+  height: 100%;
 }
 
-.text-box {
-  font-weight: 400;
-  position: fixed;
-  margin-top: 10%;
-  height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1%;
-}
+.section-header {
+  .intro {
+    transform: translateY(50%);
+  }
 
-.text-box .auto-type{
-  width: 100%;
-  height: 30%;
-}
+  .auto-type h1{
+    font-family: Philosopher;
+    text-transform: none;
+    color: #ecf0f1;
+    font-size: 2.5em;
+  }
 
-.text-box .auto-type h1{
-  font-family: Philosopher;
-  text-transform: none;
-  font-size: 135%;
-  color: #ecf0f1;
+  .brief-introduction-header h2{
+    text-transform: none;
+    color: #ecf0f1;
+    font-size: 2em;
+  }
 }
-
-.text-box .brief-introduction-header{
-  width: 100%;
-  height: 40%;
-}
-
-.text-box .brief-introduction-header h2{
-  text-transform: none;
-  font-size: 115%;
-  color: #ecf0f1;
-}
-
-.text-box .contact-me{
-  text-align: center;
-  height: 40%;
-  width: 100%;
-}
-
 
 /*-------------------------------------------------------------------------*/
 /*WHO AM I*/
@@ -307,321 +306,314 @@ if it's not present, don't show loader */
   font-size: 90%;
 }
 
-.section-who-am-i .summary-who-am-i{
-  text-align: center;
-  height: 90%;
-  margin-top: 10%;
-  width: 100%;
+.section-who-am-i {
+  .icons-who-am-i{
+    display: inline-block;
+    float: left;
+    width: 10%;
+  }
+
+  .title{
+    line-height: 150%;
+    font-size: 100%;
+  }
+
+  .fun-facts{
+    height: 100%;
+    width: 90%;
+    float: right;
+  }
+
+  a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-web-developer .icons-who-am-i{
+    color: #19B5FE;
+  }
+
+  .menu-accountant h2{
+    font-family: Chonburi;
+    color: #27ae60;
+  }
+
+  .menu-accountant .icons-who-am-i{
+    color: #27ae60;
+  }
+
+  .menu-bartender h2{
+    font-weight: 700;
+    font-family: Lobster;
+    color: #c0392b;
+  }
+
+  .menu-bartender .icons-who-am-i{
+    color: #c0392b;
+  }
+
+  .menu-traveler h2{
+    font-weight: 700;
+    font-family: YesevaOne;
+    color: #f8e8b5;
+  }
+
+  .menu-traveler .icons-who-am-i{
+    color: #f8e8b5;
+  }
+
+  .menu-web-developer h2{
+    color: #19B5FE;
+  }
 }
 
-.summary-who-am-i .intro{
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1%;
-}
-
-.section-who-am-i .summary-who-am-i .icons-who-am-i{
-  display: inline-block;
-  float: left;
-  width: 10%;
-}
-
-.summary-who-am-i .title{
-  line-height: 150%;
-  font-size: 100%;
-}
-
-.summary-who-am-i .menu-accountant,
-.summary-who-am-i .menu-bartender,
-.summary-who-am-i .menu-web-developer,
-.summary-who-am-i .menu-traveler{
-  width:100%;
-  height: 25%;
-}
-
-.summary-who-am-i .fun-facts{
-  height: 100%;
-  width: 90%;
-  float: right;
-}
-
-.summary-who-am-i a{
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.summary-who-am-i .menu-web-developer .icons-who-am-i{
-  color: #19B5FE;
-}
-
-.section-who-am-i .brief-introduction {
+.brief-introduction {
   font-size:90%;
   color: #ecf0f1;
   list-style:none;
+
+  .long-text {
+    color: #fff;
+    padding-top: 10px;
+  }
+
+  .long-text p{
+    font-size: 100%;
+    line-height: 145%;
+    margin-bottom: 5%;
+  }
+  .about-me{
+    height: 90%;
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+
+  .about-me .icons-who-am-i{
+    top: -15px;
+  }
+
+  .about-me {
+    .personal-info,
+    .general-facts{
+      height: 50%;
+      width: 100%;
+    }
+  }
 }
 
-.summary-who-am-i .menu-accountant h2{
-  font-family: Chonburi;
-  color: #27ae60;
-}
-
-.summary-who-am-i .menu-accountant .icons-who-am-i{
-  color: #27ae60;
-}
-
-.summary-who-am-i .menu-bartender h2{
-  font-weight: 700;
-  font-family: Lobster;
-  color: #c0392b;
-}
-
-.summary-who-am-i .menu-bartender .icons-who-am-i{
-  color: #c0392b;
-}
-
-.summary-who-am-i .menu-traveler h2{
-  font-weight: 700;
-  font-family: YesevaOne;
-  color: #f8e8b5;
-}
-
-.summary-who-am-i .menu-traveler .icons-who-am-i{
-  color: #f8e8b5;
-}
-
-.summary-who-am-i .menu-web-developer h2{
-  color: #19B5FE;
-}
-
-.section-who-am-i .long-text {
-  color: #fff;
-  padding-top: 10px;
-}
-
-.section-who-am-i .long-text p{
-  font-size: 100%;
-  line-height: 145%;
-  margin-bottom: 5%;
-}
-.section-who-am-i .about-me{
-  height: 90%;
-  margin-top: 10%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2%;
-}
-
-.section-who-am-i .about-me .icons-who-am-i{
-  top: -15px;
-}
-
-.section-who-am-i .about-me .personal-info,
-.section-who-am-i .about-me .general-facts{
-  height: 50%;
-  width: 100%;
-}
 
 /*-------------------------------------------------------------------------*/
 /*web developer*/
 
-.web-developer h2{
-  font-size: 110%;
+.web-developer {
+  h2{
+    font-size: 110%;
+  }
+
+  .long-text h2{
+    font-size: 110%;
+    color: #19B5FE;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .long-text .makers-academy{
+    display:none;
+  }
+
+  .long-text ul{
+    text-align: center;
+    list-style: none;
+    line-height: 20px;
+    font-size: 100%;
+  }
+
+  .icons-who-am-i{
+    color: #19B5FE;
+    font-size: 300%;
+    position: fixed;
+  }
+
+  .skills h2,
+  .certificates h2 {
+    margin: 1% 0;
+    color: #19B5FE;
+  }
+
+  .skills {
+    text-align:center;
+  }
+
+  .skills {
+    .languages,
+    .frameworks{
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+
+  .certificates .img-list-small{
+    height: 65px;
+  }
 }
 
-.web-developer .long-text h2{
-  font-size: 110%;
-  color: #19B5FE;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.web-developer .long-text .makers-academy{
-  display:none;
-}
-
-.web-developer .long-text ul{
-  text-align: center;
-  list-style: none;
-  line-height: 20px;
-  font-size: 100%;
-}
-
-.web-developer .icons-who-am-i{
-  color: #19B5FE;
-  font-size: 300%;
-  position: fixed;
-}
-
-.web-developer .skills h2,
-.web-developer .certificates h2 {
-  margin: 1% 0;
-  color: #19B5FE;
-}
-
-.web-developer .skills {
-  text-align:center;
-}
-
-.web-developer .skills .languages,
-.web-developer  .skills .frameworks{
-  display: inline-block;
-  margin: 5px;
-}
-
-.certificates .img-list-small{
-  height: 65px;
-}
 /*-------------------------------------------------------------------------*/
 /*accountant*/
 
-.accountant .icons-who-am-i{
-  color: #27ae60;
-  font-size: 300%;
-  position: fixed;
+.accountant {
+  .icons-who-am-i{
+    color: #27ae60;
+    font-size: 300%;
+    position: fixed;
+  }
+
+  .general-facts{
+    text-align: center;
+    color:#fff;
+    display:inline;
+  }
+
+  h2{
+    font-family: Chonburi;
+    color: #27ae60;
+    font-size: 140%;
+    margin-top: 20%;
+  }
+
+  .facts {
+    .accounting-facts{
+      display:inline-block;
+      margin: 0 5%;
+    }
+
+    .coffee{
+      display:none;
+    }
+
+    .coffee p{
+      display: inline-block;
+    }
+  }
+
+  .icons-coffe {
+    margin-left: 10px;
+    display: inline-block;
+  }
 }
 
-.accountant .general-facts{
-  text-align: center;
-  color:#fff;
-  display:inline;
-}
-
-.accountant h2{
-  font-family: Chonburi;
-  color: #27ae60;
-  font-size: 140%;
-  margin-top: 20%;
-}
-
-.accountant .facts .accounting-facts{
-  display:inline-block;
-  margin: 0 5%;
-}
-
-.accountant .facts .coffee{
-  display:none;
-}
-.accountant .facts .coffee p{
-  display: inline-block;
-}
-
-.accountant .icons-coffe {
-  margin-left: 10px;
-  display: inline-block;
-}
 
 /*-------------------------------------------------------------------------*/
 /*bartender*/
 
-.bartender .icons-who-am-i{
-  color: #c0392b;
-  font-size: 300%;
-  position: fixed;
-}
+.bartender {
+  .icons-who-am-i{
+    color: #c0392b;
+    font-size: 300%;
+    position: fixed;
+  }
 
-.bartender .general-facts{
-  display:inline;
-  font-family: GravitasOne;
-  position: relative;
-  text-align:center;
-}
+  .general-facts{
+    display:inline;
+    font-family: GravitasOne;
+    position: relative;
+    text-align:center;
+  }
 
-.bartender .general-facts h2{
-  color: #c0392b;
-  font-family: Lobster;
-  font-size: 140%;
-  margin: 5% auto;
-}
+  .general-facts {
+    h2{
+      color: #c0392b;
+      font-family: Lobster;
+      font-size: 140%;
+      margin: 5% auto;
+    }
 
+    img{
+      width: 20%;
+      margin-top: 5%;
+    }
 
-.bartender .general-facts img{
-  width: 20%;
-  margin-top: 5%;
-}
+    p{
+      margin: 10px 0;
+    }
+  }
 
-.bartender .general-facts p{
-  margin: 10px 0;
-}
-
-.bartender .invented-cocktail i{
-  padding-top: 30px;
-  font-size: 350%;
+  .invented-cocktail i{
+    padding-top: 30px;
+    font-size: 350%;
+  }
 }
 
 /*-------------------------------------------------------------------------*/
 /*traveler*/
 
-.traveler .icons-who-am-i{
-  color: #f8e8b5;
-  font-size: 300%;
-  position: fixed;
+.traveler {
+  .icons-who-am-i{
+    color: #f8e8b5;
+    font-size: 300%;
+    position: fixed;
+  }
+
+  .travel-quote {
+    padding-top: 15px;
+    font-family: Merriweather;
+    color: #FFFFFF;
+    font-size: 160%;
+  }
+
+  .travel-quote span{
+    display: block;
+    text-align: right;
+    margin: 30px 70px;
+  }
+
+  h2 {
+    font-size: 140%;
+    font-family: Merriweather;
+    color: #f8e8b5;
+  }
+
+  h2 span{
+    font-size: 160%;
+    color: #fff;
+  }
+
+  .general-facts{
+    text-align: center;
+    display:inline;
+  }
+
+  .general-facts {
+    .flags {
+      height: 70px;
+      margin: 0 auto;
+      width: 308px;
+    }
+  }
+
+  .languages-countries{
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  .footer {
+    text-align:center;
+  }
+
+  .personal-quote {
+    margin-top: 5%;
+    font-family: Merriweather;
+    font-size: 160%;
+  }
 }
 
-.traveler .travel-quote {
-  padding-top: 15px;
-  font-family: Merriweather;
-  color: #FFFFFF;
-  font-size: 160%;
-}
-
-.traveler .travel-quote span{
-  display: block;
-  text-align: right;
-  margin: 30px 70px;
-}
-
-.traveler h2 {
-  font-size: 140%;
-  font-family: Merriweather;
-  color: #f8e8b5;
-}
-
-.traveler h2 span{
-  font-size: 160%;
-  color: #fff;
-}
-
-
-.traveler .general-facts{
-  text-align: center;
-  display:inline;
-}
-
-.traveler .general-facts .flags {
-  height: 70px;
-  margin: 0 auto;
-  width: 308px;
-}
-
-.traveler .languages-countries{
-  text-align: center;
-  margin-top: 2%;
-}
-
-.traveler .footer {
-  text-align:center;
-}
-
-.traveler .personal-quote {
-  margin-top: 5%;
-  font-family: Merriweather;
-  font-size: 160%;
-}
 
 /*-------------------------------------------------------------------------*/
 /*PROJECTS*/
 /*-------------------------------------------------------------------------*/
-.section-projects .project {
-  margin-top: 10%;
-  height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1%;
-}
-
 .keyboard{
   z-index: 8;
   position: absolute;
@@ -636,95 +628,105 @@ if it's not present, don't show loader */
   font-family: Lato;
 }
 
-.section-projects .project-name{
-  text-align: center;
-  width: 100%;
-}
+.section-projects {
+  .project {
+    margin-top: 10%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+  }
 
-.section-projects .img-list-small {
-  height: 50px;
-}
+  .project-name{
+    text-align: center;
+    width: 100%;
+  }
 
-.section-projects .project .photo{
-  display: inline-block;
-  margin: 0 10px;
-  text-align: center;
-}
+  .img-list-small {
+    height: 50px;
+  }
 
-.section-projects .accounting-rails h1 {
-  font-family: Lato;
-  color:#27ae60;
-}
+  .project .photo{
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+  }
 
-.section-projects .autotrasporti-rotari h1 {
-  font-family: Georgia;
-  color:#39658C;
-}
-.section-projects .cms-php h1 {
-  font-family: Georgia;
-  color:#39658C;
-}
-.section-projects .omnifood h1 {
-  font-family: Lato;
-  color:#e67e22;
-}
-.section-projects .maker-pair h1 {
-  color: #228B22;
-}
+  .accounting-rails h1 {
+    font-family: Lato;
+    color:#27ae60;
+  }
 
-.section-projects .photo img{
-  width: 60%;
-}
+  .autotrasporti-rotari h1 {
+    font-family: Georgia;
+    color:#39658C;
+  }
+  .cms-php h1 {
+    font-family: Georgia;
+    color:#39658C;
+  }
+  .omnifood h1 {
+    font-family: Lato;
+    color:#e67e22;
+  }
+  .maker-pair h1 {
+    color: #228B22;
+  }
 
-.section-projects .project-info{
-  float: right;
-  margin: 0 10px;
-}
+  .photo img{
+    width: 60%;
+  }
 
-.section-projects .languages{
-  display: inline-block;
-  margin-left: 15%;
-}
+  .project-info{
+    float: right;
+    margin: 0 10px;
+  }
 
-.section-projects h2{
-  font-weight: 300;
-  color: #fff;
-  font-size: 115%;
-  display: inline-block;
-  text-transform: none;
-  margin: 5% 1% 5% 0;
-}
+  .languages{
+    display: inline-block;
+    margin-left: 15%;
+  }
 
-.section-projects h2 a{
-  text-decoration: none;
-  color: #19B5FE;
-}
+  h2{
+    font-weight: 300;
+    color: #fff;
+    font-size: 115%;
+    display: inline-block;
+    text-transform: none;
+    margin: 5% 1% 5% 0;
+  }
 
-.section-projects h1{
-  color: #19B5FE;
-  font-family: YesevaOne;
-  letter-spacing: 4px;
-  font-size: 150%;
-}
+  h2 a{
+    text-decoration: none;
+    color: #19B5FE;
+  }
 
-.section-projects p{
-  font-size: 100%;
-}
+  h1{
+    color: #19B5FE;
+    font-family: YesevaOne;
+    letter-spacing: 4px;
+    font-size: 150%;
+  }
 
-.section-projects .project-facts{
-  text-align:center;
-}
+  p{
+    font-size: 100%;
+  }
 
-.section-projects .coffee{
-  font-size: 120%;
-  margin: 10px;
-}
+  .project-facts{
+    text-align:center;
+  }
 
-.section-projects .coffee h3{
-  display: inline-block;
-}
+  .coffee{
+    font-size: 120%;
+    margin: 10px;
+  }
 
-.section-projects .coffee p{
-  display: inline-block;
-  margin:0;
+  .coffee h3{
+    display: inline-block;
+  }
+
+  .coffee p{
+    display: inline-block;
+    margin:0;
+  }
 }

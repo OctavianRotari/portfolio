@@ -24,6 +24,7 @@
     "gulp-debug": "^3.1.0",
     "gulp-google-webfonts": "git+https://github.com/OctavianRotari/gulp-google-webfonts.git",
     "gulp-sass": "^3.1.0",
-    "gulp-server-livereload": "^1.9.2"
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-uglify": "^2.0.1"
   }
 }

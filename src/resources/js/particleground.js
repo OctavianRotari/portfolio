@@ -1,5 +1,5 @@
-$(document).ready(function(){
-  $('.section').particleground({
+$(document).ready(function () {
+  $('section').particleground({
     dotColor: '#005882',
     lineColor: '#005882',
     particleRadius:5,

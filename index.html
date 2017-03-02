@@ -8,13 +8,10 @@
 		<link rel="stylesheet" href="dist/css/style.css" type='text/css'>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="src/vendors/js/jquery.visible.js"></script>
-		<!--<script type="text/javascript" src="src/vendors/js/modernizr.custom.25376.js"></script>-->
 		<script type="text/javascript">
 			$(window).on('load', function() {
 				// Animate loader off screen
-				setTimeout(function(){
-					$(".se-pre-con").fadeOut("slow");;
-				}, 3000);
+				$(".se-pre-con").fadeOut("slow");;
 			});
 		</script>
 		<title>Octavian Rotari</title>
@@ -25,22 +22,42 @@
 			<nav id="bt-menu" class="bt-menu">
 				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 				<ul class="main-nav" id="menu">
-					<li data-menuanchor="#home" class="active"><a href="#home" class="bt-icon icon-home-house-streamline">Home</a></li>
-					<li data-menuanchor="#who-am-i"><a href="#who-am-i" class="bt-icon icon-monocle-mustache-streamline">Who am I?</a></li>
-					<li data-menuanchor="#projects"><a href="#projects" class="bt-icon icon-photo-pictures-streamline">Projects</a></li>
+					<li data-menuanchor="#home" class="active">
+						<a href="#home" class="bt-icon icon-home-house-streamline">
+							<span>Home</span>
+						</a>
+					</li>
+					<li data-menuanchor="#who-am-i">
+						<a href="#who-am-i" class="bt-icon icon-monocle-mustache-streamline">
+							<span>Who am I?</span>
+						</a>
+					</li>
+					<li data-menuanchor="#projects">
+						<a href="#projects" class="bt-icon icon-photo-pictures-streamline">
+							<span>Projects</span>
+						</a>
+					</li>
 					<div class="contacts">
 						<li>
-							<a class="ion-social-github" target="_blank" href="https://github.com/OctavianRotari">GitHub</a>
+							<a class="ion-social-github" target="_blank" href="https://github.com/OctavianRotari">
+								<span>GitHub</span>
+							</a>
 						</li>
 						<li>
-							<a class="ion-social-wordpress" target="_blank" href="https://learningcodeinlondon.wordpress.com/">Wordpress</a>
+							<a class="ion-social-wordpress" target="_blank" href="https://learningcodeinlondon.wordpress.com/">
+								<span>Wordpress</span>
+							</a>
 						</li>
 						<li>
 							<a class="ion-social-linkedin" target="_blank"
-								href="https://www.linkedin.com/in/octavian-rotari-65114711a?authType=NAME_SEARCH&authToken=ND9j&locale=it_IT&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A496018141%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1482269090257%2Ctas%3AOcta">LinkedIn</a>
+								href="https://www.linkedin.com/in/octavian-rotari-65114711a?authType=NAME_SEARCH&authToken=ND9j&locale=it_IT&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A496018141%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1482269090257%2Ctas%3AOcta">
+								<span>LinkedIn</span>
+							</a>
 						</li>
 						<li>
-							<a class="ion-android-mail" target="_blank" href="mailto:octavianrotari@gmail.com">Mail</a>
+							<a class="ion-android-mail" target="_blank" href="mailto:octavianrotari@gmail.com">
+								<span>Mail</span>
+							</a>
 						</li>
 					</div>
 				</ul>
@@ -54,29 +71,33 @@
 			</div>
 		</header>
 		<div id="fullpage">
-			<div class="section section-header">
-				<div class="text-box">
-					<div class="auto-type">
-						<h1><span class="js--text-box"></span></h1>
-					</div>
-					<div class="brief-introduction-header">
-						<h2>
-							I am a junior web-developer who graduated from Makers Accademy,
-							a highly selective bootcamp based in London, I'm looking
-							forward to start an exciting career as an amazing coder.
-						</h2>
-					</div>
-					<div class="contact-me">
-						<a class="btn btn-full" target="_blank" href="cv_web_developer.pdf">Hire me</a>
-						<a class="btn btn-ghost" target="_blank" href="mailto:octavianrotari@gmail.com">Need a website</a>
+			<section class="section-header">
+				<div class="container">
+					<div class="row">
+						<div class=" col-xs-8 intro">
+							<div class="auto-type">
+								<h1><span class="js--text-box"></span></h1>
+							</div>
+							<div class="brief-introduction-header">
+								<h2>
+									I am a junior web-developer who graduated from Makers Accademy,
+									a highly selective bootcamp based in London, I'm looking
+									forward to start an exciting career as an amazing coder.
+								</h2>
+							</div>
+							<div class="contact-me">
+								<a class="btn btn-full" target="_blank" href="cv_web_developer.pdf">Hire me</a>
+								<a class="btn btn-ghost" target="_blank" href="mailto:octavianrotari@gmail.com">Need a website</a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="section section-who-am-i js--who-am-i">
+			</section>
+			<section class="section-who-am-i js--who-am-i">
 				<div class="slide">
-					<div id='js--summary-who-am-i' class="summary-who-am-i" >
-						<div class="intro">
-							<div class="menu-web-developer">
+					<div id='js--summary-who-am-i' class="container">
+						<div class="row">
+							<div class="col-md-6 menu-web-developer">
 								<div class="inner-menu-div">
 									<div class="icons-who-am-i">
 										<a id="4" class="js--navigation-who-am-i">
@@ -97,7 +118,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="menu-accountant">
+							<div class="col-md-6 menu-accountant">
 								<div class="icons-who-am-i">
 									<a id="1" class="js--navigation-who-am-i">
 										<i class="ion-ios-calculator-outline hvr-buzz-out"></i>
@@ -116,7 +137,9 @@
 									</ul>
 								</div>
 							</div>
-							<div class="menu-bartender">
+						</div>
+						<div class="row">
+							<div class="col-md-6 menu-bartender">
 								<div class="icons-who-am-i">
 									<a id="2" class="js--navigation-who-am-i">
 										<i class="ion-bowtie hvr-wobble-horizontal"></i>
@@ -135,7 +158,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="menu-traveler">
+							<div class="col-md-6 menu-traveler">
 								<div class="icons-who-am-i">
 									<a id="3" class="js--navigation-who-am-i">
 										<i class="ion-android-compass hvr-grow-rotate"></i>
@@ -227,10 +250,10 @@
 						<div class="general-facts">
 							<div class="icons-cocktail">
 								<h2>Cocktails Invented</h2>
-								<img src="dist/css/icons/cocktail.svg" alt="">
-								<img src="dist/css/icons/cocktail-1.svg" alt="">
-								<img src="dist/css/icons/cocktail-2.svg" alt="">
-								<img src="dist/css/icons/cocktail-3.svg" alt="">
+								<!--<img src="dist/css/icons/cocktail.svg" alt="">-->
+								<!--<img src="dist/css/icons/cocktail-1.svg" alt="">-->
+								<!--<img src="dist/css/icons/cocktail-2.svg" alt="">-->
+								<!--<img src="dist/css/icons/cocktail-3.svg" alt="">-->
 							</div>
 						</div>
 					</div>
@@ -312,31 +335,31 @@
 							<div class="skills">
 								<h2>My playground</h2>
 								<div class="languages">
-									<img class='img-list-small' src="src/resources/img/HTML5.png" alt="">
-									<img class='img-list-small' src="src/resources/img/CSS3.png" alt="">
-									<img class='img-list-small' src="src/resources/img/js.png" alt="">
-									<img class='img-list-small' src="src/resources/img/ruby.png" alt="">
-									<img class='img-list-small' src="src/resources/img/PHP.png" alt="">
+									<!--<img class='img-list-small' src="src/resources/img/HTML5.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/CSS3.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/js.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/ruby.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/PHP.png" alt="">-->
 								</div>
 								<div class="frameworks">
-									<img class='img-list-small' src="src/resources/img/ruby_on_rails.png" alt="">
-									<img class='img-list-small' src="src/resources/img/jquery.png" alt="">
-									<img class='img-list-small' src="src/resources/img/nodejs.png" alt="">
-									<img class='img-list-small' src="src/resources/img/angular.png" alt="">
-									<img class='img-list-small' src="src/resources/img/firebase_logo_shot.png" alt="">
-									<img class='img-list-small' src="src/resources/img/ionic.png" alt="">
+									<!--<img class='img-list-small' src="src/resources/img/ruby_on_rails.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/jquery.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/nodejs.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/angular.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/firebase_logo_shot.png" alt="">-->
+									<!--<img class='img-list-small' src="src/resources/img/ionic.png" alt="">-->
 								</div>
 								<div class='certificates'>
 									<h2>Certificates</h2>
 									<div class="certificates-images">
 										<a class="test-popup-link" href="src/resources/img/jscourse.png">
-											<img class='img-list-small' src="src/resources/img/jscourse.png" alt="">
+											<!--<img class='img-list-small' src="src/resources/img/jscourse.png" alt="">-->
 										</a>
 										<a class="test-popup-link" href="src/resources/img/webdesign.png">
-											<img class='img-list-small' src="src/resources/img/webdesign.png" alt="">
+											<!--<img class='img-list-small' src="src/resources/img/webdesign.png" alt="">-->
 										</a>
 										<a class="test-popup-link" href="src/resources/img/php-certificate.png">
-											<img class='img-list-small' src="src/resources/img/php-certificate.png" alt="">
+											<!--<img class='img-list-small' src="src/resources/img/php-certificate.png" alt="">-->
 										</a>
 									</div>
 								</div>
@@ -345,7 +368,7 @@
 					</div>
 				</div>
 				<img class="keyboard" src="dist/css/icons/keyboard.svg" alt="Toggle gradients with the arrow keys">
-			</div>
+			</section>
 			<div class="section section-projects">
 				<div class="slide">
 					<div class="accounting-rails project">
@@ -354,7 +377,7 @@
 						</div>
 						<div class="photo">
 							<a class="test-popup-link" href="src/resources/img/desktop-contabilita-dashboard.png">
-								<img class="screen-shot" src="src/resources/img/desktop-contabilita-dashboard.png" alt="">
+								<!--<img class="screen-shot" src="src/resources/img/desktop-contabilita-dashboard.png" alt="">-->
 							</a>
 						</div>
 						<div class="project-info">
@@ -397,7 +420,7 @@
 						</div>
 						<div class="photo">
 							<a class="test-popup-link" href="src/resources/img/autotrasporti-home.png">
-								<img class="screen-shot" src="src/resources/img/autotrasporti-home.png" alt="">
+								<!--<img class="screen-shot" src="src/resources/img/autotrasporti-home.png" alt="">-->
 							</a>
 						</div>
 						<div class="project-info">
@@ -441,7 +464,7 @@
 						</div>
 						<div class="photo">
 							<a class="test-popup-link" href="src/resources/img/cms-php-home.png">
-								<img class="screen-shot" src="src/resources/img/cms-php-home.png" alt="">
+								<!--<img class="screen-shot" src="src/resources/img/cms-php-home.png" alt="">-->
 							</a>
 						</div>
 						<div class="project-info">
@@ -486,7 +509,7 @@
 						</div>
 						<div class="photo">
 							<a class="test-popup-link" href="src/resources/img/omnifood-home.png">
-								<img class="screen-shot" src="src/resources/img/omnifood-home.png" alt="">
+								<!--<img class="screen-shot" src="src/resources/img/omnifood-home.png" alt="">-->
 							</a>
 						</div>
 						<div class="project-info">
@@ -524,7 +547,7 @@
 						</div>
 						<div class="photo">
 							<a class="test-popup-link" href="src/resources/img/maker-pair-home.png">
-								<img class="screen-shot" src="src/resources/img/maker-pair-home.png" alt="">
+								<!--<img class="screen-shot" src="src/resources/img/maker-pair-home.png" alt="">-->
 							</a>
 						</div>
 						<div class="project-info">
@@ -559,27 +582,6 @@
 				<img class="keyboard" src="dist/css/icons/keyboard.svg" alt="Toggle gradients with the arrow keys">
 			</div>
 		</div>
-		<script type="text/javascript" src="src/vendors/js/scrolloverflow.min.js"></script>
-		<script type="text/javascript" src="src/vendors/js/jquery.fullPage.js"></script>
-		<script type="text/javascript" src="src/vendors/js/classie.js"></script>
-		<script type="text/javascript" src="src/vendors/js/borderMenu.js"></script>
-		<script type="text/javascript" src="src/vendors/js/jquery.particleground.js"></script>
-		<script type="text/javascript" src="src/vendors/js/typed.js"></script>
-		<script type="text/javascript" src="src/vendors/js/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="src/vendors/js/jquery.contentcarousel.js"></script>
-		<script type="text/javascript" src="src/vendors/js/percircle.js"></script>
-		<script type="text/javascript" src="src/vendors/js/jquery.ba-cond.js"></script>
-		<script type="text/javascript" src="src/vendors/js/jquery.blast.js"></script>
-		<script type="text/javascript" src="src/vendors/js/pop-up.js"></script>
-		<script type="text/javascript" src="src/resources/js/fullPage.js"></script>
-		<script type="text/javascript" src="src/resources/js/particleground.js"></script>
-		<script type="text/javascript" src="src/resources/js/typed.js"></script>
-		<script type="text/javascript" src="src/resources/js/who-am-i.js"></script>
-		<script type="text/javascript" src="src/resources/js/who-am-i-navigation.js"></script>
-		<script type="text/javascript" src="src/resources/js/projects-navigation.js"></script>
-		<script type="text/javascript" src="src/resources/js/percircle.js"></script>
-		<script type="text/javascript" src="src/resources/js/popup.js"></script>
-		<script type="text/javascript" src="src/resources/js/blast.js"></script>
-		<script type="text/javascript" src="src/resources/js/animate.js"></script>
+		<script type="text/javascript" src="dist/js/scripts.min.js"></script>
 	</body>
 </html>

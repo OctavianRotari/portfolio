@@ -56,7 +56,7 @@ $(document).ready(function(){
     responsiveSlides: false,
 
     //Custom selectors
-    sectionSelector: '.section',
+    sectionSelector: 'section',
     slideSelector: '.slide',
 
     lazyLoading: true,
