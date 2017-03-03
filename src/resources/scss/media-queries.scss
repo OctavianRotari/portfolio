@@ -1,0 +1,218 @@
+@media only screen and (max-width: 1024px){
+  .header {
+    .intro {
+      top: 10em;
+    }
+  }
+  .height-100 {
+    margin-top: 5em;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .about-me .long-text {
+    font-size: 1.7em;
+  }
+
+  .accounting-facts {
+    p {
+      font-size: 1.7em;
+    }
+  }
+
+  .flag-icon {
+    margin-right: .2em;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .projects {
+    .project {
+      .project-description {
+        margin-top: 3em;
+      }
+    }
+  }
+
+  .who-am-i {
+    .menu-accountant,
+    .menu-bartender,
+    .menu-traveler,
+    .menu-web-developer {
+      height: 50%;
+      margin-top: 4em;
+    }
+    .inner-menu-div {
+      .icons-who-am-i {
+        display: inline-block;
+        margin-right: 3em;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .fun-facts {
+        display: inline-block;
+      }
+    }
+  }
+
+  .about-me {
+    .long-text:last-child {
+      margin-top: 4em;
+    }
+  }
+
+  .bartender {
+    .general-facts img {
+      width: 11em;
+    }
+  }
+
+  .traveler {
+    .general-facts {
+      .flags {
+        font-size: 5em;
+        margin-top: 1em;
+      }
+    }
+  }
+  .web-developer {
+    .certificates {
+      .img-list-small {
+        width: 14em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px){
+  nav ul{
+    position: absolute;
+    transform: translate(40px, 0);
+    transition: transform 0.3s ease;
+  }
+  nav a {
+    color: #23527c;
+  }
+  nav ul.open{
+    transform: translate(-1em, 0);
+  }
+  nav .nav-icon{
+    display: block;
+    font-size: 1.5em;
+    position: absolute;
+    top: -0.5em;
+    right: 0;
+  }
+
+  nav ul:first-of-type {
+    margin-top: 1em;
+  }
+
+  .col-xs-8 {
+    width: 100%;
+  }
+  .height-100 {
+    margin: initial;
+  }
+  .header {
+    .auto-type h1 {
+      font-size: 2em;
+    }
+    .brief-introduction-header h2 {
+      font-size: 1.5em;
+    }
+  }
+  .projects {
+    .project h1 {
+      font-size: 1.6em;
+      margin-top: 1.7em;
+      text-align: left;
+    }
+    .project h2 {
+      margin-bottom: 1em;
+      font-size: 1.5em;
+      margin-top: 0px;
+    }
+    .project .project-description {
+      margin-top: 1em;
+    }
+    .project p {
+      font-size: 1.1em;
+      text-align: center;
+    }
+    .project h3 {
+      font-size: 1em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+  }
+  .who-am-i {
+    h1 {
+      font-size: 1.6em;
+      margin-top: 1.7em;
+    }
+    .fun-facts h2 {
+      font-size: 1.5em;
+    }
+    .menu-accountant,
+    .menu-bartender,
+    .menu-traveler,
+    .menu-web-developer {
+      margin-top: 0em;
+    }
+    .icons-who-am-i a,
+    .icons-who-am-i i {
+      font-size: 1.5em !important;
+    }
+    .col-md-6 {
+      padding: initial;
+    }
+    .brief-introduction {
+      font-size: 1em;
+    }
+    .about-me {
+      h2 {
+        font-size: 1.5em;
+        margin-top: 2em;
+      }
+      .long-text:last-child {
+        margin-top: 0em;
+      }
+      .long-text {
+        font-size: 1em;
+      }
+    }
+    .inner-menu-div .icons-who-am-i {
+      display: inline-block;
+      margin-right: 3em;
+      position: absolute;
+      left: 0;
+      top: 10%;
+      transform: translateY(0);
+    }
+    .accountant .col-sm-6 {
+      width: 50%;
+      float: left;
+    }
+    .accountant .facts:last-child {
+      margin-top: 5em;
+    }
+    .accounting-facts p {
+      font-size: 1em;
+    }
+  }
+  .bartender .general-facts img {
+    width: 5em;
+  }
+  .traveler .general-facts .flags {
+    font-size: 3em;
+  }
+  .web-developer .certificates .img-list-small {
+    width: 6em;
+  }
+  .col-xs-12 {
+    float: initial;
+  }
+}

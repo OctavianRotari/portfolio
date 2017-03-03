@@ -209,6 +209,9 @@ nav {
 }
 
 nav {
+  .nav-icon {
+    display: none;
+  }
   a:before {
     color: #337ab7;
   }
@@ -261,24 +264,12 @@ nav {
   top: 10px;
 }
 
-.bt-menu.bt-menu-open {
-  border-width: 0 45px 0 0;
-}
-
-.bt-menu.bt-menu-open ul li {
-  width: 45px;
-}
-
 .bt-menu{
-  ul {
-    right: 45px;
-  }
-
   .contacts{
     position: fixed;
     bottom: 0;
   }
-} 
+}
 
 .header {
   height: 100%;
@@ -584,7 +575,7 @@ nav {
       position: fixed;
       padding-left: 0.3em;
     }
-  } 
+  }
 }
 
 /*accountant*/

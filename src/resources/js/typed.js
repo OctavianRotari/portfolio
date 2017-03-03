@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $(".js--text-box").typed({
-    strings: ["Persist. Practice. Experiment. Imagine.", "Do your best work and all rest will follow!"],
+    strings: [ "Hi, I'm Octavian Rotari." ],
     typeSpeed: 50,
     startDelay: 1000,
   });

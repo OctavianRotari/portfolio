@@ -12,16 +12,19 @@
 			var loading = function() {
 				$(".se-pre-con").fadeOut("slow");;
 			}
-			window.onload = loading;
+window.onload = loading;
 		</script>
 		<title>Octavian Rotari</title>
 	</head>
 	<body>
 		<div class="se-pre-con"></div>
 		<header>
-			<nav id="bt-menu" class="bt-menu">
-				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-				<ul class="main-nav" id="menu">
+			<nav id="js--main-nav" class="bt-menu">
+				<a href="#" id="js--navigation">
+					<i class="ion-navicon nav-icon"></i>
+					<span>Menu</span>
+				</a>
+				<ul class="main-nav">
 					<li data-menuanchor="#home" class="active">
 						<a href="#home" class="bt-icon icon-home-house-streamline">
 							<span>Home</span>
@@ -37,29 +40,29 @@
 							<span>Who am I?</span>
 						</a>
 					</li>
-					<div class="contacts">
-						<li>
-							<a class="ion-social-github" target="_blank" href="https://github.com/OctavianRotari">
-								<span>GitHub</span>
-							</a>
-						</li>
-						<li>
-							<a class="ion-social-wordpress" target="_blank" href="https://learningcodeinlondon.wordpress.com/">
-								<span>Wordpress</span>
-							</a>
-						</li>
-						<li>
-							<a class="ion-social-linkedin" target="_blank"
-								href="https://www.linkedin.com/in/octavian-rotari-65114711a?authType=NAME_SEARCH&authToken=ND9j&locale=it_IT&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A496018141%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1482269090257%2Ctas%3AOcta">
-								<span>LinkedIn</span>
-							</a>
-						</li>
-						<li>
-							<a class="ion-android-mail" target="_blank" href="mailto:octavianrotari@gmail.com">
-								<span>Mail</span>
-							</a>
-						</li>
-					</div>
+				</ul>
+				<ul class="main-nav contacts">
+					<li>
+						<a class="ion-social-github" target="_blank" href="https://github.com/OctavianRotari">
+							<span>GitHub</span>
+						</a>
+					</li>
+					<li>
+						<a class="ion-social-wordpress" target="_blank" href="https://learningcodeinlondon.wordpress.com/">
+							<span>Wordpress</span>
+						</a>
+					</li>
+					<li>
+						<a class="ion-social-linkedin" target="_blank"
+							href="https://www.linkedin.com/in/octavian-rotari-65114711a?authType=NAME_SEARCH&authToken=ND9j&locale=it_IT&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A496018141%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1482269090257%2Ctas%3AOcta">
+							<span>LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a class="ion-android-mail" target="_blank" href="mailto:octavianrotari@gmail.com">
+							<span>Mail</span>
+						</a>
+					</li>
 				</ul>
 			</nav>
 			<div class="navigation-arrow">
@@ -98,7 +101,7 @@
 					<div class="accounting-rails row height-100">
 						<h1 class="col-xs-12 text-center">Projects I'm proud of</h1>
 						<h2 class="col-xs-12 project-name">Contabilita</h2>
-						<div class="col-sm-6 photo">
+						<div class="col-lg-6 photo">
 							<a target="_blanck" href="https://quiet-sea-15101.herokuapp.com/">
 								<img class="screen-shot"
 								src="src/resources/img/desktop-contabilita-dashboard.jpg"
@@ -107,7 +110,7 @@
 								alt="">
 							</a>
 						</div>
-						<div class="col-sm-6 project-info">
+						<div class="col-lg-6 project-info">
 							<div class="project-description">
 								<p>
 									This is a web-app developed with Rails. It’s purpose is to help small-scale
@@ -139,7 +142,7 @@
 					<div class="autotrasporti-rotari row height-100">
 						<h1 class="col-xs-12 text-center">Projects I'm proud of</h1>
 						<h2 class="col-xs-12 project-name">Autotrasporti Rotari</h2>
-						<div class="col-sm-6 photo">
+						<div class="col-lg-6 photo">
 							<a class="test-popup-link" href="src/resources/img/autotrasporti-home.jpg">
 								<img class="screen-shot"
 								src="src/resources/img/autotrasporti-home.jpg"
@@ -148,7 +151,7 @@
 								alt="">
 							</a>
 						</div>
-						<div class="col-sm-6 project-info">
+						<div class="col-lg-6 project-info">
 							<div class="project-description">
 								<p>
 									This project was relatively personal, as I created it for my family’s company to
@@ -187,7 +190,7 @@
 					<div class="cms-php row height-100">
 						<h1 class="col-xs-12 text-center">Projects I'm proud of</h1>
 						<h2 class="col-xs-12 project-name">CMS php</h2>
-						<div class="col-sm-6 photo">
+						<div class="col-lg-6 photo">
 							<a class="test-popup-link" href="src/resources/img/cms-php-home.jpg">
 								<img class="screen-shot"
 								src="src/resources/img/cms-php-home.jpg"
@@ -196,7 +199,7 @@
 								alt="">
 							</a>
 						</div>
-						<div class="col-sm-6 project-info">
+						<div class="col-lg-6 project-info">
 							<div class="project-description">
 								<p>
 									My final assessment in the php course was to build a fully functioning CMS (content
@@ -236,7 +239,7 @@
 					<div class="omnifood row height-100">
 						<h1 class="col-xs-12 text-center">Projects I'm proud of</h1>
 						<h2 class="col-xs-12 project-name">Omnifood</h2>
-						<div class="col-sm-6 photo">
+						<div class="col-lg-6 photo">
 							<a class="test-popup-link" href="src/resources/img/omnifood-home.jpg">
 								<img class="screen-shot"
 								src="src/resources/img/omnifood-home.jpg"
@@ -245,7 +248,7 @@
 								alt="">
 							</a>
 						</div>
-						<div class="col-sm-6 project-info">
+						<div class="col-lg-6 project-info">
 							<div class="project-description">
 								<p>
 									The emphasis of this project was to improve my web-designing skills, as my ultimate
@@ -306,60 +309,66 @@
 								</div>
 							</div>
 							<div class="col-md-6 menu-accountant text-center">
-								<div class="icons-who-am-i">
-									<a id="1" class="js--navigation-who-am-i">
-										<i class="ion-ios-calculator-outline hvr-buzz-out"></i>
-									</a>
-								</div>
-								<div class="fun-facts">
-									<div class="title">
+								<div class="inner-menu-div">
+									<div class="icons-who-am-i">
 										<a id="1" class="js--navigation-who-am-i">
-											<h2>An accountant</h2>
+											<i class="ion-ios-calculator-outline hvr-buzz-out"></i>
 										</a>
 									</div>
-									<ul class="brief-introduction">
-										<li>Second best final mark in my class 98/100</li>
-										<li>I received the maximum grade in oral exam</li>
-										<li>Helped class mates to do their best during the course</li>
-									</ul>
+									<div class="fun-facts">
+										<div class="title">
+											<a id="1" class="js--navigation-who-am-i">
+												<h2>An accountant</h2>
+											</a>
+										</div>
+										<ul class="brief-introduction">
+											<li>Second best final mark in my class 98/100</li>
+											<li>I received the maximum grade in oral exam</li>
+											<li>Helped class mates to do their best during the course</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-6 menu-bartender text-center">
-								<div class="icons-who-am-i">
-									<a id="2" class="js--navigation-who-am-i">
-										<i class="ion-bowtie hvr-wobble-horizontal"></i>
-									</a>
-								</div>
-								<div class="fun-facts">
-									<div class="title">
+								<div class="inner-menu-div">
+									<div class="icons-who-am-i">
 										<a id="2" class="js--navigation-who-am-i">
-											<h2>A bartender</h2>
+											<i class="ion-bowtie hvr-wobble-horizontal"></i>
 										</a>
 									</div>
-									<ul class="brief-introduction">
-										<li>Scored 88/100 in EBS course, Stocholm</li>
-										<li>Second in comand at elite cocktail-bar, Rome</li>
-										<li>First in comand at elite cocktail-bar, Majorca</li>
-									</ul>
+									<div class="fun-facts">
+										<div class="title">
+											<a id="2" class="js--navigation-who-am-i">
+												<h2>A bartender</h2>
+											</a>
+										</div>
+										<ul class="brief-introduction">
+											<li>Scored 88/100 in EBS course, Stocholm</li>
+											<li>Second in comand at elite cocktail-bar, Rome</li>
+											<li>First in comand at elite cocktail-bar, Majorca</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-6 menu-traveler text-center">
-								<div class="icons-who-am-i">
-									<a id="3" class="js--navigation-who-am-i">
-										<i class="ion-android-compass hvr-grow-rotate"></i>
-									</a>
-								</div>
-								<div class="fun-facts">
-									<div class="title">
+								<div class="inner-menu-div">
+									<div class="icons-who-am-i">
 										<a id="3" class="js--navigation-who-am-i">
-											<h2>A traveler</h2>
+											<i class="ion-android-compass hvr-grow-rotate"></i>
 										</a>
 									</div>
-									<ul class="brief-introduction">
-										<li>I had traveled 6 countries in 10 days</li>
-										<li>I lived on a boat for two months in Stokholm</li>
-										<li>I did snowboard in Norway and surf in Portugal</li>
-									</ul>
+									<div class="fun-facts">
+										<div class="title">
+											<a id="3" class="js--navigation-who-am-i">
+												<h2>A traveler</h2>
+											</a>
+										</div>
+										<ul class="brief-introduction">
+											<li>I had traveled 6 countries in 10 days</li>
+											<li>I lived on a boat for two months in Stokholm</li>
+											<li>I did snowboard in Norway and surf in Portugal</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -377,7 +386,7 @@
 								<h2>An accountant</h2>
 							</div>
 							<div class="row">
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<p>
 											My first step towards web developing was night school in accounting.
@@ -386,7 +395,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<p>
 											was less in the arithmetic and more in
@@ -429,7 +438,7 @@
 								<h2>A bartender</h2>
 							</div>
 							<div class="row">
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<p>
 											Next was EBS bartender school which had the same appeal.  The combining and
@@ -438,7 +447,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<p>
 											was less in the arithmetic and more in the attention to detail that had to
@@ -471,7 +480,7 @@
 								<div class="col-sm-12">
 									<h2>A traveler</h2>
 								</div>
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<p>
 											Finally, traveling. in the space of 2 years I went to 20 countries.
@@ -480,7 +489,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<p>
 											Traveling had given me a lot, a better understanding of my self,
@@ -517,7 +526,7 @@
 								<div class="col-sm-12">
 									<h2>A web developer</h2>
 								</div>
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<p>
 											Using my eye for detail, innate perfectionism and the desire to
@@ -526,7 +535,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-6 personal-info">
+								<div class="col-lg-6 personal-info">
 									<div class="long-text">
 										<div class="makers-academy text-center">
 											<ul>

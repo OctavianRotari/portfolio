@@ -23,7 +23,9 @@ var options = {
 var cssFiles = [
   'src/vendors/css/googleWebFonts.css',
   'src/vendors/css/*.css',
-  'src/resources/scss/*.{scss,css}'
+  'src/resources/scss/icons.css',
+  'src/resources/scss/style.scss',
+  'src/resources/scss/media-queries.scss'
 ];
 
 var jsFiles = [
@@ -108,6 +110,7 @@ function watch() {
   gulp.watch(cssFiles, style);
   gulp.watch(jsFiles, javaScriptUglify);
   gulp.watch('src/resources/fonts/fonts.list', fonts);
+  gulp.watch(htmlFiles, htmlMinify);
 }
 
 function server() {
