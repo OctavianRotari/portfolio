@@ -3,16 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Cache-control" content="public">
+		<meta http-equiv="expires" content="35000">
 		<meta name="description" content="Portolio Octavian Rotari junior web developer searching for cool projects to
 		work on or a job to improve my skills as a web developer.">
 		<link rel="stylesheet" href="dist/css/style.css" type='text/css'>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="src/vendors/js/jquery.visible.js"></script>
 		<script type="text/javascript">
-			$(window).on('load', function() {
-				// Animate loader off screen
+			var loading = function() {
 				$(".se-pre-con").fadeOut("slow");;
-			});
+			}
+			window.onload = loading;
 		</script>
 		<title>Octavian Rotari</title>
 	</head>
@@ -578,6 +578,7 @@
 				<img class="keyboard" src="dist/css/icons/keyboard.svg" alt="Toggle gradients with the arrow keys">
 			</section>
 		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="dist/js/scripts.min.js"></script>
 	</body>
 </html>
