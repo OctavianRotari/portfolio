@@ -8,6 +8,8 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var clean = require('gulp-clean');
 var uglify = require('gulp-uglify');
+var htmlMin = require('gulp-htmlmin');
+var svgMin = require('gulp-svgmin');
 var imageResize = require('gulp-image-resize');
 //var debug = require('gulp-debug');
 
@@ -33,6 +35,10 @@ var imgPath = {
   projects: 'src/resources/img/projects/*.{jpeg,jpg,png}',
   certificates: 'src/resources/img/certificates/*.{jpeg,jpg,png}'
 };
+
+var htmlFiles = [ 'src/index.html' ];
+
+var iconsFiles = [ 'src/resources/icons/*.svg' ];
 
 var projectsImageSize = [ 530, 1060 ];
 var certificateImageSize = [ 210, 420 ];
@@ -62,6 +68,18 @@ function javaScriptUglify() {
     .pipe(uglify())
     .pipe(concat('scripts.min.js'))
     .pipe(gulp.dest('dist/js'));
+}
+
+function htmlMinify() {
+  return gulp.src(htmlFiles)
+    .pipe(htmlMin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./'));
+}
+
+function svgMinify() {
+  return gulp.src(iconsFiles)
+    .pipe(svgMin())
+    .pipe(gulp.dest('dist/css/icons/'));
 }
 
 function resizeImages(done) {
@@ -101,6 +119,12 @@ function server() {
     }));
 }
 
-var build = gulp.series(cleanDist, fonts, style, javaScriptUglify, resizeImages, gulp.parallel(watch, server));
+var build = gulp.series(cleanDist, fonts, style, gulp.parallel(
+  javaScriptUglify,
+  htmlMinify,
+  resizeImages,
+  svgMinify,
+  watch,
+  server));
 
 gulp.task('default', build);
