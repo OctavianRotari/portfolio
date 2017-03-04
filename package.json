@@ -1,0 +1,34 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OctavianRotari/portfolio.git"
+  },
+  "author": "Octavian Rotari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OctavianRotari/portfolio/issues"
+  },
+  "homepage": "https://github.com/OctavianRotari/portfolio#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-google-webfonts": "git+https://github.com/OctavianRotari/gulp-google-webfonts.git",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-image-resize": "^0.12.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-uglify": "^2.0.1"
+  }
+}

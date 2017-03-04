@@ -1,0 +1,670 @@
+$light-blue: #19b5fe;
+$dark-blue: #161525;
+/*-------------------------------------------------------------------------*/
+/*BASIC SETUP*/
+/*-------------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*outline: 1px solid red !important;*/
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: Lato;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow:hidden;
+  /*Avoid flicker on slides transitions for mobile phones #336 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+section{
+  background-color: $dark-blue;
+}
+
+a:focus{
+  border: none;
+  outline: none;
+}
+
+.height-100 {
+  min-height: 100%;
+}
+
+h1,
+h2{
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.clearfix{zoom:1}
+.clearfix:after{
+  content: '.';
+  clear:both;
+  display: block;
+  height:0;
+  visibility:hidden;
+}
+
+/*-------------------------------------------------------------------------*/
+/*REUSABLE CONTENTS*/
+/*-------------------------------------------------------------------------*/
+
+.hidden {
+  display:none;
+}
+
+/*------Main navigation------*/
+
+header {
+  width:100%;
+  position: fixed;
+  z-index: 8;
+}
+
+.active {
+  transition: left 0.31s;
+}
+
+.navigation-arrow {
+  display:none;
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 100vh;
+  transform: translate(-50%, -50%);
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow
+{
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+/*------Buttons------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+  background-color: #22A4EB;
+  border: 1px solid #22A4EB;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #22a4eb;
+  color: #22a4eb;
+  margin-top: 10px;
+}
+
+.btn:hover,
+.btn:active {
+  border: 1px solid #028FDA;
+  background-color: #028FDA;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+  border: 1px solid #028FDA;
+  color: #fff;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+  border: 1px solid #028FDA;
+  color: #fff;
+}
+
+.img-list-small {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.icons-coffee{
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.slide .section-title{
+  transform: rotate(45deg);
+  margin-top: 10%;
+  margin-right: -30%;
+  text-align: center;
+}
+
+.slide .image h2 {
+  line-height: 150%;
+  font-size: 220%;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  font-size: 2.5em;
+  display: inline-block;
+  margin: .2em .2em .2em 0;
+}
+
+nav {
+  .nav-icon {
+    display: none;
+  }
+  a:before {
+    color: #337ab7;
+  }
+
+  .bt-menu-trigger {
+    display: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a:focus, a:hover {
+    text-decoration: none;
+  }
+
+  a {
+    span {
+      display: none;
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+/*HEADER*/
+/*-------------------------------------------------------------------------*/
+.no-js #loader { display: none;  }
+.js #loader {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  left: 100px; top: 0;
+}
+
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: url('./img/Preloader_2.gif') center no-repeat $dark-blue;
+}
+
+.brief-introduction-header, span{
+  display: inline-block;
+}
+
+.fp-slidesNav.top {
+  top: 10px;
+}
+
+.bt-menu{
+  .contacts{
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.header {
+  height: 100%;
+}
+
+.header {
+  .intro {
+    position: absolute;
+    top: 0;
+  }
+
+  .auto-type h1{
+    font-family: Philosopher;
+    text-transform: none;
+    color: #ecf0f1;
+    font-size: 2.5em;
+  }
+
+  .brief-introduction-header h2{
+    text-transform: none;
+    color: #ecf0f1;
+    font-size: 2em;
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+/*PROJECTS*/
+/*-------------------------------------------------------------------------*/
+.keyboard{
+  z-index: 8;
+  position: absolute;
+  top: 94%;
+  left: 61%;
+  display:none;
+}
+
+.projects {
+  background-color: rgb(22, 21, 37);
+  color: #fff;
+  font-family: Lato;
+}
+
+.projects {
+  .project {
+    h1{
+      font-family: Lato;
+      color: $light-blue;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 2em;
+      color: #fff;
+      display: inline-block;
+      text-transform: none;
+    }
+
+    h3 a {
+      text-decoration: none;
+      color: $light-blue;
+    }
+
+    h3 {
+      font-size: 2em;
+      margin-bottom: 2em;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+
+  .accounting-rails h2 {
+    color:#27ae60;
+  }
+
+  .autotrasporti-rotari h2 {
+    font-family: Georgia;
+    color:#39658C;
+    font-size: 2.5em;
+  }
+
+  .cms-php h2 {
+    font-family: Georgia;
+    color:#39658C;
+  }
+
+  .omnifood h2 {
+    font-family: Lato;
+    color:#e67e22;
+  }
+
+  .photo img{
+    width: 100%;
+  }
+
+  .coffee {
+    h3, p{
+      display: inline-block;
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+/*WHO AM I*/
+/*-------------------------------------------------------------------------*/
+
+
+.who-am-i {
+  h1 {
+    font-family: Lato;
+    color: $light-blue;
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .menu-web-developer,
+  .menu-accountant,
+  .menu-bartender,
+  .menu-traveler {
+    height: 50%;
+  }
+
+  .icons-who-am-i {
+    a, i {
+      cursor: pointer;
+      font-size: 2.2em;
+    }
+  }
+
+
+  .icons-who-am-i{
+    display: block;
+  }
+
+  .title{
+  }
+
+  .fun-facts{
+  }
+
+  a{
+    text-decoration: none;
+    display: block;
+  }
+
+
+  .menu-web-developer {
+    h2{
+      color: $light-blue;
+    }
+
+    .icons-who-am-i{
+      color: $light-blue;
+    }
+  }
+
+  .menu-accountant {
+    h2{
+      font-family: Chonburi;
+      color: #27ae60;
+    }
+
+    .icons-who-am-i{
+      color: #27ae60;
+    }
+  }
+
+  .menu-bartender {
+    h2{
+      font-weight: 700;
+      font-family: Lobster;
+      color: #c0392b;
+    }
+
+    .icons-who-am-i{
+      color: #c0392b;
+    }
+  }
+
+  .menu-traveler {
+    h2{
+      font-weight: 700;
+      font-family: YesevaOne;
+      color: #f8e8b5;
+    }
+
+    .icons-who-am-i{
+      color: #f8e8b5;
+    }
+  }
+}
+
+.brief-introduction {
+  font-size: 1.5em;
+  color: #ecf0f1;
+  list-style:none;
+
+  .long-text {
+    color: #fff;
+    padding-top: 10px;
+  }
+
+  .long-text p{
+    font-size: 100%;
+    line-height: 145%;
+    margin-bottom: 5%;
+  }
+
+}
+
+/*-------------------------------------------------------------------------*/
+/*about me*/
+
+.about-me{
+  color: #fff;
+}
+
+.about-me{
+  .long-text {
+    font-size: 2em;
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+/*web developer*/
+
+.web-developer {
+  h2{
+    color: $light-blue;
+  }
+
+  .long-text h2{
+    color: $light-blue;
+  }
+
+  .long-text ul{
+    list-style: none;
+  }
+
+  .icons-who-am-i{
+    color: $light-blue;
+    position: fixed;
+  }
+
+  .skills h2,
+  .certificates h2 {
+    color: $light-blue;
+  }
+
+  .skills {
+    text-align:center;
+  }
+
+  .skills {
+    .languages, .frameworks{
+      display: inline-block;
+    }
+  }
+
+  .certificates {
+    margin-top: 5em;
+  }
+
+  .certificates {
+    a{
+      display: inline-block;
+    }
+
+    .img-list-small{
+      width: 15em;
+      height: initial;
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+
+.description {
+  .icons-who-am-i {
+    .ion-ios-calculator-outline{
+      color: #27ae60;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+
+    .ion-bowtie{
+      color: #c0392b;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+
+    .ion-android-compass{
+      color: #f8e8b5;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+
+    .ion-laptop{
+      color: $light-blue;
+      position: fixed;
+      padding-left: 0.3em;
+    }
+  }
+}
+
+/*accountant*/
+
+.accountant {
+  .general-facts{
+    color:#fff;
+  }
+
+  h2{
+    font-family: Chonburi;
+    color: #27ae60;
+  }
+
+  .facts:last-child {
+    margin-top: 10em;
+  }
+
+  .icons-coffe {
+    display: inline-block;
+  }
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*bartender*/
+
+.bartender {
+  h2{
+    font-weight: 700;
+    font-family: Lobster;
+    color: #c0392b;
+  }
+
+  .personal-info{
+    height: 50%;
+  }
+
+  .general-facts{
+    font-family: GravitasOne;
+    margin-top: 10em;
+  }
+
+  .general-facts {
+    h2{
+      color: #c0392b;
+      font-family: Lobster;
+    }
+
+    img{
+      display: inline-block;
+      width: 15em;
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+/*traveler*/
+
+.traveler {
+  .travel-quote {
+    font-family: Merriweather;
+    color: #FFFFFF;
+  }
+
+  .travel-quote span{
+    display: block;
+  }
+
+  h2 {
+    font-family: Merriweather;
+    color: #f8e8b5;
+  }
+
+  h2 span{
+    color: #fff;
+  }
+
+  .general-facts{
+    text-align: center;
+    display:inline;
+  }
+
+  .general-facts {
+    .flags {
+      font-size: 8em;
+      margin-top: 1em;
+    }
+  }
+}
+
+
